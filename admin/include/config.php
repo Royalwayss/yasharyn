@@ -7,7 +7,7 @@
 	define('ADMIN_MAIL','rwpttech@gmail.com');
 	define('RECAPTCHA_SITE_KEY','6Ldx-AosAAAAAJxdP2-YhrveSlk1PiwHPU3i9Y0b');
 	define('RECAPTCHA_SECRET_KEY','6Ldx-AosAAAAABj5zF9tJ5SpW7rOb0N96c3mtxnG');
-
+ 
 	$conn = new mysqli($servername, $username, $password, $dbname);
 	// Check connection
 	if ($conn->connect_error) {
