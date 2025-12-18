@@ -1,0 +1,84 @@
+[01-Dec-2025 12:22:22 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "SITE_LOGO" in /home1/yasharyn/public_html/new/includes/header.php:42
+Stack trace:
+#0 /home1/yasharyn/public_html/new/index.php(3): include()
+#1 {main}
+  thrown in /home1/yasharyn/public_html/new/includes/header.php on line 42
+[10-Dec-2025 15:17:18 Asia/Kolkata] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in /home1/yasharyn/public_html/new/admin/include/config.php:287
+Stack trace:
+#0 /home1/yasharyn/public_html/new/admin/include/config.php(287): mysqli->query('select * FROM `...')
+#1 /home1/yasharyn/public_html/new/products.php(5): get_category(Object(mysqli), NULL)
+#2 {main}
+  thrown in /home1/yasharyn/public_html/new/admin/include/config.php on line 287
+[10-Dec-2025 16:32:06 Asia/Kolkata] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function get_products(), 2 passed in /home1/yasharyn/public_html/new/products.php on line 12 and exactly 3 expected in /home1/yasharyn/public_html/new/admin/include/config.php:157
+Stack trace:
+#0 /home1/yasharyn/public_html/new/products.php(12): get_products(Object(mysqli), '1')
+#1 {main}
+  thrown in /home1/yasharyn/public_html/new/admin/include/config.php on line 157
+[10-Dec-2025 16:32:33 Asia/Kolkata] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function get_products(), 2 passed in /home1/yasharyn/public_html/new/products.php on line 12 and exactly 3 expected in /home1/yasharyn/public_html/new/admin/include/config.php:157
+Stack trace:
+#0 /home1/yasharyn/public_html/new/products.php(12): get_products(Object(mysqli), '1')
+#1 {main}
+  thrown in /home1/yasharyn/public_html/new/admin/include/config.php on line 157
+[10-Dec-2025 16:33:01 Asia/Kolkata] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function get_products(), 2 passed in /home1/yasharyn/public_html/new/products.php on line 12 and exactly 3 expected in /home1/yasharyn/public_html/new/admin/include/config.php:157
+Stack trace:
+#0 /home1/yasharyn/public_html/new/products.php(12): get_products(Object(mysqli), '10')
+#1 {main}
+  thrown in /home1/yasharyn/public_html/new/admin/include/config.php on line 157
+[10-Dec-2025 16:34:29 Asia/Kolkata] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function get_products(), 2 passed in /home1/yasharyn/public_html/new/products.php on line 12 and exactly 3 expected in /home1/yasharyn/public_html/new/admin/include/config.php:157
+Stack trace:
+#0 /home1/yasharyn/public_html/new/products.php(12): get_products(Object(mysqli), '10')
+#1 {main}
+  thrown in /home1/yasharyn/public_html/new/admin/include/config.php on line 157
+[10-Dec-2025 16:34:29 Asia/Kolkata] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function get_products(), 2 passed in /home1/yasharyn/public_html/new/products.php on line 12 and exactly 3 expected in /home1/yasharyn/public_html/new/admin/include/config.php:157
+Stack trace:
+#0 /home1/yasharyn/public_html/new/products.php(12): get_products(Object(mysqli), '10')
+#1 {main}
+  thrown in /home1/yasharyn/public_html/new/admin/include/config.php on line 157
+[12-Dec-2025 14:22:41 Asia/Kolkata] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in /home1/yasharyn/public_html/new/admin/include/config.php:361
+Stack trace:
+#0 /home1/yasharyn/public_html/new/admin/include/config.php(361): mysqli->query('select * FROM `...')
+#1 /home1/yasharyn/public_html/new/products.php(5): get_category(Object(mysqli), NULL)
+#2 {main}
+  thrown in /home1/yasharyn/public_html/new/admin/include/config.php on line 361
+[12-Dec-2025 14:24:15 Asia/Kolkata] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in /home1/yasharyn/public_html/new/admin/include/config.php:361
+Stack trace:
+#0 /home1/yasharyn/public_html/new/admin/include/config.php(361): mysqli->query('select * FROM `...')
+#1 /home1/yasharyn/public_html/new/products.php(5): get_category(Object(mysqli), NULL)
+#2 {main}
+  thrown in /home1/yasharyn/public_html/new/admin/include/config.php on line 361
+[12-Dec-2025 14:24:45 Asia/Kolkata] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in /home1/yasharyn/public_html/new/admin/include/config.php:361
+Stack trace:
+#0 /home1/yasharyn/public_html/new/admin/include/config.php(361): mysqli->query('select * FROM `...')
+#1 /home1/yasharyn/public_html/new/products.php(5): get_category(Object(mysqli), NULL)
+#2 {main}
+  thrown in /home1/yasharyn/public_html/new/admin/include/config.php on line 361
+[12-Dec-2025 14:27:54 Asia/Kolkata] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in /home1/yasharyn/public_html/new/admin/include/config.php:361
+Stack trace:
+#0 /home1/yasharyn/public_html/new/admin/include/config.php(361): mysqli->query('select * FROM `...')
+#1 /home1/yasharyn/public_html/new/products.php(5): get_category(Object(mysqli), NULL)
+#2 {main}
+  thrown in /home1/yasharyn/public_html/new/admin/include/config.php on line 361
+[15-Dec-2025 16:23:50 Asia/Kolkata] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in /home1/yasharyn/public_html/new/admin/include/config.php:361
+Stack trace:
+#0 /home1/yasharyn/public_html/new/admin/include/config.php(361): mysqli->query('select * FROM `...')
+#1 /home1/yasharyn/public_html/new/products.php(5): get_category(Object(mysqli), NULL)
+#2 {main}
+  thrown in /home1/yasharyn/public_html/new/admin/include/config.php on line 361
+[17-Dec-2025 23:32:55 Asia/Kolkata] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in /home1/yasharyn/public_html/new/admin/include/config.php:361
+Stack trace:
+#0 /home1/yasharyn/public_html/new/admin/include/config.php(361): mysqli->query('select * FROM `...')
+#1 /home1/yasharyn/public_html/new/products.php(5): get_category(Object(mysqli), NULL)
+#2 {main}
+  thrown in /home1/yasharyn/public_html/new/admin/include/config.php on line 361
+[17-Dec-2025 23:33:49 Asia/Kolkata] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in /home1/yasharyn/public_html/new/admin/include/config.php:361
+Stack trace:
+#0 /home1/yasharyn/public_html/new/admin/include/config.php(361): mysqli->query('select * FROM `...')
+#1 /home1/yasharyn/public_html/new/products.php(5): get_category(Object(mysqli), NULL)
+#2 {main}
+  thrown in /home1/yasharyn/public_html/new/admin/include/config.php on line 361
+[17-Dec-2025 23:33:54 Asia/Kolkata] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in /home1/yasharyn/public_html/new/admin/include/config.php:361
+Stack trace:
+#0 /home1/yasharyn/public_html/new/admin/include/config.php(361): mysqli->query('select * FROM `...')
+#1 /home1/yasharyn/public_html/new/products.php(5): get_category(Object(mysqli), NULL)
+#2 {main}
+  thrown in /home1/yasharyn/public_html/new/admin/include/config.php on line 361
