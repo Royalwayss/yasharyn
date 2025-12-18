@@ -12,5 +12,5 @@
 		$username = "yasharyn_usr";
 		$password = "p7Db9D[9sh0@";
 		$dbname = "yasharyn_newdb";
-	}
+	} 
 ?>
