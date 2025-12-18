@@ -1,18 +1,5 @@
 <?php
-    date_default_timezone_set("Asia/Kolkata");
-	if($_SERVER['HTTP_HOST'] == 'localhost'){
-		$base_url = 'http://localhost/yasharyn/';
-		$servername = "localhost";
-		$username = "root";
-		$password = "";
-		$dbname = "yasharyn";
-	}else{
-		$base_url = 'https://www.yasharyn.com/new/';
-		$servername = "localhost";
-		$username = "yasharyn_usr";
-		$password = "p7Db9D[9sh0@";
-		$dbname = "yasharyn_newdb";
-	}
+    include('admin/include/db_config.php');
 	define('BASE_URL',$base_url);
 	define('SITE_LOGO',$base_url.'assets/images/logo.png');
 	define('WEBSITENAME','Yasharyn');
