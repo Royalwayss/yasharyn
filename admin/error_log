@@ -1,0 +1,14 @@
+[15-Nov-2025 18:18:47 Asia/Kolkata] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'is_delete' in 'field list' in /home1/yasharyn/public_html/new/admin/delete_product.php:7
+Stack trace:
+#0 /home1/yasharyn/public_html/new/admin/delete_product.php(7): mysqli->query('update products...')
+#1 {main}
+  thrown in /home1/yasharyn/public_html/new/admin/delete_product.php on line 7
+[27-Nov-2025 13:20:27 Asia/Kolkata] PHP Warning:  Undefined array key "admin_type" in /home1/yasharyn/public_html/new/admin/include/header.php on line 92
+[27-Nov-2025 13:20:30 Asia/Kolkata] PHP Warning:  Undefined array key "admin_type" in /home1/yasharyn/public_html/new/admin/include/header.php on line 92
+[27-Nov-2025 13:20:35 Asia/Kolkata] PHP Warning:  Undefined array key "admin_type" in /home1/yasharyn/public_html/new/admin/include/header.php on line 92
+[27-Nov-2025 13:22:40 Asia/Kolkata] PHP Warning:  Undefined array key "admin_type" in /home1/yasharyn/public_html/new/admin/include/header.php on line 92
+[27-Nov-2025 13:22:42 Asia/Kolkata] PHP Warning:  Undefined array key "admin_type" in /home1/yasharyn/public_html/new/admin/include/header.php on line 92
+[27-Nov-2025 13:22:46 Asia/Kolkata] PHP Warning:  Undefined array key "admin_type" in /home1/yasharyn/public_html/new/admin/include/header.php on line 92
+[27-Nov-2025 13:23:45 Asia/Kolkata] PHP Warning:  Undefined array key "admin_type" in /home1/yasharyn/public_html/new/admin/include/header.php on line 92
+[27-Nov-2025 13:27:44 Asia/Kolkata] PHP Warning:  Undefined array key "admin" in /home1/yasharyn/public_html/new/admin/save-admin.php on line 36
+[05-Dec-2025 15:56:42 Asia/Kolkata] PHP Warning:  Undefined array key "sort" in /home1/yasharyn/public_html/new/admin/save-product.php on line 18
