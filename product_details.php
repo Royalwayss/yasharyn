@@ -11,87 +11,125 @@ if(empty($get_product['status'])){
 ?>
 
 <!-- Page Title -->
-        <section class="page-title centred inner-pages" style="background-image: url(assets/images/background/product.jpg);">
-            <div class="auto-container">
-                <div class="content-box">
-                    <h2><?php echo $product['product_name']; ?></h2>
-                </div>
-            </div>
-        </section>
-        <!-- End Page Title -->
+<section class="page-title centred inner-pages" style="background-image: url(assets/images/background/product.jpg);">
+    <div class="auto-container">
+        <div class="content-box">
+            <h2><?php echo $product['product_name']; ?></h2>
+        </div>
+    </div>
+</section>
+<!-- End Page Title -->
 
 
-         <!-- shop-details -->
-         <section class="shop-details">
-            <div class="auto-container">
-                <div class="product-details-content">
+<!-- shop-details -->
+<section class="shop-details">
+    <div class="auto-container">
+        <div class="product-details-content">
+            <?php if(!empty($product['image'])) { ?>
+            <div class="shape"
+                style="background-image: url('assets/images/product/detail/<?php echo $product['image']; ?>);"></div>
+            <?php } ?>
+            <div class="row clearfix">
+                <div class="col-lg-6 col-md-12 col-sm-12 image-column">
                     <?php if(!empty($product['image'])) { ?>
-					<div class="shape" style="background-image: url('assets/images/product/detail/<?php echo $product['image']; ?>);"></div>
-                    <?php } ?>
-					<div class="row clearfix">
-                        <div class="col-lg-6 col-md-12 col-sm-12 image-column">
-                            <?php if(!empty($product['image'])) { ?>
-							<div class="image-box">
-                                <figure class="image"><img src="assets/images/product/detail/<?php echo $product['image']; ?>" alt=""></figure>
-                                <div class="preview-link"><a href="assets/images/product/detail/<?php echo $product['image']; ?>" class="lightbox-image" data-fancybox="gallery"><i class="far fa-search-plus"></i></a></div>
-                            </div>
-							 <?php } ?>
+                    <div class="image-box">
+                        <figure class="image"><img src="assets/images/product/detail/<?php echo $product['image']; ?>"
+                                alt=""></figure>
+                        <div class="preview-link"><a
+                                href="assets/images/product/detail/<?php echo $product['image']; ?>"
+                                class="lightbox-image" data-fancybox="gallery"><i class="far fa-search-plus"></i></a>
                         </div>
-                        <div class="col-lg-6 col-md-12 col-sm-12 content-column">
-                            <div class="product-details">
-                                <h3><?php echo $product['product_name']; ?></h3>
-                                <!-- <div class="text">
+                    </div>
+                    <?php } ?>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+                    <div class="product-details">
+                        <h3><?php echo $product['product_name']; ?></h3>
+                        <!-- <div class="text">
                                     <p><?php echo $product['product_code']; ?></p>
                                 </div> -->
-                                <div class="other-option">
-                                    <ul class="list product-details-sub-details-ul">
-                                        <li class="product-details-sub-details-heading">Size : </li>
-                                        <li class="product-details-sub-details-data"><?php echo $product['size']; ?></li>
-                                    </ul>
-									<ul class="list product-details-sub-details-ul">
-                                        <li class="product-details-sub-details-heading">Availability : </li>
-                                        <li class="product-details-sub-details-data"><?php echo $product['availability']; ?></li>
-                                    </ul>
-                                    <ul class="category list product-details-sub-details-ul">
-                                         <li class="product-details-sub-details-heading">Weight : </li>
-                                        <li class="product-details-sub-details-data"><?php echo $product['weight']; ?></li>
-                                    </ul>
-									<?php if(!empty($product['moc'])) { ?>
-                                    <ul class="category list product-details-sub-details-ul">
-                                         <li class="product-details-sub-details-heading">MOC : </li>
-                                        <li class="product-details-sub-details-data"><?php echo $product['moc']; ?></li>
-                                    </ul>
-									
-									<?php } ?>
-									
-									
-									
-									
-                                   <!-- <ul class="tags list">
+                        <div class="yasharyn-new-product-details mb-2">
+
+                            <ul class="list product-details-sub-details-ul">
+                                <li class="product-details-sub-details-heading">Size :</li>
+                                <li class="product-details-sub-details-data"><?php echo $product['size']; ?></li>
+                            </ul>
+
+                            <ul class="list product-details-sub-details-ul">
+                                <li class="product-details-sub-details-heading">Availability :</li>
+                                <li class="product-details-sub-details-data"><?php echo $product['availability']; ?>
+                                </li>
+                            </ul>
+
+                            <ul class="category list product-details-sub-details-ul">
+                                <li class="product-details-sub-details-heading">Weight :</li>
+                                <li class="product-details-sub-details-data"><?php echo $product['weight']; ?></li>
+                            </ul>
+
+                            <?php if(!empty($product['moc'])) { ?>
+                            <ul class="category list product-details-sub-details-ul">
+                                <li class="product-details-sub-details-heading">MOC :</li>
+                                <li class="product-details-sub-details-data"><?php echo $product['moc']; ?></li>
+                            </ul>
+                            <?php } ?>
+
+                        </div>
+
+                        <div class="other-option">
+                            <!-- <ul class="list product-details-sub-details-ul">
+                                <li class="product-details-sub-details-heading">Size : </li>
+                                <li class="product-details-sub-details-data"><?php echo $product['size']; ?></li>
+                            </ul>
+                            <ul class="list product-details-sub-details-ul">
+                                <li class="product-details-sub-details-heading">Availability : </li>
+                                <li class="product-details-sub-details-data"><?php echo $product['availability']; ?>
+                                </li>
+                            </ul>
+                            <ul class="category list product-details-sub-details-ul">
+                                <li class="product-details-sub-details-heading">Weight : </li>
+                                <li class="product-details-sub-details-data"><?php echo $product['weight']; ?></li>
+                            </ul>
+                            <?php if(!empty($product['moc'])) { ?>
+                            <ul class="category list product-details-sub-details-ul">
+                                <li class="product-details-sub-details-heading">MOC : </li>
+                                <li class="product-details-sub-details-data"><?php echo $product['moc']; ?></li>
+                            </ul>
+
+                            <?php } ?> -->
+
+
+
+
+                            <!--<ul class="tags list">
                                         <li>Tags:</li>
                                         <li>glasses,</li>
                                         <li>water,</li>
                                         <li>bottle</li>
                                     </ul> -->
-									
-									
-								
-									   <div class="product-discription">
-                    <div class="shape" style="background-image: url(assets/images/shape/shape-39.png);"></div>
-                    <div class="tabs-box">
-                        <div class="tab-btn-box">
-                            <ul class="tab-btns tab-buttons clearfix">
-                                <li class="tab-btn active-btn" data-tab="#tab-1">Description</li>
-                                <?php /*<li class="tab-btn" data-tab="#tab-2">Reviews (2)</li> */ ?>
+                            <div class="product-discription">
+                               
+                                <div class="tabs-box">
+                                    <div class="tab-btn-box description-product-details-new">
+                                        <ul class="tab-btns tab-buttons clearfix">
+                                            <li class="tab-btn active-btn " data-tab="#tab-1">Description</li>
+                                            <?php /*<li class="tab-btn" data-tab="#tab-2">Reviews (2)</li> */ ?>
+                                        </ul>
+                                    </div>
+                                    <div class="tabs-content">
+                                        <div class="tab active-tab" id="tab-1">
+                                            <div class="content-box">
+                                                <?php echo $product['description']; ?>
+                                            </div>
+                                        </div>
+                                         <ul>
+                                <li class="btn-box mt-4 text-center">
+                                    <a href="javascript:;" class="theme-btn btn-one" data-toggle="modal"
+                                        data-target="#exampleModal">Product Enquiry</a>
+                                </li>
                             </ul>
-                        </div>
-                        <div class="tabs-content">
-                            <div class="tab active-tab" id="tab-1">
-                                <div class="content-box">
-								   <?php echo $product['description']; ?>
-								</div>
-                            </div>
-                            <?php /*
+                             <div class="shape" style="background-image: url(assets/images/shape/shape-39.png);">
+                                </div> 
+                                        <?php /*
 							<div class="tab" id="tab-2">
                                 <div class="row clearfix">
                                     <div class="col-lg-6 col-md-6 col-sm-12 review-block">
@@ -164,31 +202,27 @@ if(empty($get_product['status'])){
                                 </div>
                             </div>
                              */ ?>
-						</div>
-                    </div>
-                </div>
-									<ul>
-                                        	<li class="btn-box mt-4">
-                                           <a href="javascript:;" class="theme-btn btn-one" data-toggle="modal" data-target="#exampleModal" >Product Enquiry</a>
-                                    </li>
-                                    </ul>
-									
-                                    <ul class="social-links clearfix">
-                                     <?php /*   <a rel="nofollow" href="javascript:void(0);" class="inline--icon enlarged bgCircleEnclosed" data-sharer="facebook" data-url="">
+                                    </div>
+                                </div>
+                            </div>
+                           
+
+                            <ul class="social-links clearfix">
+                                <?php /*   <a rel="nofollow" href="javascript:void(0);" class="inline--icon enlarged bgCircleEnclosed" data-sharer="facebook" data-url="">
 														<i class="fab fa-facebook-f"></i>
 										</a> */ ?>
-										<!-- <li><h6>Follow Us:</h6></li>
+                                <!-- <li><h6>Follow Us:</h6></li>
                                         <li><a href="javascript:;"><i class="fab fa-facebook-f"></i></a></li>
                                         <li><a href="javascript:;"><i class="fab fa-twitter"></i></a></li>
                                         <li><a href="javascript:;"><i class="fab fa-vimeo-v"></i></a></li>
                                         <li><a href="javascript:;"><i class="fab fa-google-plus-g"></i></a></li> -->
-                                    </ul>
-                                </div>
-                            </div>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <!-- <div class="product-discription">
+            </div>
+        </div>
+        <!-- <div class="product-discription">
                     <div class="shape" style="background-image: url(assets/images/shape/shape-39.png);"></div>
                     <div class="tabs-box">
                         <div class="tab-btn-box">
@@ -279,76 +313,82 @@ if(empty($get_product['status'])){
 						</div>
                     </div>
                 </div> -->
-				<?php if(!empty($product['related_products'])){  ?>
-                <div class="related-product pt-5">
-                    <div class="title-box">
-                        <h3>Related Products</h3>
-                    </div>
-                    <div class="row clearfix">
-                        <?php foreach($product['related_products'] as $related_product){  ?>
-						<div class="col-lg-4 col-md-6 col-sm-12 shop-block mb-5">
-                            <div class="shop-block-one wow fadeInUp animated " data-wow-delay="00ms" data-wow-duration="1500m">
-                                <div class="inner-box product-details-inner-height">
-                                             <?php if($related_product['image']) { ?>
-											<figure class="image-box "><img src="assets/images/product/list/<?php echo $related_product['image']; ?>" alt=""></figure>
-                                            <?php } ?>
-                                    <div class="lower-content">
-                                        <span><?php echo $related_product['size'] ; ?></span>
-										<div class="shape" style="background-image: url(assets/images/shape/shape-7.png);"></div>
-                                        <h4><a href="product_details.php?id=<?php echo $related_product['id']; ?>"><?php echo $related_product['product_name']; ?></a></h4>
-                                     
-                                    </div>
+        <?php if(!empty($product['related_products'])){  ?>
+        <div class="related-product pt-5">
+            <div class="title-box">
+                <h3>Related Products</h3>
+            </div>
+            <div class="row clearfix">
+                <?php foreach($product['related_products'] as $related_product){  ?>
+                <div class="col-lg-4 col-md-6 col-sm-12 shop-block mb-5">
+                    <div class="shop-block-one wow fadeInUp animated " data-wow-delay="00ms" data-wow-duration="1500m">
+                        <div class="inner-box product-details-inner-height">
+                            <?php if($related_product['image']) { ?>
+                            <figure class="image-box "><img
+                                    src="assets/images/product/list/<?php echo $related_product['image']; ?>" alt="">
+                            </figure>
+                            <?php } ?>
+                            <div class="lower-content">
+                                <span><?php echo $related_product['size'] ; ?></span>
+                                <div class="shape" style="background-image: url(assets/images/shape/shape-7.png);">
                                 </div>
+                                <h4><a
+                                        href="product_details.php?id=<?php echo $related_product['id']; ?>"><?php echo $related_product['product_name']; ?></a>
+                                </h4>
+
                             </div>
                         </div>
-						<?php } ?>
-                       
                     </div>
                 </div>
-				<?php } ?>
+                <?php } ?>
+
             </div>
-        </section>
-        <!-- shop-details end -->
-
-
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Product Enquery</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-	   <form id="product-enquery" action="product-enquery.php" method="post">
-	   <input type="hidden" name="product_id" value="<?php echo $product['id']; ?>">
-      <div class="modal-body">
-       
-          <div class="form-group">
-            <label for="enquery-name" class="col-form-label">Name:</label>
-            <input type="text" class="form-control" id="enquery-name" name="name">
-          </div>
-		  <div class="form-group">
-            <label for="enquery-email" class="col-form-label">Email:</label>
-            <input type="text" class="form-control" id="enquery-email" name="email">
-          </div>
-		  <div class="form-group">
-            <label for="enquery-mobile" class="col-form-label">Mobile:</label>
-            <input type="text" class="form-control" id="enquery-mobile" name="mobile">
-          </div>
-          <div class="form-group">
-            <label for="enquery-message" class="col-form-label">Message:</label>
-            <textarea class="form-control" id="enquery-message" name="message"></textarea>
-          </div>
-        
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <input type="submit" class="btn btn-primary" value="Send message">
-      </div>
-	  </form>
+        </div>
+        <?php } ?>
     </div>
-  </div>
+</section>
+<!-- shop-details end -->
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Product Enquery</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form id="product-enquery" action="product-enquery.php" method="post">
+                <input type="hidden" name="product_id" value="<?php echo $product['id']; ?>">
+                <div class="modal-body">
+
+                    <div class="form-group">
+                        <label for="enquery-name" class="col-form-label">Name:</label>
+                        <input type="text" class="form-control" id="enquery-name" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="enquery-email" class="col-form-label">Email:</label>
+                        <input type="text" class="form-control" id="enquery-email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="enquery-mobile" class="col-form-label">Mobile:</label>
+                        <input type="text" class="form-control" id="enquery-mobile" name="mobile">
+                    </div>
+                    <div class="form-group">
+                        <label for="enquery-message" class="col-form-label">Message:</label>
+                        <textarea class="form-control" id="enquery-message" name="message"></textarea>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <input type="submit" class="btn btn-primary" value="Send message">
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
 
 
@@ -358,8 +398,8 @@ if(empty($get_product['status'])){
 <?php include 'includes/footer.php'; ?>
 <script>
 //$('#exampleModal').on('show.bs.modal', function (event) {
- 
- 
+
+
 //})
 </script>
 

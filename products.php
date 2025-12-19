@@ -81,7 +81,7 @@ if(!empty($category['parent_id'])){
 				        <div class="row clearfix" style="align-items:center">
                                     <div class="col-lg-4 col-md-4 col-sm-12 form-group" >
                                        <label style="font-weight:600; font-size:16px; color:#000;">Category</label>
-									   <select class="form-control" id="filter-category" >
+									   <select class="form-control new-select-height" id="filter-category">
 										        <option value="">Select Category</option>
 										        <?php foreach($categories as $cat) { ?>
 												<option value="<?php echo $cat['id']; ?>" <?php if($category['id'] == $cat['id']){ echo 'selected'; } ?> ><?php echo $cat['category_name']; ?></option>
@@ -144,7 +144,7 @@ if(!empty($category['parent_id'])){
 				
 				
 				<div class="row clearfix">
-                    <div class="col-lg-4 col-md-12 col-sm-12 sidebar-side">
+                    <!-- <div class="col-lg-4 col-md-12 col-sm-12 sidebar-side">
                         <div class="shop-sidebar default-sidebar">
                             <div class="sidebar-widget sidebar-category">
                                 <div class="widget-title">
@@ -164,9 +164,9 @@ if(!empty($category['parent_id'])){
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
-                    <div class="col-lg-8 col-md-12 col-sm-12 content-side">
+                    <div class="col-lg-12 col-md-12 col-sm-12 content-side">
                         <div class="our-shop">
                             <div class="item-shorting clearfix">
                                 <?php $product_count = count($products);?>
@@ -176,7 +176,7 @@ if(!empty($category['parent_id'])){
                             </div>
                             <div class="row clearfix">
                                 <?php foreach($products as $product){ ?>
-								<div class="col-lg-4 col-md-4 col-sm-12 shop-block">
+								<div class="col-lg-4 col-md-4 col-sm-12 shop-block mb-4">
                                     <div class="shop-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500m">
                                         <div class="inner-box">
                                             <?php if($product['image']) { ?>

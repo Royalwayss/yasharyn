@@ -178,16 +178,16 @@ $categories = get_categories($conn,$status=1);
                                     <li><a href="contacts.php">Contact</a></li>
                                     <li><a href="events.php">Events</a></li>
                                     <li><a href="career.php">Career</a></li>
-                                    <li> 
+                                    <!-- <li> 
                                             <a href="javascript:;" class="yasharyn-download-btn">View Catalogue</a>
-                                        </li>
+                                        </li> -->
 
 
                                 </ul>
                             </div>
                         </nav>
                     </div>
-                    <ul class="nav-right">
+                    <ul class="nav-right ml-5">
                         <li class="search-box-outer">
                             <div class="dropdown">
                                 <button class="search-box-btn" type="button" id="dropdownMenu3" data-toggle="dropdown"

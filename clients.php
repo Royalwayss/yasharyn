@@ -36,6 +36,11 @@
                     <a href="#"><img src="assets/images/clients/new-1.png" alt=""></a>
                 </div>
             </div>
+              <div class=" col-12 col-md-4 col-lg-3 mb-5">
+                <div class="client-inner-logo">
+                    <a href="#"><img src="assets/images/clients/new-7.png" alt=""></a>
+                </div>
+            </div>
             <div class=" col-12 col-md-4 col-lg-3 mb-5">
                 <div class="client-inner-logo">
                     <a href="#"><img src="assets/images/clients/new-2.png" alt=""></a>
@@ -52,11 +57,11 @@
                     <a href="#"><img src="assets/images/clients/new-20.png" alt=""></a>
                 </div>
             </div>
-            <div class=" col-12 col-md-4 col-lg-3 mb-5">
+            <!-- <div class=" col-12 col-md-4 col-lg-3 mb-5">
                 <div class="client-inner-logo">
                     <a href="#"><img src="assets/images/clients/new-4.png" alt=""></a>
                 </div>
-            </div>
+            </div> -->
             <div class=" col-12 col-md-4 col-lg-3 mb-5">
                 <div class="client-inner-logo">
                     <a href="#"><img src="assets/images/clients/new-5.png" alt=""></a>
@@ -72,11 +77,7 @@
                     <a href="#"><img src="assets/images/clients/new-6.png" alt=""></a>
                 </div>
             </div>
-            <div class=" col-12 col-md-4 col-lg-3 mb-5">
-                <div class="client-inner-logo">
-                    <a href="#"><img src="assets/images/clients/new-7.png" alt=""></a>
-                </div>
-            </div>
+          
             <div class=" col-12 col-md-4 col-lg-3 mb-5">
                 <div class="client-inner-logo">
                     <a href="#"><img src="assets/images/clients/new-8.png" alt=""></a>
@@ -97,18 +98,18 @@
                     <a href="#"><img src="assets/images/clients/new-11.png" alt=""></a>
                 </div>
             </div>
-            <div class=" col-12 col-md-4 col-lg-3 mb-5">
+            <!-- <div class=" col-12 col-md-4 col-lg-3 mb-5">
                 <div class="client-inner-logo">
                     <a href="#"><img src="assets/images/clients/new-12.png" alt=""></a>
                 </div>
-            </div>
+            </div> -->
 
 
-             <div class=" col-12 col-md-4 col-lg-3 mb-5">
+             <!-- <div class=" col-12 col-md-4 col-lg-3 mb-5">
                 <div class="client-inner-logo">
                     <a href="#"><img src="assets/images/clients/new-13.png" alt=""></a>
                 </div>
-            </div>
+            </div> -->
             <div class=" col-12 col-md-4 col-lg-3 mb-5">
                 <div class="client-inner-logo">
                     <a href="#"><img src="assets/images/clients/new-14.png" alt=""></a>
@@ -119,32 +120,32 @@
                     <a href="#"><img src="assets/images/clients/new-15.png" alt=""></a>
                 </div>
             </div>
-            <div class=" col-12 col-md-4 col-lg-3 mb-5">
+            <!-- <div class=" col-12 col-md-4 col-lg-3 mb-5">
                 <div class="client-inner-logo">
                     <a href="#"><img src="assets/images/clients/new-16.png" alt=""></a>
                 </div>
-            </div>
-            <div class=" col-12 col-md-4 col-lg-3 mb-5">
+            </div> -->
+            <!-- <div class=" col-12 col-md-4 col-lg-3 mb-5">
                 <div class="client-inner-logo">
                     <a href="#"><img src="assets/images/clients/new-17.png" alt=""></a>
                 </div>
-            </div>
-            <div class=" col-12 col-md-4 col-lg-3 mb-5">
+            </div> -->
+            <!-- <div class=" col-12 col-md-4 col-lg-3 mb-5">
                 <div class="client-inner-logo">
                     <a href="#"><img src="assets/images/clients/new-18.png" alt=""></a>
                 </div>
-            </div>
-            <div class=" col-12 col-md-4 col-lg-3 mb-5">
+            </div> -->
+            <!-- <div class=" col-12 col-md-4 col-lg-3 mb-5">
                 <div class="client-inner-logo">
                     <a href="#"><img src="assets/images/clients/new-19.png" alt=""></a>
                 </div>
-            </div>
+            </div> -->
          
-            <div class=" col-12 col-md-4 col-lg-3 mb-5">
+            <!-- <div class=" col-12 col-md-4 col-lg-3 mb-5">
                 <div class="client-inner-logo">
                     <a href="#"><img src="assets/images/clients/new-21.png" alt=""></a>
                 </div>
-            </div>
+            </div> -->
             <div class=" col-12 col-md-4 col-lg-3 mb-5">
                 <div class="client-inner-logo">
                     <a href="#"><img src="assets/images/clients/new-22.png" alt=""></a>
@@ -157,17 +158,27 @@
                     <a href="#"><img src="assets/images/clients/new-24.png" alt=""></a>
                 </div>
             </div>
+            <div class=" col-12 col-md-4 col-lg-3 mb-5">
+                <div class="client-inner-logo">
+                    <a href="#"><img src="assets/images/clients/new-27.png" alt=""></a>
+                </div>
+            </div>
+            <div class=" col-12 col-md-4 col-lg-3 mb-5">
+                <div class="client-inner-logo">
+                    <a href="#"><img src="assets/images/clients/new-28.png" alt=""></a>
+                </div>
+            </div>
 
-             <div class=" col-12 col-md-4 col-lg-3 mb-5">
+             <!-- <div class=" col-12 col-md-4 col-lg-3 mb-5">
                 <div class="client-inner-logo">
                     <a href="#"><img src="assets/images/clients/new-25.png" alt=""></a>
                 </div>
-            </div>
-             <div class=" col-12 col-md-4 col-lg-3 mb-5">
+            </div> -->
+             <!-- <div class=" col-12 col-md-4 col-lg-3 mb-5">
                 <div class="client-inner-logo">
                     <a href="#"><img src="assets/images/clients/new-26.png" alt=""></a>
                 </div>
-            </div>
+            </div> -->
 
         </div>
 </section>

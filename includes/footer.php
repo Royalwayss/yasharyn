@@ -19,7 +19,7 @@
                     <div class="row clearfix">
                         <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
                             <div class="footer-widget logo-widget">
-                                <figure class="footer-logo"><a href="index.html"><img src="assets/images/Yamed.png" alt=""></a></figure>
+                                <figure class="footer-logo"><a href="index.html"><img src="assets/images/logo-footer.png" alt=""></a></figure>
                                 <div class="text">
                                     <p>Our team of seasoned professionals is committed to realizing our vision. Their dedication towards growth of the company is immeasurable.</p>
                                 </div>
@@ -64,9 +64,18 @@
                                 </div>
                                 <div class="widget-content">
                                     <ul class="info-list clearfix">
-                                        <li><i class="fal fa-map-marker-alt"></i>Sankeshwar Parshavnath Marg, Near Neva Garments, G.T. Road West, Village Hussainpura, Dist - Ludhiana, Punjab - 141008, India.</li>
-                                        <li><i class="fal fa-phone"></i><a href="tel:+91-93170-88991">+91-93170-88991</a></li>
-                                        <li><i class="fal fa-envelope-open-text"></i><a href="mailto:info@yasharyn.com">info@yasharyn.com</a></li>
+                                        <li>
+                                            <!-- <i class="fal fa-map-marker-alt"></i> -->
+                                               <h6 class="footer-heading">Address : </h6>
+                                          Sankeshwar Parshavnath Marg, Near Neva Garments, G.T. Road West, Village Hussainpura, Dist - Ludhiana, Punjab - 141008, India.</li>
+                                        <li>
+                                            <!-- <i class="fal fa-phone"></i> -->
+                                               <h6 class="footer-heading">Call Us : <h6>
+                                        <a href="tel:+91-93170-88991">+91-93170-88991</a></li>
+                                        <li>
+                                            <!-- <i class="fal fa-envelope-open-text"></i> -->
+                                             <h6 class="footer-heading">Email Id : <h6>
+                                        <a href="mailto:info@yasharyn.com">info@yasharyn.com</a></li>
                                     </ul>
                                 </div>
                             </div>
