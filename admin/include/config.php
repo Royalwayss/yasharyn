@@ -187,6 +187,24 @@ function get_products($conn,$category_id,$filter_data) {
 }	
 
 
+
+function related_products($conn,$product_name){
+	$related_products = [];
+	$firstWord = strtok($product_name, ' '); // This gets the first word
+	$common_name = substr($product_name, strlen($firstWord) + 1); // Remove the first word and space
+	$sql = "select * from `products` where `product_name` like '%".$common_name."%' and status = '1' and product_name != '".$product_name."'";  
+	$result = $conn->query($sql); 
+	if ($result->num_rows > 0) { 
+		while ($row = $result->fetch_assoc()) { 
+			$related_products[] = $row;
+		}
+	}
+	return $related_products;
+}
+
+
+
+
 function get_new_arrival_products($conn,$limit) { 
     
 	$products = [];
@@ -210,6 +228,32 @@ function get_new_arrival_products($conn,$limit) {
 
     return $products;	
 }
+
+function home_products($conn,$limit) { 
+    
+	$products = [];
+	
+	$sql = 'select products.* from products join categories on categories.id = products.category_id where  products.status = "1" and image != "" order by rand() limit '.$limit;
+	
+	
+	$result = $conn->query($sql); 
+    
+    if ($result->num_rows > 0) { 
+    
+        while ($row = $result->fetch_assoc()) { 
+        
+		  $products[] = $row;
+			  
+        }
+    }
+
+    return $products;	
+}
+
+
+
+
+
 
 function product_size_filter($conn,$category_id) {
 	
@@ -405,27 +449,8 @@ function get_product($conn,$id){
 	   $product = mysqli_fetch_assoc($row);
 	   
 	   
-	   
-	   
-	    $related_products = [];
-	
-		$related_products_sql = 'SELECT * FROM `products` WHERE `size` = "'.$product['size'].'" AND `status` = "1" AND `id` != '.$id.' ORDER BY `id` DESC;';
-
-		$related_products_result = $conn->query($related_products_sql); 
-		
-		if ($related_products_result->num_rows > 0) { 
-		
-			while ($related_products_row = $related_products_result->fetch_assoc()) { 
-			
-			  $related_products[] = $related_products_row;
-				  
-			}
-		}
-
-	   
-	   $product['related_products'] = $related_products;
-	   
-	   
+	   $product['related_products'] = related_products($conn,$product['product_name']);
+	   	   
 	   return array(
 		   'status'=>true,
 		   'product'=>$product,

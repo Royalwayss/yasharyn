@@ -3,6 +3,7 @@
 include 'includes/header.php';
 
 $new_arrival_products =get_new_arrival_products($conn,$limit=3); 
+$home_products =home_products($conn,$limit=10);  
 
  ?>
 
@@ -154,7 +155,7 @@ $new_arrival_products =get_new_arrival_products($conn,$limit=3);
     </div>
 </section>
 <!-- banner-section end -->
-
+<?php if(!empty($home_products)) { ?>
 <section class="yasharyan-products">
     <div class="container">
         <div class="product-sec">
@@ -164,127 +165,18 @@ $new_arrival_products =get_new_arrival_products($conn,$limit=3);
             <div class="swiper productSwiper">
                 <div class="swiper-wrapper">
 
-                    <!-- 10 Product Items -->
-                    <!-- You can repeat these -->
+                    <?php foreach($home_products as $home_product) { ?>
                     <div class="swiper-slide">
                         <div class="product-box">
-                            <img src="assets/images/random-products/1.jpg" alt="">
-                            <!-- <h4 class="product-title">Product 1</h4> -->
+                            <a href="product_details.php?id=<?php echo $home_product['id'];  ?>">
+							<img src="assets/images/product/list/<?php echo $home_product['image']; ?>" alt="">
+                            </a>
+							<!-- <h4 class="product-title">Product 1</h4> -->
                         </div>
                     </div>
-
-                    <div class="swiper-slide">
-                        <div class="product-box">
-                            <img src="assets/images/random-products/2.jpg" alt="">
-                            <!-- <h4 class="product-title">Product 2</h4> -->
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="product-box">
-                            <img src="assets/images/random-products/3.jpg" alt="">
-                            <!-- <h4 class="product-title">Product 3</h4> -->
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="product-box">
-                            <img src="assets/images/random-products/4.jpg" alt="">
-                            <!-- <h4 class="product-title">Product 4</h4> -->
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="product-box">
-                            <img src="assets/images/random-products/5.jpg" alt="">
-                            <!-- <h4 class="product-title">Product 5</h4> -->
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="product-box">
-                            <img src="assets/images/random-products/6.jpg" alt="">
-                            <!-- <h4 class="product-title">Product 6</h4> -->
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="product-box">
-                            <img src="assets/images/random-products/7.jpg" alt="">
-                            <!-- <h4 class="product-title">Product 7</h4> -->
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="product-box">
-                            <img src="assets/images/random-products/8.jpg" alt="">
-                            <!-- <h4 class="product-title">Product 8</h4> -->
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="product-box">
-                            <img src="assets/images/random-products/9.jpg" alt="">
-                            <!-- <h4 class="product-title">Product 9</h4> -->
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="product-box">
-                            <img src="assets/images/random-products/10.jpg" alt="">
-                            <!-- <h4 class="product-title">Product 10</h4> -->
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="product-box">
-                            <img src="assets/images/random-products/11.jpg" alt="">
-                            <!-- <h4 class="product-title">Product 1</h4> -->
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="product-box">
-                            <img src="assets/images/random-products/12.jpg" alt="">
-                            <!-- <h4 class="product-title">Product 2</h4> -->
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="product-box">
-                            <img src="assets/images/random-products/13.jpg" alt="">
-                            <!-- <h4 class="product-title">Product 3</h4> -->
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="product-box">
-                            <img src="assets/images/random-products/14.jpg" alt="">
-                            <!-- <h4 class="product-title">Product 4</h4> -->
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="product-box">
-                            <img src="assets/images/random-products/15.jpg" alt="">
-                            <!-- <h4 class="product-title">Product 5</h4> -->
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="product-box">
-                            <img src="assets/images/random-products/16.jpg" alt="">
-                            <!-- <h4 class="product-title">Product 6</h4> -->
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="product-box">
-                            <img src="assets/images/random-products/17.jpg" alt="">
-                            <!-- <h4 class="product-title">Product 7</h4> -->
-                        </div>
-                    </div>
-
-
+                    <?php } ?>
+					
+				
                 </div>
 
                 <!-- Arrows -->
@@ -295,6 +187,9 @@ $new_arrival_products =get_new_arrival_products($conn,$limit=3);
         </div>
     </div>
 </section>
+<?php } ?>
+
+
 <!-- feature-section -->
 <!-- <section class="feature-section centred">
     <div class="auto-container">
