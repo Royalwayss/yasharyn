@@ -99,19 +99,19 @@
                                         <div class="icon-outer"><i class="fal fa-plus"></i></div>
                                         <h4>Head Office</h4>
                                     </div>
-                                    <div class="acc-content current">
+                                    <div class="acc-content current"> 
                                         <div class="text">
                                             <p>Sankeshwar Parshavnath Marg, Near Neva Garments, G.T. Road West, Village Hussainpura, Dist - Ludhiana, Punjab - 141008, India.</p>
                                             <ul class="list clearfix">
-                                                <li>Ms. Neha : +91-89683-55229</li>
-                                                <li>Ms. Geeta : +91-79869-99632</li>
+                                                <li>Mr. Yashik : +91-99212-00000</li>
+                                                <!-- <li>Ms. Geeta : +91-79869-99632</li>
                                                 <li>Ms. Simran : +91-96460-00866</li>
-                                                <li>Ms. Rakshanda : +91-93177-55226</li>
+                                                <li>Ms. Rakshanda : +91-93177-55226</li> -->
                                             </ul>
                                         </div>
                                     </div>
                                 </li>
-                                <li class="accordion block">
+                                <!-- <li class="accordion block">
                                     <div class="acc-btn">
                                         <div class="icon-outer"><i class="fal fa-plus"></i></div>
                                         <h4>Sale Office</h4>
@@ -125,7 +125,7 @@
                                             </ul>
                                         </div>
                                     </div>
-                                </li>
+                                </li> -->
                                 <li class="accordion block">
                                      <div class="acc-btn">
                                         <div class="icon-outer"><i class="fal fa-plus"></i></div>
@@ -150,7 +150,7 @@
                                         <div class="text">
                                             <p>Nalagrah-Baddi Road, Near Manpura Bus Stop, Opp. Electricity Office, Baddi, Distt Solan, Himachal Pradesh, 173025, India.</p>
                                             <ul class="list clearfix">
-                                                <li>Mr. Ujjagar : +91-92183-30003, +91-82190-81003</li>
+                                                <!-- <li>Mr. Ujjagar : +91-92183-30003, +91-82190-81003</li> -->
                                                 <li> baddibranch@yasharyn.com</li>
                                             </ul>
                                         </div>

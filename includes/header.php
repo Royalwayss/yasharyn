@@ -40,9 +40,9 @@ $categories = get_categories($conn,$status=1);
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
     <style>
-    .error {
-        color: red;
-    }
+        .error {
+            color: red;
+        }
     </style>
 </head>
 
@@ -58,8 +58,9 @@ $categories = get_categories($conn,$status=1);
                 <!-- <div class="preloader-close">Preloader Close</div> -->
                 <div id="handle-preloader" class="handle-preloader">
                     <div class="animation-preloader">
-                        <div class="spinner"></div>
-                        <div class="txt-loading">
+                        <!-- <div class="spinner"></div> -->
+                          <figure class="logo text-center"><a href="index.php"><img src="assets/images/logo-w.png" class="img-fluid " style="width: 10%;" alt=""></a></figure>
+                        <!-- <div class="txt-loading">
                             <span data-text-preloader="y" class="letters-loading">
                                 y
                             </span>
@@ -83,7 +84,7 @@ $categories = get_categories($conn,$status=1);
                             <span data-text-preloader="n" class="letters-loading">
                                 n
                             </span>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -94,13 +95,24 @@ $categories = get_categories($conn,$status=1);
                 <div class="col-6 col-lg-4 justify-content-center d-flex align-items-center social-media-display">
                     <div class="">
                         <ul class="header-social-media d-flex align-items-center">
-                            <li><a href="https://www.facebook.com/yasharynofficial"><i
-                                            class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="https://www.instagram.com/yasharynofficial/"><i
-                                            class="fab fa-instagram"></i></a></li>
-                                <li><a href="https://www.linkedin.com/company/yasharynofficial/"><i
-                                            class="fab fa-linkedin-in"></i></a></li>
-                       </ul>
+                            <li><a class="fb-color" style="background-color:#3b5998;"
+                                    href="https://www.facebook.com/yasharynofficial"><i
+                                        class="fab fa-facebook-f "></i></a></li>
+                            <li><a class="insta-color" style="background: linear-gradient(
+        45deg,
+        #405DE6,
+        #5851DB,
+        #833AB4,
+        #C13584,
+        #E1306C,
+        #FD1D1D,
+        #F56040,
+        #F77737,
+        #FCAF45);" href="https://www.instagram.com/yasharynofficial/"><i class="fab fa-instagram "></i></a></li>
+                            <li><a class="insta-color" style="background-color:#0a66c2;"
+                                    href="https://www.linkedin.com/company/yasharynofficial/"><i
+                                        class="fab fa-linkedin-in linkedin-color"></i></a></li>
+                        </ul>
                     </div>
                 </div>
                 <div class="col-6 col-lg-3 justify-content-center d-flex align-items-centers logo-header-display">
@@ -114,8 +126,9 @@ $categories = get_categories($conn,$status=1);
                         <div class="col-6 col-lg-10">
                             <div class="">
                                 <ul class="header-social-media d-flex align-items-center">
-                                   <li><a href="tel:+91-93170-88991"><i class="fal fa-phone"></i></a></li>
-                                        <li><a href="mailto:info@yasharyn.com"><i class="fal fa-envelope-open-text"></i></a></li>
+                                    <li><a href="tel:+91-93170-88991"><i class="fal fa-phone"></i></a></li>
+                                    <li><a href="mailto:info@yasharyn.com"><i class="fal fa-envelope-open-text"></i></a>
+                                    </li>
                             </div>
                         </div>
                     </div>
@@ -155,15 +168,19 @@ $categories = get_categories($conn,$status=1);
 
                                     <!-- <li><a href="why-us.php">Why Us</a></li>   -->
 
-                                    <li class="dropdown"><a href="#">Products</a>
+                                    <li class="dropdown"><a href="product.php">Products</a>
                                         <ul>
                                             <?php foreach($categories as $category) { ?>
                                             <li class="dropdown"><a
-                                                    href="products.php?category_id=<?php echo $category['id']; ?>"><?php echo $category['category_name']; ?></a>
+                                                    href="products.php?category_id=<?php echo $category['id']; ?>">
+                                                    <?php echo $category['category_name']; ?>
+                                                </a>
                                                 <ul>
                                                     <?php foreach($category['sub_categories'] as $sub_category) { ?>
                                                     <li><a
-                                                            href="products.php?category_id=<?php echo $sub_category['id']; ?>"><?php echo $sub_category['category_name']; ?></a>
+                                                            href="products.php?category_id=<?php echo $sub_category['id']; ?>">
+                                                            <?php echo $sub_category['category_name']; ?>
+                                                        </a>
                                                     </li>
                                                     <?php } ?>
                                                 </ul>
@@ -177,6 +194,7 @@ $categories = get_categories($conn,$status=1);
                                     <li><a href="clients.php">Clients</a></li>
                                     <li><a href="contacts.php">Contact</a></li>
                                     <li><a href="events.php">Events</a></li>
+                                    <li><a href="">Blogs</a></li>
                                     <li><a href="career.php">Career</a></li>
                                     <!-- <li> 
                                             <a href="javascript:;" class="yasharyn-download-btn">View Catalogue</a>
