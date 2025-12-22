@@ -1,5 +1,6 @@
 <?php
-    include('admin/include/db_config.php');
+ 
+    include(__DIR__.'/'.'db_config.php');
 	define('BASE_URL',$base_url);
 	define('SITE_LOGO',$base_url.'assets/images/logo.png');
 	define('WEBSITENAME','Yasharyn');

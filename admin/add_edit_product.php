@@ -100,7 +100,7 @@
                                     <input type="text" class="form-control" id="ofc" name="ofc" placeholder="Enter OFC" <?php if(!empty($id)) { ?> value="<?php echo $product['ofc']; ?>" <?php } ?> >
                                  </div> 
 
-                                  <div class="form-group col-md-6" style="display:none">
+                                  <div class="form-group col-md-6" >
                                     <label for="neck">Neck</label>
                                     <input type="text" class="form-control" id="neck" name="neck" placeholder="Enter Neck " <?php if(!empty($id)) { ?> value="<?php echo $product['neck']; ?>" <?php } ?> >
                                  </div> 
@@ -114,7 +114,7 @@
                                     <label for="moc">MOC</label>
                                     <input type="text" class="form-control" id="moc" name="moc" placeholder="Enter MOC" <?php if(!empty($id)) { ?> value="<?php echo $product['moc']; ?>" <?php } ?> >
                                  </div> 
-								 <div class="form-group col-md-6" >
+								 <div class="form-group col-md-6"  style="display:none">
                                     <label for="availability">Availability</label>
                                     <input type="text" class="form-control" id="availability" name="availability" placeholder="Enter Availability" <?php if(!empty($id)) { ?> value="<?php echo $product['availability']; ?>" <?php } ?> >
                                  </div> 

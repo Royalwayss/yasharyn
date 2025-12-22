@@ -54,18 +54,28 @@ if(empty($get_product['status'])){
                                 <li class="product-details-sub-details-heading">Size :</li>
                                 <li class="product-details-sub-details-data"><?php echo $product['size']; ?></li>
                             </ul>
-
+                            <?php /* if(!empty($product['availability'])) { ?>
                             <ul class="list product-details-sub-details-ul">
                                 <li class="product-details-sub-details-heading">Availability :</li>
                                 <li class="product-details-sub-details-data"><?php echo $product['availability']; ?>
                                 </li>
                             </ul>
-
+							<?php } */?>
+							
+							<?php  if(!empty($product['neck'])) { ?>
+                            <ul class="list product-details-sub-details-ul">
+                                <li class="product-details-sub-details-heading">Neck :</li>
+                                <li class="product-details-sub-details-data"><?php echo $product['neck']; ?>
+                                </li>
+                            </ul>
+							<?php } ?>
+							
+							 <?php  if(!empty($product['weight'])) { ?>
                             <ul class="category list product-details-sub-details-ul">
                                 <li class="product-details-sub-details-heading">Weight :</li>
                                 <li class="product-details-sub-details-data"><?php echo $product['weight']; ?></li>
                             </ul>
-
+                            <?php } ?>
                             <?php if(!empty($product['moc'])) { ?>
                             <ul class="category list product-details-sub-details-ul">
                                 <li class="product-details-sub-details-heading">MOC :</li>
