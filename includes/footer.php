@@ -3,9 +3,9 @@
            <div class="pattern-layer">
                <div class="pattern-1" style="background-image: url(assets/images/shape/shape-12.png);"></div>
                <div class="pattern-2" style="background-image: url(assets/images/shape/shape-13.png);"></div>
-               <div class="pattern-3" style="background-image: url(assets/images/shape/shape-14.png);"></div>
+               <!-- <div class="pattern-3" style="background-image: url(assets/images/shape/shape-14.png);"></div> -->
            </div>
-           <div class="auto-container">
+           <div class="container-fluid px-5">
                <!-- <div class="footer-top clearfix">
                     <div class="line-shape" style="background-image: url(assets/images/shape/shape-11.png);"></div>
                     <div class="text pull-left">
@@ -17,20 +17,18 @@
                 </div> -->
 
                <div class="widget-section">
-                   <div class="row ">
+                   <!-- <div class="row ">
                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column m-auto">
                            <div class="footer-widget logo-widget">
                                <figure class="footer-logo"><a href="index.html"><img src="assets/images/logo-footer.png"
                                            alt=""></a></figure>
-                               <!-- <div class="text">
-                                    <p>Our team of seasoned professionals is committed to realizing our vision. Their dedication towards growth of the company is immeasurable.</p>
-                                </div> -->
+                             
                            </div>
                        </div>
-                   </div>
-                   <hr style="border-top: 1px solid #cecece41;">
+                   </div> -->
+                   <!-- <hr style="border-top: 1px solid #cecece41;"> -->
                    <div class="row clearfix">
-                       <div class="col-lg-3 col-md-6 col-sm-12 footer-column text-center">
+                       <div class="col-lg-2 col-md-6 col-sm-12 footer-column text-center">
                            <div class="footer-widget logo-widget">
                                <figure class="footer-logo"><a href="index.html"><img src="assets/images/logo-footer-w.png"
                                            alt=""></a></figure>
@@ -39,7 +37,7 @@
                                </div>
                            </div>
                        </div>
-                       <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                       <div class="col-lg-2 col-md-6 col-sm-12 footer-column">
                            <div class="footer-widget links-widget ml-70">
                                <div class="widget-title">
                                    <h4>Quick Links</h4>
@@ -57,7 +55,7 @@
                                </div>
                            </div>
                        </div>
-                       <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                       <div class="col-lg-2 col-md-6 col-sm-12 footer-column">
                            <div class="footer-widget links-widget ml-50">
                                <div class="widget-title">
                                    <h4>Our Products</h4>
@@ -100,6 +98,17 @@
                                </div>
                            </div>
                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-12 footer-column text-center">
+                           <div class="footer-widget logo-widget">
+                               <figure class="footer-logo-new"><a href="http://yamedlifesciences.com/"><img src="assets/images/logo-footer.png"
+                                           alt=""></a></figure>
+                                             <div class="text mt-3">
+                                   <p>GROUP CONCERN</p>
+                               </div>
+                             
+                           </div>
+                       </div>
+                   </div>
 
 
                    </div>

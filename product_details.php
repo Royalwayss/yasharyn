@@ -49,8 +49,11 @@ if(empty($get_product['status'])){
                                     <p><?php echo $product['product_code']; ?></p>
                                 </div> -->
                         <div class="yasharyn-new-product-details mb-2">
-                             <h3><?php echo $product['product_name']; ?></h3> 
-                          
+                             <!-- <h3><?php echo $product['product_name']; ?></h3>  -->
+                          <ul class="list product-details-sub-details-ul">
+                                <li class="product-details-sub-details-heading">Product Name :</li>
+                                <li class="product-details-sub-details-data"><?php echo $product['product_name']; ?></li>
+                            </ul>
 							
 							<ul class="list product-details-sub-details-ul">
                                 <li class="product-details-sub-details-heading">Size :</li>
@@ -93,6 +96,7 @@ if(empty($get_product['status'])){
                                 <li class="product-details-sub-details-data"><?php echo $product['ofc']; ?></li>
                             </ul>
                             <?php } ?>
+                            
 							
 							<?php if(!empty(trim($product['description']))) { ?>
                             <ul class="category list product-details-sub-details-ul" style="border-bottom: none;">
