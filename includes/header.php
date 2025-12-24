@@ -58,7 +58,7 @@
             <div id="handle-preloader" class="handle-preloader">
                <div class="animation-preloader">
                   <!-- <div class="spinner"></div> -->
-                  <figure class="logo text-center"><a href="index.php"><img src="assets/images/logo-w.png" class="img-fluid " style="width: 10%;" alt=""></a></figure>
+                  <figure class="logo text-center"><a href="index.php"><img src="assets/images/logo-w.png" class="img-fluid " style="width: 20%;" alt=""></a></figure>
                   <!-- <div class="txt-loading">
                      <span data-text-preloader="y" class="letters-loading">
                          y
@@ -115,7 +115,7 @@
                </div>
             </div>
             <div class="col-6 col-lg-3 justify-content-center d-flex align-items-centers logo-header-display">
-               <figure class="logo"><a href="index.php"><img src="assets/images/logo.png" alt=""></a></figure>
+               <figure class="logo"><a href="index.php"><img src="assets/images/new-logo.png" alt=""></a></figure>
             </div>
             <div class="col-6 col-lg-5 justify-content-center d-flex align-items-center social-media-display">
                <div class="row">
@@ -228,7 +228,7 @@
          <div class="sticky-header">
             <div class="outer-box">
                <div class="logo-box">
-                  <figure class="logo"><a href="index.php"><img src="assets/images/logo.png" alt=""></a></figure>
+                  <figure class="logo"><a href="index.php"><img src="assets/images/new-logo.png" alt=""></a></figure>
                </div>
                <div class="menu-area clearfix">
                   <nav class="main-menu clearfix">

@@ -46,7 +46,7 @@
                 </div>
             </div>
         </div>
-          <div class="col-12 col-md-6 col-lg-4 m-auto pb-5">
+          <div class="col-12 col-md-6 col-lg-4 pb-5">
             <div class="products-all">
                 <img src="assets/images/product-4.png">
                 <div class="products-inner-heading">
@@ -54,7 +54,7 @@
                 </div>
             </div>
         </div>
-          <div class="col-12 col-md-6 col-lg-4 m-auto pb-5">
+          <div class="col-12 col-md-6 col-lg-4  pb-5">
             <div class="products-all">
                 <img src="assets/images/product-5.png">
                 <div class="products-inner-heading">
