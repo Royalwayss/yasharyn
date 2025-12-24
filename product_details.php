@@ -94,14 +94,14 @@ if(empty($get_product['status'])){
                             </ul>
                             <?php } ?>
 							
-							<?php if(!empty($product['description'])) { ?>
+							<?php if(!empty(trim($product['description']))) { ?>
                             <ul class="category list product-details-sub-details-ul">
                                 <li class="product-details-sub-details-heading">Description :</li>
                                 
                             </ul>
 							
 							<ul class="category list product-details-sub-details-ul">
-							<li class="product-details-sub-details-data"><?php echo $product['description']; ?></li>
+							<li class="product-details-sub-details-data" style="text-align: left"><?php echo $product['description']; ?></li>
 							 </ul>
                             <?php } ?>
 							

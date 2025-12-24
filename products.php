@@ -185,8 +185,10 @@ if(!empty($category['parent_id'])){
                                     <div class="shop-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500m">
                                         <div class="inner-box">
                                             <?php if($product['image']) { ?>
+											<a href="product_details.php?id=<?php echo $product['id']; ?>">
 											<figure class="image-box"><img src="assets/images/product/list/<?php echo $product['image']; ?>" alt=""></figure>
-                                            <?php } ?>
+                                            </a>
+											<?php } ?>
 											<div class="lower-content">
                                             <span><?php echo $product['size'] ; ?></span>
 								               <h4><a href="product_details.php?id=<?php echo $product['id']; ?>"><?php echo $product['product_name']; ?></a></h4>
