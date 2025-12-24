@@ -90,7 +90,9 @@ if(!empty($category['parent_id'])){
 												<option value="<?php echo $cat['id']; ?>" <?php if($category['id'] == $cat['id']){ echo 'selected'; } ?> ><?php echo $cat['category_name']; ?></option>
 												 <?php foreach($cat['sub_categories'] as $sub_cat) { ?>
 												 <option value="<?php echo $sub_cat['id']; ?>" <?php if($category['id'] == $sub_cat['id']){ echo 'selected'; } ?>>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -<?php echo $sub_cat['category_name']; ?></option>
-												<?php }} ?>
+												 <?php foreach($sub_cat['sub_categories2'] as $sub_cat2) { ?>
+												 <option value="<?php echo $sub_cat2['id']; ?>" <?php if($category['id'] == $sub_cat2['id']){ echo 'selected'; } ?>>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<?php echo $sub_cat2['category_name']; ?></option>
+												<?php }}} ?>
                                         </select>
 										
                                     </div>
