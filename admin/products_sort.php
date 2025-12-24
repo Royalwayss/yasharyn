@@ -99,7 +99,8 @@
                            <!-- /.card-body -->
                         </form>
                         <div>
-                           <div class="card-body">
+                         <?php if(!empty($_GET['category_id'])) { ?>   
+						   <div class="card-body">
                               
                                  <div class="row">
                                      <div class="form-group col-md-6" style="text-align:center;">
@@ -110,7 +111,7 @@
                                        </div>
                                     </div>
                                  </div>
-                              
+						 <?php }  ?>  
                            </div>
                            <?php if(!empty($_GET['category_id'])) { ?>
                            <ul id="trackList">

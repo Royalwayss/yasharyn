@@ -44,13 +44,15 @@ if(empty($get_product['status'])){
                 </div>
                 <div class="col-lg-6 col-md-12 col-sm-12 content-column">
                     <div class="product-details">
-                        <h3><?php echo $product['product_name']; ?></h3>
+                      
                         <!-- <div class="text">
                                     <p><?php echo $product['product_code']; ?></p>
                                 </div> -->
                         <div class="yasharyn-new-product-details mb-2">
-
-                            <ul class="list product-details-sub-details-ul">
+                             <h3><?php echo $product['product_name']; ?></h3> 
+                          
+							
+							<ul class="list product-details-sub-details-ul">
                                 <li class="product-details-sub-details-heading">Size :</li>
                                 <li class="product-details-sub-details-data"><?php echo $product['size']; ?></li>
                             </ul>
@@ -92,6 +94,17 @@ if(empty($get_product['status'])){
                             </ul>
                             <?php } ?>
 							
+							<?php if(!empty($product['description'])) { ?>
+                            <ul class="category list product-details-sub-details-ul">
+                                <li class="product-details-sub-details-heading">Description :</li>
+                                
+                            </ul>
+							
+							<ul class="category list product-details-sub-details-ul">
+							<li class="product-details-sub-details-data"><?php echo $product['description']; ?></li>
+							 </ul>
+                            <?php } ?>
+							
 
                         </div>
 
@@ -129,18 +142,18 @@ if(empty($get_product['status'])){
                             <div class="product-discription">
                                
                                 <div class="tabs-box">
-                                    <div class="tab-btn-box description-product-details-new">
+                                   <?php /* <div class="tab-btn-box description-product-details-new">
                                         <ul class="tab-btns tab-buttons clearfix">
                                             <li class="tab-btn active-btn " data-tab="#tab-1">Description</li>
-                                            <?php /*<li class="tab-btn" data-tab="#tab-2">Reviews (2)</li> */ ?>
+                                            <!-- <li class="tab-btn" data-tab="#tab-2">Reviews (2)</li> -->
                                         </ul>
-                                    </div>
+                                    </div> */ ?>
                                     <div class="tabs-content">
-                                        <div class="tab active-tab" id="tab-1">
+                                   <?php /*     <div class="tab active-tab" id="tab-1">
                                             <div class="content-box">
                                                 <?php echo $product['description']; ?>
                                             </div>
-                                        </div>
+                                        </div> */ ?>
                                          <ul>
                                 <li class="btn-box mt-4 text-center">
                                     <a href="javascript:;" class="theme-btn btn-one" data-toggle="modal"
