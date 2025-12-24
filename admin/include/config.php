@@ -126,7 +126,39 @@ function get_categories($conn,$status='') {
              if ($sub_cat_result->num_rows > 0) { 
 
 				while ($sub_category_row = $sub_cat_result->fetch_assoc()) { 
-                    $sub_categories[] = $sub_category_row;
+                    
+					
+					/* sub cat2 */
+					      $sub2_categories = [];
+
+						 $sub_cat2_sql = 'select * FROM `categories` where `parent_id` = '.$sub_category_row['id'];
+						 
+						 if($status == '1'){
+						  $sub_cat2_sql .= ' and status  =1';
+						 }
+						 
+						 $sub_cat2_sql .= ' order by sort asc'; 
+				
+						 $sub_cat2_result = $conn->query($sub_cat2_sql); 
+
+						 if ($sub_cat2_result->num_rows > 0) { 
+
+							while ($sub_cat2_row = $sub_cat2_result->fetch_assoc()) { 
+								$sub2_categories[] = $sub_cat2_row;
+							}
+
+						 }
+					/* sub cat2 */
+					
+					
+					
+					$sub_category_row['sub_categories2'] = $sub2_categories;
+					
+					
+					
+					
+					
+					$sub_categories[] = $sub_category_row;
 				}
 
 			 }
@@ -141,11 +173,23 @@ function get_categories($conn,$status='') {
     return $categories;	
 }	
 	
-function get_products($conn,$category_id,$filter_data) {
+function get_products($conn,$category_id,$filter_data) { 
 	
-	$products = [];
 	
-	$sql = 'select * from `products` where `category_id` = '.$category_id.' and status = "1"';
+	if (is_array($category_id)) {
+        $cats_id = $category_id;
+	} elseif (is_string($category_id)) {
+		$cats_id[] = $category_id;
+	}else{
+		$cats_id = [];
+	}
+	
+	$cats_id_implode = implode(',',$cats_id);
+	
+	$products = []; 
+	
+	$sql = 'select products.*,categories.category_name from `products` INNER JOIN categories
+ON categories.id = products.category_id where `category_id` IN  ('.$cats_id_implode.') and products.status = "1"';
     
 	
 	if(!empty($filter_data)){
@@ -171,7 +215,7 @@ function get_products($conn,$category_id,$filter_data) {
 		
 	}
 
-	$sql .=' order by id desc';  
+	$sql .=' order by  categories.sort asc,products.sort asc';  
 
 	$result = $conn->query($sql); 
     
@@ -258,9 +302,24 @@ function home_products($conn,$limit) {
 
 function product_size_filter($conn,$category_id) {
 	
+	
+	
+	if (is_array($category_id)) {
+        $cats_id = $category_id;
+	} elseif (is_string($category_id)) {
+		$cats_id[] = $category_id;
+	}else{
+		$cats_id = [];
+	}
+	
+	$cats_id_implode = implode(',',$cats_id);
+	
+	
+	
+	
 	$products = [];
 	
-	$sql = 'select size from `products` where `category_id` = '.$category_id.' and status = "1"  group by size ORDER BY CAST(SUBSTRING(size, 1, LENGTH(size) - 3) AS UNSIGNED) asc';
+	$sql = 'select size from `products` where `category_id` IN  ('.$cats_id_implode.') and status = "1"  group by size ORDER BY CAST(SUBSTRING(size, 1, LENGTH(size) - 3) AS UNSIGNED) asc';
 
 	$result = $conn->query($sql); 
     
@@ -279,11 +338,25 @@ function product_size_filter($conn,$category_id) {
 
 function product_weight_filter($conn,$category_id) {
 	
+	
+	
+	
+	if (is_array($category_id)) {
+        $cats_id = $category_id;
+	} elseif (is_string($category_id)) {
+		$cats_id[] = $category_id;
+	}else{
+		$cats_id = [];
+	}
+	
+	$cats_id_implode = implode(',',$cats_id);
+	
+	
 	$products = [];
 	
 	
 	$sql ="SELECT *
-FROM products where weight != '' and `category_id` = ".$category_id." and status = '1'
+FROM products where weight != '' and `category_id` IN (".$cats_id_implode.") and status = '1'
 ORDER BY CAST(SUBSTRING(weight, 1, LOCATE(' ±', weight) - 1) AS DECIMAL(10,2)) ASC;";
 	$result = $conn->query($sql); 
     
@@ -388,6 +461,11 @@ function resizeImage($source_path, $destination_path, $new_width, $new_height) {
 	
 	
 function get_category($conn,$id){
+	
+	
+	
+	
+	
 	$sql = 'select * FROM `categories` where `id` = '.$id ;
 	$row = $conn->query($sql);
 	if ($row->num_rows > 0) { 
@@ -407,7 +485,7 @@ function get_category($conn,$id){
 			
 	         $sub_categories = [];
 
-             $sub_cat_sql = 'select * FROM `categories` where `parent_id` = '.$parent_id;
+             $sub_cat_sql = 'select * FROM `categories` where `parent_id` = '.$category['id'];
 			
 		     $sub_cat_sql .= ' and status  =1';
 	         
@@ -418,7 +496,38 @@ function get_category($conn,$id){
              if ($sub_cat_result->num_rows > 0) { 
 
 				while ($sub_category_row = $sub_cat_result->fetch_assoc()) { 
-                    $sub_categories[] = $sub_category_row;
+                    
+					
+					   $sub2_categories = [];
+
+						 $sub_cat2_sql = 'select * FROM `categories` where `parent_id` = '.$sub_category_row['id'];
+						 
+						 
+						  $sub_cat2_sql .= ' and status  =1';
+						
+						 
+						 $sub_cat2_sql .= ' order by sort asc'; 
+				
+						 $sub_cat2_result = $conn->query($sub_cat2_sql); 
+
+						 if ($sub_cat2_result->num_rows > 0) { 
+
+							while ($sub_cat2_row = $sub_cat2_result->fetch_assoc()) { 
+								$sub2_categories[] = $sub_cat2_row;
+							}
+
+						 }
+					
+					$sub_category_row['sub_categories2'] = $sub2_categories;
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 $sub_categories[] = $sub_category_row;
 				}
 
 			 }
@@ -427,11 +536,24 @@ function get_category($conn,$id){
 	        $category['sub_categories'] = $sub_categories;
 	   
 	   
+	   $cats_id = [];
+	   $cats_id[] = $category['id'];
+	  
+	   foreach($category['sub_categories'] as $cat){
+		   $cats_id[] = $cat['id'];
+		   foreach($cat['sub_categories2'] as $sub_cat){
+			   $cats_id[] = $sub_cat['id'];
+		   }
+	   }
+	   
+	   
+	   
 	   
 	   
 	   return array(
 		   'status'=>true,
 		   'category'=>$category,
+		   'cats_id'=>$cats_id,
 	   );
 	}else{
 		 return array(

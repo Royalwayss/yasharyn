@@ -8,7 +8,10 @@
 	 echo "<script>window.location.href='".BASE_URL."';</script>";
  }else{
 	
+	 $cats_id = $get_category['cats_id'];
+	 
 	
+	 
 	 $filter_data = [];
 	 $selected_size = [];
 	 if(isset($_GET['size']) && !empty($_GET['size'])){
@@ -29,12 +32,12 @@
 	
 	$category =$get_category['category']; 
 	$sub_categories =$category['sub_categories']; 
-	$products =get_products($conn,$category['id'],$filter_data);  
+	$products =get_products($conn,$cats_id,$filter_data);  
  }
  
  
- $sizes = product_size_filter($conn,$category['id']);
- $weights = product_weight_filter($conn,$category['id']);
+ $sizes = product_size_filter($conn,$cats_id);
+ $weights = product_weight_filter($conn,$cats_id);
  
  
  

@@ -45,6 +45,8 @@
 								<h3 class="card-title">Products</h3>
 								<?php if($adminAccess['edit'] == 1){ ?>
 								<div class="text-right">
+									<a style="max-width: 150px; margin-top: 0px ; display: inline-block;" href="products_sort.php" class="btn btn-block btn-primary">Product Sort</a>
+                                
 									<a style="max-width: 150px; margin-top: 0px ; display: inline-block;" href="add_edit_product.php" class="btn btn-block btn-primary">Add Product</a>
                                 </div>
 								<?php } ?>

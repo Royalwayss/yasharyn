@@ -81,8 +81,11 @@
 									   <option value="<?php echo $cat['id']; ?>" <?php if(!empty($id) && $cat['id'] == $product['category_id']) { echo 'selected'; } ?>><?php echo $cat['category_name']; ?></option>
                                             <?php foreach($cat['sub_categories'] as $sub_cat) { ?>
                                             <option value="<?php echo $sub_cat['id']; ?>" <?php if(!empty($id) && $sub_cat['id'] == $product['category_id']) { echo 'selected'; } ?>>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - <?php echo $sub_cat['category_name']; ?></option>
-                                            <?php } ?>
-                                       <?php } ?>
+                                            <?php foreach($sub_cat['sub_categories2'] as $sub_cat2) { ?>
+                                            <option value="<?php echo $sub_cat2['id']; ?>" <?php if(!empty($id) && $sub_cat2['id'] == $product['category_id']) { echo 'selected'; } ?>>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - <?php echo $sub_cat2['category_name']; ?></option>
+									      <?php }}} ?>
+											
+                                       
                                     </select>
                                  </div>
                                <!--  <div class="form-group col-md-6">
@@ -95,7 +98,7 @@
                                     <input type="text" class="form-control" id="weight" name="weight" placeholder="Enter Weight" <?php if(!empty($id)) { ?> value="<?php echo $product['weight']; ?>" <?php } ?>>
                                  </div> 
 								 
-                                  <div class="form-group col-md-6" style="display:none">
+                                  <div class="form-group col-md-6" >
                                     <label for="ofc">OFC</label>
                                     <input type="text" class="form-control" id="ofc" name="ofc" placeholder="Enter OFC" <?php if(!empty($id)) { ?> value="<?php echo $product['ofc']; ?>" <?php } ?> >
                                  </div> 

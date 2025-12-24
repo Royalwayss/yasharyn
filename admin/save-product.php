@@ -86,13 +86,14 @@ session_start();
 		
 		$message = 'Product has been added successfully';
 	}
-	
-	if(!empty($image)){
-		$source_image = '../assets/images/product/list/'.$image; 
-		$destination_image =  '../assets/images/product/detail/'.$image; 
-		$new_width = 550;
-		$new_height = 550;
-		resizeImage($source_image, $destination_image, $new_width, $new_height);
+	if(!empty($_FILES["image"]["name"])){
+		if(!empty($image)){
+			$source_image = '../assets/images/product/list/'.$image; 
+			$destination_image =  '../assets/images/product/detail/'.$image; 
+			$new_width = 550;
+			$new_height = 550;
+			resizeImage($source_image, $destination_image, $new_width, $new_height);
+		}
 	}
 	
 	
@@ -105,7 +106,7 @@ session_start();
 	$_SESSION['success_message'] = $message;
 	echo "<script>window.location.href='products.php';</script>";
  }else{
-	 //echo "<script>window.location.href='products.php';</script>";
+	 echo "<script>window.location.href='products.php';</script>";
  }
  
  

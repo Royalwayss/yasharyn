@@ -7,7 +7,7 @@
    <?php 
       include('include/head.php');
       $table ='categories';
-      $categories = get_categories($conn);
+      $categories = get_categories($conn); 
       if(isset($_GET['id']) && $_GET['id'] != ''){
         $id = $_GET['id'];
         $title = 'Edit Category';
@@ -75,11 +75,13 @@
                                  </div>
                                  <div class="form-group col-md-6">
                                     <label for="category_name"> Parent Category</label>
-                                    <select name="parent_id" class="form-control">
+                                    <select name="parent_id" id="parent_id" class="form-control">
                                        <option value="0" selected="">Main Category</option>
-                                       <?php foreach($categories as $cat) { ?>
-									   <option value="<?php echo $cat['id']; ?>" <?php if(!empty($id) && $cat['id'] == $category['parent_id']) { echo 'selected'; } ?>><?php echo $cat['category_name']; ?></option>
-									   <?php } ?>
+                                       <?php foreach($categories as $cat) {   ?>
+									    <option value="<?php echo $cat['id']; ?>" <?php if(!empty($id) && $cat['id'] == $category['parent_id']) { echo 'selected'; } ?>><?php echo $cat['category_name']; ?></option>
+										<?php foreach($cat['sub_categories'] as $sub_cat) {   ?> 
+									    <option value="<?php echo $sub_cat['id']; ?>" <?php if(!empty($id) && $sub_cat['id'] == $category['parent_id']) { echo 'selected'; } ?>>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ><?php echo $sub_cat['category_name']; ?></option>
+									   <?php }} ?>
                                     </select>
                                  </div>
 								 
@@ -150,8 +152,10 @@
       </div>
       <?php include('include/js-files.php'); ?>
        <script src="assets/js/jquery.validate.min.js"></script>
+	   <script src="assets/plugins/select2/js/select2.full.min.js"></script>
 	  <script>
 	  $(document).ready(function() {
+		      $("#parent_id").select2();
 			  $("#addEditForm").validate({
 				rules: {
 				  category_name: {

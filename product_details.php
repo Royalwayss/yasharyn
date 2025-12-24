@@ -76,12 +76,22 @@ if(empty($get_product['status'])){
                                 <li class="product-details-sub-details-data"><?php echo $product['weight']; ?></li>
                             </ul>
                             <?php } ?>
+							
                             <?php if(!empty($product['moc'])) { ?>
                             <ul class="category list product-details-sub-details-ul">
                                 <li class="product-details-sub-details-heading">MOC :</li>
                                 <li class="product-details-sub-details-data"><?php echo $product['moc']; ?></li>
                             </ul>
                             <?php } ?>
+							
+							
+							<?php if(!empty($product['ofc'])) { ?>
+                            <ul class="category list product-details-sub-details-ul">
+                                <li class="product-details-sub-details-heading">OFC :</li>
+                                <li class="product-details-sub-details-data"><?php echo $product['ofc']; ?></li>
+                            </ul>
+                            <?php } ?>
+							
 
                         </div>
 

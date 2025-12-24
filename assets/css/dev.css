@@ -1,0 +1,46 @@
+.subcategory2 li {
+	display: flex
+	margin-right: 10px; 
+}
+.parent-category:hover .subcategory2 {
+	display: block;
+}
+
+.subcategory2 {
+	display: none;
+}
+
+.main-menu .navigation > li > ul > li > ul  li > ul{
+	position: absolute;
+	right: 100%;
+	top: 0%;
+	margin-top: 15px;
+	width: 230px;
+	z-index: 100;
+	display: none;
+	border-radius: 0px;
+	background-color: #051F15;
+	transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+	-webkit-transition: all 500ms ease;
+	-ms-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+	left: 100%;
+}
+.subcategory2 li a {	 
+   position: relative;
+    display: block;
+    padding: 10px 30px;
+    line-height: 24px;
+    font-weight: 400;
+    font-size: 15px;
+    text-transform: capitalize;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    text-align: left;
+    transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -webkit-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;		
+}
