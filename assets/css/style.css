@@ -2713,8 +2713,11 @@ div#mCSB_1_container{
   width: 50%;
 }
 .footer-logo-new{
-  width: 30%;
+    width: 100%;
+    text-align: center;
+    margin: auto;
 }
+
 
 .main-footer .pattern-layer .pattern-3{
   position: absolute;

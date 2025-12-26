@@ -99,7 +99,7 @@
                            </div>
                        </div>
                         <div class="col-lg-2 col-md-6 col-sm-12 footer-column text-center">
-                           <div class="footer-widget logo-widget">
+                           <div class="footer-widget logo-widget text-center">
                                <figure class="footer-logo-new"><a href="http://yamedlifesciences.com/"><img src="assets/images/logo-footer.png"
                                            alt=""></a></figure>
                                              <div class="text mt-3">
