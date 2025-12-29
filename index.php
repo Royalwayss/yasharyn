@@ -547,13 +547,13 @@ $home_products =home_products($conn,$limit=10);
                             </div>
                         </div>
                     </div>
-                    <div class="owl-item">
+                    <!-- <div class="owl-item">
                         <div class="testimonial-block-one">
                             <div class="inner-box">
                                 <img src="assets/images/clients/new-2.png" alt="">
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="owl-item">
                         <div class="testimonial-block-one">
                             <div class="inner-box">
@@ -575,13 +575,13 @@ $home_products =home_products($conn,$limit=10);
                             </div>
                         </div>
                     </div>
-                    <div class="owl-item">
+                    <!-- <div class="owl-item">
                         <div class="testimonial-block-one">
                             <div class="inner-box">
                                 <img src="assets/images/clients/new-23.png" alt="">
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="owl-item">
                         <div class="testimonial-block-one">
                             <div class="inner-box">
@@ -596,6 +596,7 @@ $home_products =home_products($conn,$limit=10);
                             </div>
                         </div>
                     </div>
+                   
                     <div class="owl-item">
                         <div class="testimonial-block-one">
                             <div class="inner-box">
@@ -617,13 +618,13 @@ $home_products =home_products($conn,$limit=10);
                             </div>
                         </div>
                     </div>
-                    <div class="owl-item">
+                    <!-- <div class="owl-item">
                         <div class="testimonial-block-one">
                             <div class="inner-box">
                                 <img src="assets/images/clients/new-9.png" alt="">
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- <div class="owl-item">
                         <div class="testimonial-block-one">
                             <div class="inner-box">
@@ -663,6 +664,27 @@ $home_products =home_products($conn,$limit=10);
                         <div class="testimonial-block-one">
                             <div class="inner-box">
                                 <img src="assets/images/clients/new-27.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                       <div class="owl-item">
+                        <div class="testimonial-block-one">
+                            <div class="inner-box">
+                                <img src="assets/images/clients/new-28.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                       <div class="owl-item">
+                        <div class="testimonial-block-one">
+                            <div class="inner-box">
+                                <img src="assets/images/clients/new-29.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                       <div class="owl-item">
+                        <div class="testimonial-block-one">
+                            <div class="inner-box">
+                                <img src="assets/images/clients/new-30.png" alt="">
                             </div>
                         </div>
                     </div>

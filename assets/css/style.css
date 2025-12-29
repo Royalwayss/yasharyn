@@ -8413,7 +8413,7 @@ margin-top: 1rem;
 /* Each row */
 .yasharyn-new-product-details .product-details-sub-details-ul {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     padding: 10px 0;
     margin: 0;
@@ -8433,6 +8433,8 @@ margin-top: 1rem;
     font-size: 17px;
     color: #555;
     font-weight: 500;
+     min-width: 200px;
+    
 }
 
 /* Value */
@@ -8442,6 +8444,7 @@ margin-top: 1rem;
     color: #222;
     font-weight: 600;
     text-align: right;
+   
 }
 
 /* Subtle hover (optional) */

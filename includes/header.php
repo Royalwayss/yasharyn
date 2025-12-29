@@ -42,9 +42,7 @@
 		
 		
 		
-		
-		
-		
+
 		 
       </style>
    </head>
@@ -122,9 +120,10 @@
                   <div class="col-6 col-lg-10">
                      <div class="">
                         <ul class="header-social-media d-flex align-items-center">
-                        <li><a href="tel:+91-93170-88991"><i class="fal fa-phone"></i></a></li>
-                        <li><a href="mailto:info@yasharyn.com"><i class="fal fa-envelope-open-text"></i></a>
+                        <li><a style="background-color:#006a4e;" href="tel:+91-93170-88991"><i class="fal fa-phone"></i></a></li>
+                        <li><a style="background-color:#1d6cb3;" href="mailto:info@yasharyn.com" ><i class="fal fa-envelope-open-text"></i></a>
                         </li>
+                        </ul>
                      </div>
                   </div>
                </div>

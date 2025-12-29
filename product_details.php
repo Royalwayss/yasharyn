@@ -101,12 +101,13 @@ if(empty($get_product['status'])){
 							<?php if(!empty(trim($product['description']))) { ?>
                             <ul class="category list product-details-sub-details-ul" style="border-bottom: none;">
                                 <li class="product-details-sub-details-heading">Description :</li>
+                                <li class="product-details-sub-details-data " style="text-align: left;"><?php echo $product['description']; ?></li>
                                 
                             </ul>
 							
-							<ul class="category list product-details-sub-details-ul">
+							<!-- <ul class="category list product-details-sub-details-ul">
 							<li class="product-details-sub-details-data" style="text-align: left"><?php echo $product['description']; ?></li>
-							 </ul>
+							 </ul> -->
                             <?php } ?>
 							
 
