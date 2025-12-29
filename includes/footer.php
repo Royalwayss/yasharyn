@@ -28,16 +28,16 @@
                    </div> -->
                    <!-- <hr style="border-top: 1px solid #cecece41;"> -->
                    <div class="row clearfix">
-                       <div class="col-lg-2  col-md-6 col-sm-12 footer-column text-center">
+                       <div class="col-xl-2 col-lg-2  col-md-6 col-sm-12 footer-column text-center">
                            <div class="footer-widget logo-widget">
-                               <figure class="footer-logo"><a href="index.html"><img src="assets/images/logo-footer-w.png"
-                                           alt=""></a></figure>
+                               <figure class="footer-logo"><a href="index.html"><img
+                                           src="assets/images/logo-footer-w.png" alt=""></a></figure>
                                <div class="text">
                                    <p>BRINGING EXCELLENCE IN PACKAGING</p>
                                </div>
                            </div>
                        </div>
-                       <div class="col-lg-2 m-auto col-md-6 col-sm-12 footer-column">
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 footer-column">
                            <div class="footer-widget links-widget ml-70">
                                <div class="widget-title">
                                    <h4>Quick Links</h4>
@@ -54,8 +54,8 @@
                                    </ul>
                                </div>
                            </div>
-                       </div>
-                       <div class="col-lg-2 m-auto col-md-6 col-sm-12 footer-column">
+                        </div>
+                       <div class="col-xl-2 col-lg-2 col-md-6 col-sm-12 footer-column">
                            <div class="footer-widget links-widget ml-50">
                                <div class="widget-title">
                                    <h4>Our Products</h4>
@@ -71,7 +71,7 @@
                                </div>
                            </div>
                        </div>
-                       <div class="col-lg-2 m-auto col-md-6 col-sm-12 footer-column">
+                       <div class="col-xl-2 col-lg-2 col-md-6 col-sm-12 footer-column">
                            <div class="footer-widget contact-widget ml-50">
                                <div class="widget-title">
                                    <h4>Address</h4>
@@ -86,33 +86,35 @@
                                        </li>
                                        <li>
                                            <!-- <i class="fal fa-phone"></i> -->
-                                           <h6 class="footer-heading">Call Us : <a href="tel:+91-93170-88991">+91-93170-88991</a><h6>
-                                                   
+                                           <h6 class="footer-heading">Call Us : <a
+                                                   href="tel:+91-93170-88991">+91-93170-88991</a>
+                                               <h6>
+
                                        </li>
                                        <li>
                                            <!-- <i class="fal fa-envelope-open-text"></i> -->
-                                           <h6 class="footer-heading">Email Id : <a href="mailto:info@yasharyn.com">info@yasharyn.com</a><h6>
-                                                   
+                                           <h6 class="footer-heading">Email Id : <a
+                                                   href="mailto:info@yasharyn.com">info@yasharyn.com</a>
+                                               <h6>
+
                                        </li>
                                    </ul>
                                </div>
                            </div>
                        </div>
-                        <div class="col-lg-2  col-md-6 col-sm-12 footer-column text-center">
+                       <div class="col-xl-3 col-lg-3  col-md-6 col-sm-12 footer-column text-center">
                            <div class="footer-widget logo-widget text-center">
-                               <figure class="footer-logo-new"><a href="http://yamedlifesciences.com/"><img src="assets/images/logo-footer.png"
-                                           alt=""></a></figure>
-                                             <div class="text mt-3">
+                               <figure class="footer-logo-new"><a href="http://yamedlifesciences.com/"><img
+                                           src="assets/images/logo-footer.png" alt=""></a></figure>
+                               <div class="text mt-3">
                                    <p>GROUP CONCERN</p>
                                </div>
-                             
+
                            </div>
                        </div>
                    </div>
-
-
-                   </div>
                </div>
+           </div>
            </div>
            <div class="footer-bottom">
                <div class="auto-container">
