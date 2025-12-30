@@ -180,6 +180,24 @@
                 </div>
             </div>
 
+
+              <div class=" col-12 col-md-4 col-lg-3 mb-5">
+                <div class="client-inner-logo">
+                    <a href="#"><img src="assets/images/clients/new-31.png" alt=""></a>
+                </div>
+            </div>
+              <div class=" col-12 col-md-4 col-lg-3 mb-5">
+                <div class="client-inner-logo">
+                    <a href="#"><img src="assets/images/clients/new-32.png" alt=""></a>
+                </div>
+            </div>
+              <div class=" col-12 col-md-4 col-lg-3 mb-5">
+                <div class="client-inner-logo">
+                    <a href="#"><img src="assets/images/clients/new-33.png" alt=""></a>
+                </div>
+            </div>
+            
+
         </div>
 </section>
 
