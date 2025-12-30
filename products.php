@@ -9,7 +9,7 @@
  }else{
 	
 	 $cats_id = $get_category['cats_id'];
-	 
+	
 	
 	 
 	 $filter_data = [];
@@ -32,7 +32,13 @@
 	
 	$category =$get_category['category']; 
 	$sub_categories =$category['sub_categories']; 
-	$products =get_products($conn,$cats_id,$filter_data);  
+	$products =get_products($conn,$cats_id,$filter_data); 
+    $category_wise_products = [];
+    foreach($products  as $pro){
+		
+		$category_wise_products[$pro['category_id']][] = $pro;
+	}
+	
  }
  
  
@@ -113,7 +119,7 @@ if(!empty($category['parent_id'])){
 									<div class="col-lg-2 col-md-2 col-sm-12 form-group" >
                                        <label style="font-weight:600; font-size:16px; color:#000;">Weight</label>
 									   <select class="form-control" id="filter-weight" multiple >
-										        <option value="">Select Wight</option>
+										        <option value="">Select Weight</option>
 										        <?php foreach($weights as $weight) { ?>
 												<option value="<?php echo $weight; ?>" <?php if(in_array($weight,$selected_weights)){ echo 'selected'; } ?>  ><?php echo $weight; ?></option>
 												
@@ -180,7 +186,17 @@ if(!empty($category['parent_id'])){
                                 </div>
                             </div>
                             <div class="row clearfix">
-                                <?php foreach($products as $product){ ?>
+                                <?php foreach($category_wise_products as $cat_key=>$category_wise_product){  ?>
+								<div class="col-lg-12 col-md-12 col-sm-12 shop-block mb-4">
+								     <h3><?php 
+									 $cat_details = getSingleRow($conn,'select * from `categories` where `id` = '.$cat_key);
+									 echo $cat_details['category_name'];
+
+
+									 ?> </h3>
+								</div>
+                                 
+								<?php foreach($category_wise_product as $product){  ?>
 								<div class="col-lg-4 col-md-4 col-sm-12 shop-block mb-4">
                                     <div class="shop-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500m">
                                         <div class="inner-box">
@@ -198,7 +214,7 @@ if(!empty($category['parent_id'])){
                                         </div>
                                     </div>
                                 </div>
-								<?php } ?>
+								 <?php }} ?>
 
                             </div>
                         </div>

@@ -29,7 +29,7 @@
                      </div>
                      <!-- Phone -->
                      <div class="col-lg-6 col-md-12 col-sm-12 form-group">
-                        <input type="text" name="phone" required="" placeholder="Phone Number">
+                        <input type="text" name="mobile" required="" placeholder="Phone Number">
                      </div>
                      <!-- Subject -->
                      <div class="col-lg-6 col-md-12 col-sm-12 form-group">
@@ -68,10 +68,10 @@
                      <!-- Skills (Checkboxes) -->
                      <div class="col-lg-12 col-md-12 col-sm-12 form-group">
                         <label>Skills:</label><br>
-                        <label><input type="checkbox" name="skills[]" value="management"> Management</label> &nbsp;
-                        <label><input type="checkbox" name="skills[]" value="marketing"> Marketing</label> &nbsp;
-                        <label><input type="checkbox" name="skills[]" value="technical"> Technical</label> &nbsp;
-                        <label><input type="checkbox" name="skills[]" value="communication"> Communication</label>
+                        <label><input type="checkbox" name="skills[]" value="Management"> Management</label> &nbsp;
+                        <label><input type="checkbox" name="skills[]" value="Marketing"> Marketing</label> &nbsp;
+                        <label><input type="checkbox" name="skills[]" value="Technical"> Technical</label> &nbsp;
+                        <label><input type="checkbox" name="skills[]" value="Communication"> Communication</label>
                      </div>
                      <!-- Upload Resume -->
                      <div class="col-lg-12 col-md-12 col-sm-12 form-group">

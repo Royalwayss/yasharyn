@@ -157,6 +157,8 @@
        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
        <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
        <!-- main-js -->
+	   <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/additional-methods.js"></script>
+
        <script src="assets/js/script.js?v=<?php echo time(); ?>"></script>
 
        <script>

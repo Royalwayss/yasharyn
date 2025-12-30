@@ -1,20 +1,20 @@
 <?php
 include('admin/include/config.php');
-$data = $_POST;
+$data = $_POST; 
 $err = '';
 
-if(isset($data['username']) && $data['username'] != ''){
-	$name = $data['username'];
+if(isset($data['name']) && $data['name'] != ''){
+	$name = $data['name'];
 }else{
 	$name ='';
 	$err = 1;
 } 
 
 
-if(isset($data['phone']) && $data['phone'] != ''){
-	$phone = $data['phone'];
+if(isset($data['mobile']) && $data['mobile'] != ''){
+	$mobile = $data['mobile'];
 }else{
-	$phone ='';
+	$mobile ='';
 	$err = 1;
 } 
 
@@ -51,7 +51,7 @@ if(isset($data['message']) && $data['message'] != ''){
 
 if(!empty($_POST)){
 		
-		
+		/*
 		if($_SERVER['HTTP_HOST'] != 'localhost'){
 				$recaptcha_secret = RECAPTCHA_SECRET_KEY;
 				$recaptcha_response = $_POST['g-recaptcha-response'];
@@ -78,7 +78,7 @@ if(!empty($_POST)){
 				} else { 
 				  echo '<script>window.location.href="index.php"; </script>'; die;
 				} 
-		}
+		} */
    }
 
 
@@ -86,8 +86,26 @@ if(!empty($_POST)){
 if($err == ''){ 
            
 		  
-		 
-          
+		  $resume_file = '';
+           $resume_file_path = '';
+           if(!empty($_FILES["resume"]["name"])){
+				$target_dir = "assets/uploads/resume/";
+				$target_file = $target_dir . basename($_FILES["resume"]["name"]);
+				$uploadOk = 1;
+				$FileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+			   
+			   if($FileType == 'docx' || $FileType == 'doc' || $FileType == 'pdf'){
+				   $fileame = 'resume-'.time().''.rand(10,100).'-'.$FileType;
+				   $file_path = $target_dir.''.$fileame; 
+				   $tmp_name = $_FILES["resume"]["tmp_name"];
+				   if ( move_uploaded_file($tmp_name, $file_path)) {
+					  $resume_file_path =BASE_URL.$file_path;
+					   $resume_file =  $fileame;
+				   }
+				   
+			   }
+           }
+         
 			$mail_message = "<html>
 			   <head>
 			   </head>
@@ -99,7 +117,7 @@ if($err == ''){
 					 </tr>
 					
 					 <tr>
-						<td class='style2'>Hi admin!  New contact form has been recived from ".WEBSITENAME."</td>
+						<td class='style2'>Hi admin!  New career form has been recived from ".WEBSITENAME."</td>
 					 </tr>
 					 <tr>
 						<td>&nbsp;</td>
@@ -116,9 +134,9 @@ if($err == ''){
 								 <td width='65%' align='left' valign='top' class='style3'>".$name."</td>
 							  </tr>
 							  <tr>
-								 <td width='30%' align='left' valign='top' class='style2'>Phone</td>
+								 <td width='30%' align='left' valign='top' class='style2'>Mobile</td>
 								 <td width='5%' align='left' valign='top' class='style2'>:</td>
-								 <td width='65%' align='left' valign='top' class='style3'>".$phone."</td>
+								 <td width='65%' align='left' valign='top' class='style3'>".$mobile."</td>
 							  </tr>
 							   
 							  <tr>
@@ -132,14 +150,51 @@ if($err == ''){
 								 <td width='5%' align='left' valign='top' class='style2'>:</td>
 								 <td width='65%' align='left' valign='top' class='style3'>".$subject."</td>
 							  </tr>
+							  
+							  <tr>
+								 <td width='30%' align='left' valign='top' class='style2'>Join Type</td>
+								 <td width='5%' align='left' valign='top' class='style2'>:</td>
+								 <td width='65%' align='left' valign='top' class='style3'>".$data['join_type']."</td>
+							  </tr>
+							  
+							   <tr>
+								 <td width='30%' align='left' valign='top' class='style2'>Category</td>
+								 <td width='5%' align='left' valign='top' class='style2'>:</td>
+								 <td width='65%' align='left' valign='top' class='style3'>".$data['category']."</td>
+							  </tr>
+							  
+							  
+							   <tr>
+								 <td width='30%' align='left' valign='top' class='style2'>Experience</td>
+								 <td width='5%' align='left' valign='top' class='style2'>:</td>
+								 <td width='65%' align='left' valign='top' class='style3'>".$data['experience']."</td>
+							  </tr>
+							  
+							   <tr>
+								 <td width='30%' align='left' valign='top' class='style2'>Skills</td>
+								 <td width='5%' align='left' valign='top' class='style2'>:</td>
+								 <td width='65%' align='left' valign='top' class='style3'>".implode('<br>',$data['skills'])."</td>
+							  </tr>
 
 							  <tr>
 								 <td width='30%' align='left' valign='top' class='style2'>Message</td>
 								 <td width='5%' align='left' valign='top' class='style2'>:</td>
 								 <td width='65%' align='left' valign='top' class='style3'>".$message."</td>
-							  </tr>
+							  </tr>";
+							  
+							  if(!empty($resume_file)){
+								  
+								    $mail_message .= "<tr>
+									 <td width='30%' align='left' valign='top' class='style2'>Resume</td>
+									 <td width='5%' align='left' valign='top' class='style2'>:</td>
+									 <td width='65%' align='left' valign='top' class='style3'><a target='_block' href='".$resume_file_path."'>$resume_file</a></td>
+									</tr>";
+								  
+								  
+							  }
+							  
 							 
-						   </table>
+						    $mail_message .= "</table>
 						</td>
 					 </tr>
 					
@@ -151,15 +206,15 @@ if($err == ''){
 			</html>";
 			
 			
-			echo $mail_message; exit;
+			$skills = implode(',',$data['skills']);
 			
-		    $sql = "INSERT INTO contacts (form_type,name,email,mobile,subject,message) VALUES ('".$form_type."','".$name."','".$email."', '".$phone."','".$subject."','".$message."')";
-						
+		    $sql = "INSERT INTO careers (name,email,mobile,subject,join_type,skills,resume,category,experience,message) VALUES ('".$name."','".$email."','".$mobile."','".$subject."','".$data['join_type']."','".$skills."','".$resume_file."','".$data['category']."', '".$data['experience']."','".$message."')";
+					
 			mysqli_query($conn,$sql); 
 			$recipient = ADMIN_MAIL;
 			
 
-			$subject =  'Hi admin!  New contact form has been recived from '.WEBSITENAME.' date -'.date('d-m-Y');
+			$subject =  'Hi admin!  New career form has been recived from '.WEBSITENAME.' date -'.date('d-m-Y');
 			$message = $mail_message;  
 			
 			$headers = "Content-Type: text/html; charset=UTF-8\r\n";

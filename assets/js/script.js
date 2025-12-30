@@ -150,6 +150,82 @@
 	}
 
 
+
+   //career Enquery Form Validation
+	if($('#career-form').length){
+		$('#career-form').validate({
+			rules: {
+				name: {
+					required: true
+				},
+				email: {
+					required: true,
+					email: true
+				},
+				mobile:{
+				  required: true,
+				  digits: true,
+				  minlength: 10,
+				  maxlength:12,
+				},
+				subject: {
+					required: true
+				},
+				join_type: {
+					required: true
+				},
+				'skills[]': {
+					required: true
+				},
+				resume: {
+					required: true,
+					extension: "doc|pdf"
+				},
+				message: {
+					required: true
+				}
+			},
+			
+			messages: {
+				name: {
+					required: "Please enter your name",
+				},
+				email: {
+					required: "Please enter the email address",
+					email: "Please enter a valid email address"
+				},
+				mobile:{
+					required: "Please enter your Phone No",
+					digits: "Please enter digits(0-9) only",
+					minlength: "Please enter 10 digits mobile number",
+					maxlength: "Please enter maximum 12 digits mobile number including country code",
+				},
+				subject: {
+					required: "Please enter your subject",
+
+				},
+				resume: {
+					required: "Upload your CV",
+				},
+				message: {
+					required: "Please enter your message",
+				},
+			}
+			
+			
+		});
+	}
+
+
+
+
+
+
+
+
+
+
+
     //product Enquery Form Validation
 	if($('#product-enquery').length){
 		$('#product-enquery').validate({
