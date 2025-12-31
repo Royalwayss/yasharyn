@@ -14,7 +14,8 @@ if(empty($get_product['status'])){
 <section class="page-title centred inner-pages" style="background-image: url(assets/images/background/product.jpg);">
     <div class="auto-container">
         <div class="content-box">
-            <h2><?php echo $product['product_name']; ?></h2>
+            <!-- <h2><?php echo $product['product_name']; ?></h2> -->
+            <h2>Product Details</h2>
         </div>
     </div>
 </section>
@@ -32,7 +33,7 @@ if(empty($get_product['status'])){
             <div class="row clearfix">
                 <div class="col-lg-6 col-md-12 col-sm-12 image-column">
                     <?php if(!empty($product['image'])) { ?>
-                    <div class="image-box">
+                    <div class="image-box text-center">
                         <figure class="image"><img src="assets/images/product/detail/<?php echo $product['image']; ?>"
                                 alt=""></figure>
                         <div class="preview-link"><a

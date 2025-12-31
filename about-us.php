@@ -17,15 +17,15 @@
 
 <section class="about-section">
     <div class="auto-container">
-        <div class="row align-items-center clearfix">
-            <div class="col-lg-6 col-md-12 col-sm-12 image-column">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-6 col-sm-12 image-column">
                 <figure class="image-box clearfix wow fadeInLeft animated animated" data-wow-delay="00ms"
                     data-wow-duration="1500ms"
                     style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInLeft;">
                     <img src="assets/images/resource/whyus.png" alt="">
                 </figure>
             </div>
-            <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+            <div class="col-lg-6 col-md-6 col-sm-12 content-column">
                 <div class="content_block_1">
                     <div class="content-box wow fadeInRight animated animated" data-wow-delay="00ms"
                         data-wow-duration="1500ms"
@@ -91,25 +91,6 @@
                             <li>One unit in Baddi, Himachal Pradesh</li>
 
                         </ul>
-
-                        <!-- <div class="text">
-                            <p>Yasharyn Packaging embarked on its journey into manufacturing and supplying of R.O.P.P.
-                                Caps and Pharma Packing Material in 2005. It’s the brainchild of MR. YASHPAL JAIN, the
-                                Founder and Director. He envisioned transforming Yasharyn into a globally renowned brand
-                                in packaging material and allied activities. We endeavour to introduce a gamut of
-                                superior quality, eco-friendly packaging products under the brand, Yasharyn.</p>
-                            <p>Passion for innovation, integrity, commitment to excellence, experienced team,
-                                world-class infrastructure, customer oriented approach and promise of on-time delivery
-                                of our packaging product portfolio forms the bedrock of our company. It’s reflected in
-                                our strong product portfolio, including P.P. Caps, Aluminum Seals, Pet Bottles, Hdpe
-                                Bottles, Food Jars & containers, measuring cup & other ancilliary in different sizes &
-                                shapes. So our product portfolio is popular in Pharmaceuticals, Cosmetic, Food and
-                                Chemical industries. Today, we operate out of 4 locations - 2 in Ludhiana (Punjab), 1 in
-                                Karnal (Haryana) and 1 in Baddi (Himachal Pradesh) to cater to our clientele. This
-                                enabled us to achieve a turnover of Rs. 45 Crores in the financial year 2021-22. Going
-                                forward, we seek your continued patronage to take Yasharyn Packaging to the next level.
-                            </p>
-                        </div> -->
                     </div>
                 </div>
             </div>
@@ -129,24 +110,6 @@
                             <li>Attractive, functional, and customised designs</li>
                         </ul>
 
-                        <!-- <div class="text">
-                            <p>Yasharyn Packaging embarked on its journey into manufacturing and supplying of R.O.P.P.
-                                Caps and Pharma Packing Material in 2005. It’s the brainchild of MR. YASHPAL JAIN, the
-                                Founder and Director. He envisioned transforming Yasharyn into a globally renowned brand
-                                in packaging material and allied activities. We endeavour to introduce a gamut of
-                                superior quality, eco-friendly packaging products under the brand, Yasharyn.</p>
-                            <p>Passion for innovation, integrity, commitment to excellence, experienced team,
-                                world-class infrastructure, customer oriented approach and promise of on-time delivery
-                                of our packaging product portfolio forms the bedrock of our company. It’s reflected in
-                                our strong product portfolio, including P.P. Caps, Aluminum Seals, Pet Bottles, Hdpe
-                                Bottles, Food Jars & containers, measuring cup & other ancilliary in different sizes &
-                                shapes. So our product portfolio is popular in Pharmaceuticals, Cosmetic, Food and
-                                Chemical industries. Today, we operate out of 4 locations - 2 in Ludhiana (Punjab), 1 in
-                                Karnal (Haryana) and 1 in Baddi (Himachal Pradesh) to cater to our clientele. This
-                                enabled us to achieve a turnover of Rs. 45 Crores in the financial year 2021-22. Going
-                                forward, we seek your continued patronage to take Yasharyn Packaging to the next level.
-                            </p>
-                        </div> -->
                     </div>
                 </div>
             </div>
@@ -161,16 +124,16 @@
             <h2>Quality Assured, <b>Certification Secured</b></h2>
         </div>
         <div class="row">
-            <div class="col-lg-3 col-6">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-6 text-center">
                 <img src="assets/images/resource/certi1.jpg">
             </div>
-            <div class="col-lg-3 col-6">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-6 text-center">
                 <img src="assets/images/resource/certi2.jpg">
             </div>
-            <div class="col-lg-3 col-6">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-6 text-center">
                 <img src="assets/images/resource/certi3.jpg">
             </div>
-            <div class="col-lg-3 col-6">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-6 text-center">
                 <img src="assets/images/resource/certi4.jpg">
             </div>
         </div>

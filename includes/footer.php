@@ -6,29 +6,9 @@
                <!-- <div class="pattern-3" style="background-image: url(assets/images/shape/shape-14.png);"></div> -->
            </div>
            <div class="container-fluid px-5">
-               <!-- <div class="footer-top clearfix">
-                    <div class="line-shape" style="background-image: url(assets/images/shape/shape-11.png);"></div>
-                    <div class="text pull-left">
-                        <h2>Please <span>Call Us</span> to Take an Extraordinary Service</h2>
-                    </div>
-                    <div class="support-box pull-right">
-                        <a href="tel:+91-93170-88991"><i class="fas fa-phone"></i>+91-93170-88991</a>
-                    </div>
-                </div> -->
-
                <div class="widget-section">
-                   <!-- <div class="row ">
-                       <div class="col-lg-3 col-md-6 col-sm-12 footer-column m-auto">
-                           <div class="footer-widget logo-widget">
-                               <figure class="footer-logo"><a href="index.html"><img src="assets/images/logo-footer.png"
-                                           alt=""></a></figure>
-                             
-                           </div>
-                       </div>
-                   </div> -->
-                   <!-- <hr style="border-top: 1px solid #cecece41;"> -->
                    <div class="row clearfix">
-                       <div class="col-xl-2 col-lg-2  col-md-6 col-sm-12 footer-column text-center">
+                       <div class="col-xl-3 col-lg-3  col-md-4 col-sm-5 col-12 footer-column text-center">
                            <div class="footer-widget logo-widget">
                                <figure class="footer-logo"><a href="index.html"><img
                                            src="assets/images/logo-footer-w.png" alt=""></a></figure>
@@ -37,8 +17,8 @@
                                </div>
                            </div>
                        </div>
-                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 footer-column">
-                           <div class="footer-widget links-widget ml-70">
+                        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-3 col-6 footer-column">
+                           <div class="footer-widget links-widget">
                                <div class="widget-title">
                                    <h4>Quick Links</h4>
                                </div>
@@ -55,7 +35,7 @@
                                </div>
                            </div>
                         </div>
-                       <div class="col-xl-2 col-lg-2 col-md-6 col-sm-12 footer-column">
+                       <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6 footer-column">
                            <div class="footer-widget links-widget ml-50">
                                <div class="widget-title">
                                    <h4>Our Products</h4>
@@ -71,7 +51,7 @@
                                </div>
                            </div>
                        </div>
-                       <div class="col-xl-2 col-lg-2 col-md-6 col-sm-12 footer-column">
+                       <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 footer-column">
                            <div class="footer-widget contact-widget ml-50">
                                <div class="widget-title">
                                    <h4>Address</h4>
@@ -102,7 +82,7 @@
                                </div>
                            </div>
                        </div>
-                       <div class="col-xl-3 col-lg-3  col-md-6 col-sm-12 footer-column text-center">
+                       <div class="col-xl-2 col-lg-2  col-md-6 col-sm-6 col-12 footer-column text-center">
                            <div class="footer-widget logo-widget text-center">
                                <figure class="footer-logo-new"><a href="http://yamedlifesciences.com/"><img
                                            src="assets/images/logo-footer.png" alt=""></a></figure>

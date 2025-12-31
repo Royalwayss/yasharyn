@@ -1,56 +1,4 @@
- 
-/* Css For Acuasafe */
 
-/************ TABLE OF CONTENTS ***************
-1. Fonts
-2. Reset
-3. Global
-4. Main Header/style-one/style-two
-5. Main Slider/style-one/style-two
-6. Intro Section
-7. Welcome Section
-9. Cta Section
-8. Research Fields
-10. Testimonial Section
-11. Researches Section
-12. Team Section
-14. Video
-15. Fact Counter
-16. News Section
-19. Clients Section
-20. Main Footer
-21. Footer Bottom
-22. Research Style Two
-23. Innovative Solution
-24. Discover Section
-25. Testimonial Section
-26. Chooseus Section
-27. News Style Two
-28. Page Title
-29. Research Page Section
-30. Research Details
-31. Professor Page Section
-32. Professor Details
-33. About Section
-34. Error Section
-35. Blog Page Section
-36. Blog Details
-37. Blog Sidebar
-38. Contact Section
-39. Google Map
-
-
-**********************************************/
-
-
-
-/*** 
-
-====================================================================
-  Reset
-====================================================================
-
- ***/
 * {
   margin:0px;
   padding:0px;
@@ -566,6 +514,10 @@ img {
 .main-header .header-lower{
   position: relative;
   width: 100%;
+  background-color: #006a4e;
+}
+.main-header > .row{
+  padding: 12px 0 20px;
 }
 
 .main-header .outer-box {
@@ -658,7 +610,7 @@ img {
 .main-header .search-box-btn{
   position: relative;
   font-size: 20px;
-  color: #222222;
+  color: #fff;
   cursor: pointer;
   display: inline-block;
   background: transparent;
@@ -667,9 +619,7 @@ img {
   transition: all 500ms ease;
 }
 
-.main-header .search-box-btn:hover{
 
-}
 
 .main-header .search-box-outer .dropdown-menu {
   top: 55px !important;
@@ -776,7 +726,12 @@ img {
 .main-menu .navigation > li:first-child{
   margin-left: 0px !important;
 }
-
+.main-header.fixed-header .outer-box{
+  justify-content: space-between;
+}
+.main-header.fixed-header .main-menu .navigation > li > a, .main-header.fixed-header .search-box-btn {
+color: #000;
+}
 .main-menu .navigation > li > a{
     position: relative;
     display: block;
@@ -784,10 +739,9 @@ img {
     font-size: 16px;
     line-height: 30px;
     padding: 25px 0px;
-    font-family: "Poppins", sans-serif;
     font-weight: 500;
     opacity: 1;
-    color: #052015;
+    color: #fff;
  /*   padding-right: 15px; */
     padding-right: 3px;
     z-index: 1;
@@ -800,7 +754,7 @@ img {
 
 .main-menu .navigation > li.current > a,
 .main-menu .navigation > li:hover > a{
-  
+  color: #fff
 }
 
 .main-menu .navigation > li.dropdown > a:before{
@@ -817,7 +771,7 @@ img {
   position:absolute;
   left: inherit;
   top:100%;
-  width:230px;
+  width:300px;
   margin-top: 15px;
   z-index:100;
   display:none;
@@ -905,7 +859,7 @@ img {
   right:100%;
   top:0%;
   margin-top: 15px;
-  width:230px;
+  width:280px;
   z-index:100;
   display:none;
   border-radius: 0px;
@@ -1029,7 +983,7 @@ img {
   width: 30px;
   display: block;
   margin-bottom: 5px;
-  background-color: #222;
+  background-color: #fff;
   -webkit-transition: all 300ms ease;
   -moz-transition: all 300ms ease;
   -ms-transition: all 300ms ease;
@@ -1094,9 +1048,12 @@ img {
 
 .mobile-menu .nav-logo{
   position:relative;
-  padding:50px 25px;
+  padding:30px 25px;
   text-align:left;  
-  padding-bottom: 100px;
+  /* padding-bottom: 100px; */
+}
+.nav-logo img{
+  width: 120px;
 }
 
 .mobile-menu-visible{
@@ -1349,6 +1306,7 @@ div#mCSB_1_container{
 
 .main-header .outer-box{
   position: relative;
+  justify-content: center;
 }
 
 .sticky-header .logo-box .logo{
@@ -1742,7 +1700,6 @@ div#mCSB_1_container{
 
 .about-section .image-box img{
   max-width: 100%;
-  float: right;
 }
 
 .content_block_1 .content-box{
@@ -2802,9 +2759,9 @@ div#mCSB_1_container{
 
 .main-footer .logo-widget .text p{
       color: #fff;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 500;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.2px;
 }
 
 .main-footer .logo-widget .schedule-box h6{
@@ -8031,6 +7988,7 @@ font-size: 22px;
     width: 100%;
     border-radius: 10px;
     object-fit: cover;
+    height: 310px;
 }
 
 .product-title {
@@ -8062,6 +8020,7 @@ font-size: 22px;
   background-color: #fff;
 
 } */
+
 .product-btn-prev{
   background-color: #00000026;
   width: 50px !important;
@@ -8301,9 +8260,7 @@ background: #0000007a;
 }
 
 /* csr  */
-.csr-accordion .title-text h2{
-  text-transform: uppercase;
-}
+
 .csr-accordion .card {
     border: 1px solid #e1e1e1;
 }
@@ -8453,20 +8410,7 @@ margin-top: 1rem;
     background-color: #fafafa;
 }
 
-/* Mobile friendly */
-@media (max-width: 575px) {
-    .yasharyn-new-product-details 
-    .product-details-sub-details-ul {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 4px;
-    }
 
-    .yasharyn-new-product-details 
-    .product-details-sub-details-data {
-        text-align: left;
-    }
-}
 /* category select new size */
 .new-select-height .select2-container .select2-selection--single {
     box-sizing: border-box;
@@ -8489,3 +8433,4 @@ margin-top: 1rem;
 
  
 }
+/* Mobile friendly */

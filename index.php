@@ -943,7 +943,7 @@ $home_products =home_products($conn,$limit=10);
             <h2>Turning Social Media Into <br /><b>Business Success</b></h2>
         </div>
         <div class="row clearfix">
-            <div class="col-lg-4 col-md-6 col-sm-12 team-block">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-12 team-block">
                 <div class="team-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500m">
                     <div class="inner-box">
                         <div class="image-box">
@@ -965,7 +965,7 @@ $home_products =home_products($conn,$limit=10);
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 team-block">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-12 team-block">
                 <div class="team-block-one wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500m">
                     <div class="inner-box">
                         <div class="image-box">
@@ -987,7 +987,7 @@ $home_products =home_products($conn,$limit=10);
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 team-block">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-12 team-block">
                 <div class="team-block-one wow fadeInUp animated" data-wow-delay="600ms" data-wow-duration="1500m">
                     <div class="inner-box">
                         <div class="image-box">

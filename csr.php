@@ -29,7 +29,7 @@
                 <div id="csrOne" class="collapse show" data-parent="#csrAccordion">
                     <div class="card-body">
                         <div class="row clearfix">
-                            <div class="col-lg-3 col-md-6 col-sm-12 team-block">
+                            <div class="col-lg-3 col-md-6 col-sm-6 col-6 team-block">
                                 <div class="team-block-one wow fadeInUp animated" data-wow-delay="00ms"
                                     data-wow-duration="1500m">
                                     <div class="inner-box">
@@ -39,7 +39,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12 team-block">
+                            <div class="col-lg-3 col-md-6 col-sm-6 col-6 team-block">
                                 <div class="team-block-one wow fadeInUp animated" data-wow-delay="300ms"
                                     data-wow-duration="1500m">
                                     <div class="inner-box">
@@ -49,7 +49,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12 team-block">
+                            <div class="col-lg-3 col-md-6 col-sm-6 col-6 team-block">
                                 <div class="team-block-one wow fadeInUp animated" data-wow-delay="300ms"
                                     data-wow-duration="1500m">
                                     <div class="inner-box">
@@ -82,7 +82,7 @@
                 <div id="csrTwo" class="collapse" data-parent="#csrAccordion">
                     <div class="card-body">
                         <div class="row clearfix">
-                            <div class="col-lg-3 col-md-6 col-sm-12 team-block">
+                            <div class="col-lg-3 col-md-6 col-sm-6 col-6 team-block">
                                 <div class="team-block-one wow fadeInUp animated" data-wow-delay="00ms"
                                     data-wow-duration="1500m">
                                     <div class="inner-box">
@@ -92,7 +92,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12 team-block">
+                            <div class="col-lg-3 col-md-6 col-sm-6 col-6 team-block">
                                 <div class="team-block-one wow fadeInUp animated" data-wow-delay="300ms"
                                     data-wow-duration="1500m">
                                     <div class="inner-box">
@@ -102,7 +102,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12 team-block">
+                            <div class="col-lg-3 col-md-6 col-sm-6 col-6 team-block">
                                 <div class="team-block-one wow fadeInUp animated" data-wow-delay="300ms"
                                     data-wow-duration="1500m">
                                     <div class="inner-box">
@@ -163,7 +163,7 @@
                 <div id="csrFour" class="collapse" data-parent="#csrAccordion">
                     <div class="card-body">
                         <div class="row clearfix">
-                            <div class="col-lg-3 col-md-6 col-sm-12 team-block">
+                            <div class="col-lg-3 col-md-6 col-sm-6 col-6 team-block">
                                 <div class="team-block-one wow fadeInUp animated" data-wow-delay="00ms"
                                     data-wow-duration="1500m">
                                     <div class="inner-box">
@@ -173,7 +173,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12 team-block">
+                            <div class="col-lg-3 col-md-6 col-sm-6 col-6 team-block">
                                 <div class="team-block-one wow fadeInUp animated" data-wow-delay="300ms"
                                     data-wow-duration="1500m">
                                     <div class="inner-box">
@@ -183,7 +183,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12 team-block">
+                            <div class="col-lg-3 col-md-6 col-sm-6 col-6 team-block">
                                 <div class="team-block-one wow fadeInUp animated" data-wow-delay="300ms"
                                     data-wow-duration="1500m">
                                     <div class="inner-box">
@@ -193,7 +193,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12 team-block">
+                            <div class="col-lg-3 col-md-6 col-sm-6 col-6 team-block">
                                 <div class="team-block-one wow fadeInUp animated" data-wow-delay="300ms"
                                     data-wow-duration="1500m">
                                     <div class="inner-box">
@@ -228,7 +228,7 @@
                     <div class="card-body">
 
                         <div class="row clearfix">
-                            <div class="col-lg-3 col-md-6 col-sm-12 team-block">
+                            <div class="col-lg-3 col-md-6 col-sm-6 col-6 team-block">
                                 <div class="team-block-one wow fadeInUp animated" data-wow-delay="00ms"
                                     data-wow-duration="1500m">
                                     <div class="inner-box">
@@ -238,7 +238,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12 team-block">
+                            <div class="col-lg-3 col-md-6 col-sm-6 col-6 team-block">
                                 <div class="team-block-one wow fadeInUp animated" data-wow-delay="300ms"
                                     data-wow-duration="1500m">
                                     <div class="inner-box">
@@ -248,7 +248,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12 team-block">
+                            <div class="col-lg-3 col-md-6 col-sm-6 col-6 team-block">
                                 <div class="team-block-one wow fadeInUp animated" data-wow-delay="300ms"
                                     data-wow-duration="1500m">
                                     <div class="inner-box">
@@ -288,7 +288,7 @@
                                 40 Surgery to Narayan Seva Sansthan.</p>
                         </div>
                            <div class="row clearfix">
-                <div class="col-lg-3 col-md-6 col-sm-12 team-block">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6 team-block">
                     <div class="team-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500m">
                         <div class="inner-box">
                             <div class="image-box">
@@ -297,7 +297,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 team-block">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6 team-block">
                     <div class="team-block-one wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500m">
                         <div class="inner-box">
                             <div class="image-box">
@@ -306,7 +306,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 team-block">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6 team-block">
                     <div class="team-block-one wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500m">
                         <div class="inner-box">
                             <div class="image-box">
@@ -339,7 +339,7 @@
                 <div id="csrSeven" class="collapse" data-parent="#csrAccordion">
                     <div class="card-body">
                         <div class="row clearfix">
-                <div class="col-lg-3 col-md-6 col-sm-12 team-block">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6 team-block">
                     <div class="team-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500m">
                         <div class="inner-box">
                             <div class="image-box">
@@ -348,7 +348,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 team-block">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6 team-block">
                     <div class="team-block-one wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500m">
                         <div class="inner-box">
                             <div class="image-box">
@@ -357,7 +357,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 team-block">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6 team-block">
                     <div class="team-block-one wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500m">
                         <div class="inner-box">
                             <div class="image-box">
@@ -379,7 +379,7 @@
 <!-- <section class="about-section csr">
     <div class="auto-container">
         <div class="row align-items-center clearfix">
-            <div class="col-lg-12 col-md-12 col-sm-12 content-column">
+            <div class="col-lg-12 col-md-12 col-sm-6 col-6 content-column">
                 <div class="content_block_1">
                     <div class="content-box wow fadeInRight animated" data-wow-delay="00ms" data-wow-duration="1500ms">
                         <div class="title-text mb-4">
@@ -390,7 +390,7 @@
             </div>
 
             <div class="row clearfix">
-                <div class="col-lg-3 col-md-6 col-sm-12 team-block">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6 team-block">
                     <div class="team-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500m">
                         <div class="inner-box">
                             <div class="image-box">
@@ -399,7 +399,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 team-block">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6 team-block">
                     <div class="team-block-one wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500m">
                         <div class="inner-box">
                             <div class="image-box">
@@ -408,7 +408,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 team-block">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6 team-block">
                     <div class="team-block-one wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500m">
                         <div class="inner-box">
                             <div class="image-box">
@@ -425,7 +425,7 @@
 <section class="about-section csr-bg">
     <div class="auto-container">
         <div class="row align-items-center clearfix">
-            <div class="col-lg-12 col-md-12 col-sm-12 content-column">
+            <div class="col-lg-12 col-md-12 col-sm-6 col-6 content-column">
                 <div class="content_block_1">
                     <div class="content-box wow fadeInRight animated" data-wow-delay="00ms" data-wow-duration="1500ms">
                         <div class="title-text mb-4">
@@ -436,7 +436,7 @@
             </div>
 
             <div class="row clearfix">
-                <div class="col-lg-3 col-md-6 col-sm-12 team-block">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6 team-block">
                     <div class="team-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500m">
                         <div class="inner-box">
                             <div class="image-box">
@@ -445,7 +445,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 team-block">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6 team-block">
                     <div class="team-block-one wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500m">
                         <div class="inner-box">
                             <div class="image-box">
@@ -454,7 +454,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 team-block">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6 team-block">
                     <div class="team-block-one wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500m">
                         <div class="inner-box">
                             <div class="image-box">
@@ -471,7 +471,7 @@
 <section class="about-section csr csr1">
     <div class="auto-container">
         <div class="row align-items-center clearfix">
-            <div class="col-lg-12 col-md-12 col-sm-12 content-column">
+            <div class="col-lg-12 col-md-12 col-sm-6 col-6 content-column">
                 <div class="content_block_1">
                     <div class="content-box wow fadeInRight animated" data-wow-delay="00ms" data-wow-duration="1500ms">
                         <div class="title-text mb-4">
@@ -495,7 +495,7 @@
 <section class="about-section csr-bg">
     <div class="auto-container">
         <div class="row align-items-center clearfix">
-            <div class="col-lg-12 col-md-12 col-sm-12 content-column">
+            <div class="col-lg-12 col-md-12 col-sm-6 col-6 content-column">
                 <div class="content_block_1">
                     <div class="content-box wow fadeInRight animated" data-wow-delay="00ms" data-wow-duration="1500ms">
                         <div class="title-text mb-4">
@@ -506,7 +506,7 @@
             </div>
 
             <div class="row clearfix">
-                <div class="col-lg-3 col-md-6 col-sm-12 team-block">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6 team-block">
                     <div class="team-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500m">
                         <div class="inner-box">
                             <div class="image-box">
@@ -515,7 +515,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 team-block">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6 team-block">
                     <div class="team-block-one wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500m">
                         <div class="inner-box">
                             <div class="image-box">
@@ -524,7 +524,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 team-block">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6 team-block">
                     <div class="team-block-one wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500m">
                         <div class="inner-box">
                             <div class="image-box">
@@ -533,7 +533,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 team-block">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6 team-block">
                     <div class="team-block-one wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500m">
                         <div class="inner-box">
                             <div class="image-box">
@@ -551,7 +551,7 @@
 <section class="about-section csr">
     <div class="auto-container">
         <div class="row align-items-center clearfix">
-            <div class="col-lg-12 col-md-12 col-sm-12 content-column">
+            <div class="col-lg-12 col-md-12 col-sm-6 col-6 content-column">
                 <div class="content_block_1">
                     <div class="content-box wow fadeInRight animated" data-wow-delay="00ms" data-wow-duration="1500ms">
                         <div class="title-text mb-4">
@@ -562,7 +562,7 @@
             </div>
 
             <div class="row clearfix">
-                <div class="col-lg-3 col-md-6 col-sm-12 team-block">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6 team-block">
                     <div class="team-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500m">
                         <div class="inner-box">
                             <div class="image-box">
@@ -571,7 +571,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 team-block">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6 team-block">
                     <div class="team-block-one wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500m">
                         <div class="inner-box">
                             <div class="image-box">
@@ -580,7 +580,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 team-block">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6 team-block">
                     <div class="team-block-one wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500m">
                         <div class="inner-box">
                             <div class="image-box">
@@ -597,7 +597,7 @@
 <section class="about-section csr-bg">
     <div class="auto-container">
         <div class="row align-items-center clearfix">
-            <div class="col-lg-12 col-md-12 col-sm-12 content-column">
+            <div class="col-lg-12 col-md-12 col-sm-6 col-6 content-column">
                 <div class="content_block_1">
                     <div class="content-box wow fadeInRight animated" data-wow-delay="00ms" data-wow-duration="1500ms">
                         <div class="title-text mb-4">
@@ -616,7 +616,7 @@
             </div>
 
             <div class="row clearfix">
-                <div class="col-lg-3 col-md-6 col-sm-12 team-block">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6 team-block">
                     <div class="team-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500m">
                         <div class="inner-box">
                             <div class="image-box">
@@ -625,7 +625,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 team-block">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6 team-block">
                     <div class="team-block-one wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500m">
                         <div class="inner-box">
                             <div class="image-box">
@@ -634,7 +634,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 team-block">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6 team-block">
                     <div class="team-block-one wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500m">
                         <div class="inner-box">
                             <div class="image-box">
@@ -652,7 +652,7 @@
 <section class="about-section csr">
     <div class="auto-container">
         <div class="row align-items-center clearfix">
-            <div class="col-lg-12 col-md-12 col-sm-12 content-column">
+            <div class="col-lg-12 col-md-12 col-sm-6 col-6 content-column">
                 <div class="content_block_1">
                     <div class="content-box wow fadeInRight animated" data-wow-delay="00ms" data-wow-duration="1500ms">
                         <div class="title-text mb-4">
@@ -663,7 +663,7 @@
             </div>
 
             <div class="row clearfix">
-                <div class="col-lg-3 col-md-6 col-sm-12 team-block">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6 team-block">
                     <div class="team-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500m">
                         <div class="inner-box">
                             <div class="image-box">
@@ -672,7 +672,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 team-block">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6 team-block">
                     <div class="team-block-one wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500m">
                         <div class="inner-box">
                             <div class="image-box">
@@ -681,7 +681,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 team-block">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6 team-block">
                     <div class="team-block-one wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500m">
                         <div class="inner-box">
                             <div class="image-box">

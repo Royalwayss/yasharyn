@@ -14,7 +14,7 @@
         <section class="contact-style-two">
             <div class="auto-container">
                 <div class="row clearfix">
-                    <div class="col-lg-5 col-md-12 col-sm-12 info-column mt-5">
+                    <div class="col-lg-5 col-md-12 col-sm-12 info-column ">
                         <div class="info-inner">
                             <div class="sec-title">
                                 <h2>We’re Here <b>For You</b></h2>
@@ -23,12 +23,13 @@
                                 <li>
                                     <i class="fas fa-map-marker-alt"></i>
                                     <h5>Communication Office</h5>
-                                    <p>SCO-1, (First Floor), Pahwa Complex, Cemetary Road, Civil Lines, Near Fountain Chowk, Ludhiana-141001 (PB), India.</p>
+                                    <p>Jalandhar Rd, near Neva Garments, Hussainpura, Ludhiana, Punjab 141008</p>
                                 </li>
                                 <li>
                                     <i class="fas fa-envelope-open"></i>
                                     <h5>Email Drop Us</h5>
                                     <p><a href="mailto:info@yasharyn.com">info@yasharyn.com</a></p>
+                                    <p><a href="mailto:sales@yasharyn.com">sales@yasharyn.com</a></p>
                                 </li>
                                 <li>
                                     <i class="fas fa-phone"></i>
@@ -111,21 +112,6 @@
                                         </div>
                                     </div>
                                 </li>
-                                <!-- <li class="accordion block">
-                                    <div class="acc-btn">
-                                        <div class="icon-outer"><i class="fal fa-plus"></i></div>
-                                        <h4>Sale Office</h4>
-                                    </div>
-                                    <div class="acc-content">
-                                        <div class="text">
-                                            <p>HB 89, G.T. Road East, Street No.4, Opp. Nishat Bagh Colony, Bhattian, Ludhiana, Punjab - 141008, India.</p>
-                                            <ul class="list clearfix">
-                                                <li>Ms. Kiran : +91-98781-65227</li>
-                                                <li>sales@yasharyn.com</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li> -->
                                 <li class="accordion block">
                                      <div class="acc-btn">
                                         <div class="icon-outer"><i class="fal fa-plus"></i></div>
@@ -137,21 +123,6 @@
                                             <ul class="list clearfix">
                                                 <li>Mr. Amit : +91-79869-98231</li>
                                                 <li>karnalbranch@yasharyn.com</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="accordion block">
-                                     <div class="acc-btn">
-                                        <div class="icon-outer"><i class="fal fa-plus"></i></div>
-                                        <h4>Baddi Office</h4>
-                                    </div>
-                                    <div class="acc-content">
-                                        <div class="text">
-                                            <p>Nalagrah-Baddi Road, Near Manpura Bus Stop, Opp. Electricity Office, Baddi, Distt Solan, Himachal Pradesh, 173025, India.</p>
-                                            <ul class="list clearfix">
-                                                <!-- <li>Mr. Ujjagar : +91-92183-30003, +91-82190-81003</li> -->
-                                                <li> baddibranch@yasharyn.com</li>
                                             </ul>
                                         </div>
                                     </div>
