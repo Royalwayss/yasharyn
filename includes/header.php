@@ -26,10 +26,10 @@
    <link href="assets/css/jquery.fancybox.min.css" rel="stylesheet">
    <link href="assets/css/animate.css" rel="stylesheet">
    <link href="assets/css/jquery-ui.css" rel="stylesheet">
-   <link href="assets/css/color.css" rel="stylesheet">
-   <link href="assets/css/style.css?v=2.5" rel="stylesheet">
+   <link href="assets/css/color.css?v=2.0" rel="stylesheet">
+   <link href="assets/css/style.css?v=2.2" rel="stylesheet">
    <link href="assets/css/nice-select.css" rel="stylesheet">
-   <link href="assets/css/responsive.css" rel="stylesheet">
+   <link href="assets/css/responsive.css?v=2.0" rel="stylesheet">
    <link href="assets/css/select2.min.css" rel="stylesheet" />
    <link href="assets/css/dev.css" rel="stylesheet" />
    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
