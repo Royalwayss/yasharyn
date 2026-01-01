@@ -22,7 +22,7 @@
                             <ul class="info-list clearfix">
                                 <li>
                                     <i class="fas fa-map-marker-alt"></i>
-                                    <h5>Communication Office</h5>
+                                    <h5>Corporate Office / Manufacturing Unit</h5>
                                     <p>Jalandhar Rd, near Neva Garments, Hussainpura, Ludhiana, Punjab 141008</p>
                                 </li>
                                 <li>
@@ -33,7 +33,7 @@
                                 </li>
                                 <li>
                                     <i class="fas fa-phone"></i>
-                                    <h5>Call for Inquery</h5>
+                                    <h5>Call for Enquiry</h5>
                                     <p><a href="tel:+91-93177-55220">+91-93177-55220</a></p>
                                 </li>
                             </ul>
@@ -127,6 +127,17 @@
                                         </div>
                                     </div>
                                 </li>
+                                <li class="accordion block">
+                                     <div class="acc-btn">
+                                        <div class="icon-outer"><i class="fal fa-plus"></i></div>
+                                        <h4>Original Office</h4>
+                                    </div>
+                                    <div class="acc-content">
+                                        <div class="text">
+                                            <p>SC0-1, FIRST FLOOR, PAHWA COMPLEX, Cemetery Rd, Fountain Chowk, Civil Lines, Ludhiana, Punjab 141001</p>
+                                        </div>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -139,7 +150,7 @@
         <section class="google-map-section">
             <div class="auto-container">
                 <div class="map-inner">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27379.983004680445!2d75.81448353499027!3d30.92865653083698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a83c263636f99%3A0xf91f3a12d2a9452!2sYASHARYN%20PACKAGING%20PVT.%20LTD.!5e0!3m2!1sen!2sin!4v1753423618496!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3421.6289505635687!2d75.81295209999999!3d30.952926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a85c5a842b811%3A0xbc437b3454b26cdd!2sYasharyn%20Packaging%20Private%20Limited!5e0!3m2!1sen!2sin!4v1767250398975!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </section>

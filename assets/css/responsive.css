@@ -677,6 +677,9 @@
 .service-block-one {
     max-width: 220px;
 }
+.product-box img{
+  height: auto;
+}
     .testimonial-feedback{
     height: 420px;
   }

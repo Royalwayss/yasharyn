@@ -167,9 +167,10 @@ var swiper = new Swiper(".productSwiper", {
         768: {
             slidesPerView: 2
         },
-        480: {
-            slidesPerView: 1
+        320: {
+            slidesPerView: 2
         }
+    
     }
 });
        </script>
