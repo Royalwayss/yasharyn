@@ -13,7 +13,7 @@ $home_products =home_products($conn,$limit=10);
     <div class="shape" style="background-image: url(assets/images/shape/banner-shap.png);"></div>
     <div class="banner-carousel owl-theme owl-carousel owl-nav owl-dots-none">
 
-        <div class="slide-item" style="background-image: url(assets/images/home-banner-4.jpg);">
+        <div class="slide-item" style="background-image: url(assets/images/home-banner-6.jpg);">
             <!-- <div class="pattern-box">
                 <div class="pattern-1"></div>
                 <div class="pattern-2"></div>
