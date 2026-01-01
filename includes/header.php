@@ -2,49 +2,96 @@
 <?php
    include('admin/include/config.php');
    $categories = get_categories($conn,$status=1); 
+   $currentPageName = basename($_SERVER['PHP_SELF']); 
    ?>
 <html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+      <?php if($currentPageName == 'index.php'){ ?>
+      <title>Pharmaceutical Packaging Manufacturers - Wholesale Pet Bottles, HDPE Tablet Container, Dropper Bottles, Nasal Spray Bottle, Shampoo Bottle, Face Wash Bottle, Cream Jar, Plastic Sharbat Bottle & Aluminum Cap Manufacturers, Exporters & Suppliers in India</title>
+      <meta name="description" content="Yasharyn Packaging is one of the leading pharmaceutical packaging manufacturers, exporters & suppliers in India. Get high quality pet bottles, HDPE medicine bottle, dropper bottle, nasal spray bottle, shampoo bottle, lotion bottle, face wash bottle, body wash bottle, pet cream jar, talc powder container, juice bottle, sharbat bottle, powder jar, granule jar, honey jar, handwash bottle, detergent bottle, mist spray pump, dispenser pump, trigger pump, roll on bottles, balm container and all types of plastic pharma accessories."/>
+      <meta name="keywords" content="pet bottles, HDPE medicine bottle, dropper bottle, nasal spray bottle, shampoo bottle, lotion bottle, face wash bottle, body wash bottle, cream jar , pet cream jar, talc powder container, juice bottle, sharbat bottle, powder jar, granule jar, honey jar, handwash bottle, detergent bottle, mist spray pump, dispenser pump, trigger pump, roll on bottle, balm container"/>
+      <?php }else if($currentPageName == 'about-us.php'){ ?>
+      <title>About - Yasharyn Packaging,  Pharmaceutical Accessories Manufacturers India</title>
+      <meta name="description" content="Yasharyn Packaging is one of the top plastic pharma accessories manufacturers, exporters & suppliers in India."/>
+      <meta name="keywords" content="yasharyn packaging, pharma accessories, plastic packaging, india manufacturers"/>
+      <?php }else if($currentPageName == 'csr.php'){ ?>
+      <title>Environmental & Social Responsibility -  Yasharyn Packaging</title>
+      <meta name="description" content="Yasharyn Packaging prioritizes sustainability and social impact. Our CSR efforts focus on planet-friendly practices and community well-being."/>
+      <meta name="keywords" content="csr, yasharyn packaging "/>
+      <?php }else if($currentPageName == 'contacts.php'){ ?>
+      <title>Contact - Yasharyn Packaging</title>
+      <meta name="description" content="Reach out to Yasharyn Packaging, a leading pet bottle manufacturer in India for inquiries about our high-quality packaging solutions. Contact us for product details, orders, and more."/>
+      <meta name="keywords" content="contact, yasharyn packaging, contact us today, inquire now, yasharyn packaging, india pet bottles"/>
+      <?php }else if($currentPageName == 'product_details.php'){ 
+	    $get_pro = getSingleRow($conn,'select * from products where id='.@$_GET['id']);
+	    if(!empty($get_pro)){
+			$product_name = $get_pro['product_name']; 
+		}else{
+			$product_name = '';
+		}
+	  ?>
+	   
+       <title><?php echo $product_name; ?> - Manufacturer, Exporters & Suppliers in India - Request A Quote</title>
+       <meta name="description" content="Yasharyn Packaging is one of the leading <?php echo $product_name; ?> manufacturer, exporters and suppliers in India. High quality, durable & wholesale prices. Request a free quote now."/>
 
-<head>
-   <meta charset="utf-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-   <title>Yasharyn</title>
-   <!-- Fav Icon -->
-   <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
-   <!-- Google Fonts -->
-   <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet">
-   <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet">
-   <!-- Stylesheets -->
-   <link href="assets/css/font-awesome-all.css" rel="stylesheet">
-   <link href="assets/css/flaticon.css" rel="stylesheet">
-   <link href="assets/css/owl.css" rel="stylesheet">
-   <link href="assets/css/bootstrap.css" rel="stylesheet">
-   <link href="assets/css/jquery.fancybox.min.css" rel="stylesheet">
-   <link href="assets/css/animate.css" rel="stylesheet">
-   <link href="assets/css/jquery-ui.css" rel="stylesheet">
-   <link href="assets/css/color.css?v=2.0" rel="stylesheet">
-   <link href="assets/css/style.css?v=2.2" rel="stylesheet">
-   <link href="assets/css/nice-select.css" rel="stylesheet">
-   <link href="assets/css/responsive.css?v=2.0" rel="stylesheet">
-   <link href="assets/css/select2.min.css" rel="stylesheet" />
-   <link href="assets/css/dev.css" rel="stylesheet" />
-   <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
-   <!-- Swiper CSS -->
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
-   <style>
-      .error {
+      <?php }else if($currentPageName == 'products.php'){ 
+	   $get_cat = getSingleRow($conn,'select * from categories where id='.@$_GET['category_id']); 
+	    if(!empty($get_cat) && !empty($get_cat['meta_title'])){
+			$meta_title = $get_cat['meta_title']; 
+			$meta_dec = $get_cat['meta_dec']; 
+			$meta_keyword = $get_cat['meta_keyword']; 
+		}else{
+			$meta_title = 'Yasharyn';
+			$meta_dec = '';
+			$meta_keyword = '';
+		}
+	  ?>
+	  
+	 <title><?php echo $meta_title; ?></title>
+	 <meta name="description" content="<?php echo $meta_dec; ?>">
+	 <meta name="keywords" content="<?php echo $meta_keyword; ?>">
+	  
+	  
+      <?php }else{ ?>
+      <title>Yasharyn</title>
+      <?php } ?>
+      <!-- Fav Icon -->
+      <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+      <!-- Google Fonts -->
+      <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;500;600;700;800;900&display=swap"
+         rel="stylesheet">
+      <link
+         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+         rel="stylesheet">
+      <!-- Stylesheets -->
+      <link href="assets/css/font-awesome-all.css" rel="stylesheet">
+      <link href="assets/css/flaticon.css" rel="stylesheet">
+      <link href="assets/css/owl.css" rel="stylesheet">
+      <link href="assets/css/bootstrap.css" rel="stylesheet">
+      <link href="assets/css/jquery.fancybox.min.css" rel="stylesheet">
+      <link href="assets/css/animate.css" rel="stylesheet">
+      <link href="assets/css/jquery-ui.css" rel="stylesheet">
+      <link href="assets/css/color.css?v=2.0" rel="stylesheet">
+      <link href="assets/css/style.css?v=2.2" rel="stylesheet">
+      <link href="assets/css/nice-select.css" rel="stylesheet">
+      <link href="assets/css/responsive.css?v=2.0" rel="stylesheet">
+      <link href="assets/css/select2.min.css" rel="stylesheet" />
+      <link href="assets/css/dev.css" rel="stylesheet" />
+      <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+      <!-- Swiper CSS -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+      <style>
+         .error {
          color: red;
-      }
-   </style>
-</head>
-<!-- page wrapper -->
-
-<body>
-   <div class="boxed_wrapper">
+         }
+      </style>
+   </head>
+   <!-- page wrapper -->
+   <body>
+      <div class="boxed_wrapper">
       <!-- preloader -->
       <div class="loader-wrap">
          <div class="preloader">
@@ -53,7 +100,7 @@
                <div class="animation-preloader">
                   <!-- <div class="spinner"></div> -->
                   <figure class="logo text-center"><a href="index.php"><img src="assets/images/logo-w.png"
-                           class="img-fluid " style="width: 20%;" alt=""></a></figure>
+                     class="img-fluid " style="width: 20%;" alt=""></a></figure>
                </div>
             </div>
          </div>
@@ -64,7 +111,7 @@
             <div class="col-3 col-md-4 col-lg-4 justify-content-center d-flex align-items-center social-media-display">
                <ul class="header-social-media d-flex align-items-center">
                   <li><a class="fb-color" style="background-color:#3b5998;"
-                        href="https://www.facebook.com/yasharynofficial"><i class="fab fa-facebook-f "></i></a></li>
+                     href="https://www.facebook.com/yasharynofficial"><i class="fab fa-facebook-f "></i></a></li>
                   <li><a class="insta-color" style="background: linear-gradient(
                      45deg,
                      #405DE6,
@@ -76,10 +123,10 @@
                      #F56040,
                      #F77737,
                      #FCAF45);" href="https://www.instagram.com/yasharynofficial/"><i
-                           class="fab fa-instagram "></i></a></li>
+                     class="fab fa-instagram "></i></a></li>
                   <li><a class="insta-color" style="background-color:#0a66c2;"
-                        href="https://www.linkedin.com/company/yasharynofficial/"><i
-                           class="fab fa-linkedin-in linkedin-color"></i></a></li>
+                     href="https://www.linkedin.com/company/yasharynofficial/"><i
+                     class="fab fa-linkedin-in linkedin-color"></i></a></li>
                </ul>
             </div>
             <div class="col-4 col-md-4 col-lg-4 justify-content-center d-flex align-items-centers logo-header-display text-center">
@@ -90,7 +137,7 @@
                   <li><a style="background-color:#006a4e;" href="tel:+91-93170-88991"><i class="fal fa-phone"></i></a>
                   </li>
                   <li><a style="background-color:#1d6cb3;" href="mailto:info@yasharyn.com"><i
-                           class="fal fa-envelope-open-text"></i></a>
+                     class="fal fa-envelope-open-text"></i></a>
                   </li>
                </ul>
             </div>
@@ -123,26 +170,23 @@
                               <ul>
                                  <?php foreach($categories as $category) { ?>
                                  <li class="dropdown">
-
                                     <a href="products.php?category_id=<?php echo $category['id']; ?>">
-                                       <?php echo $category['category_name']; ?>
+                                    <?php echo $category['category_name']; ?>
                                     </a>
-
                                     <ul>
                                        <?php foreach($category['sub_categories'] as $sub_category) { ?>
                                        <li <?php if(!empty($sub_category['sub_categories2'])) { ?>class="dropdown
                                           parent-category"
                                           <?php } ?>>
                                           <a href="products.php?category_id=<?php echo $sub_category['id']; ?>">
-                                             <?php echo $sub_category['category_name']; ?>
+                                          <?php echo $sub_category['category_name']; ?>
                                           </a>
-
                                           <ul class="subcategory2 ">
                                              <?php foreach($sub_category['sub_categories2'] as $sub_category2) { ?>
                                              <li><a href="products.php?category_id=<?php echo $sub_category2['id']; ?>">
-                                                   <?php echo $sub_category2['category_name']; ?>
-                                                </a> </li>
-
+                                                <?php echo $sub_category2['category_name']; ?>
+                                                </a> 
+                                             </li>
                                              <?php } ?>
                                           </ul>
                                        </li>
@@ -178,7 +222,7 @@
                                     <input type="search" name="keyword" value=""
                                        placeholder="Search product name, size, category" required="">
                                     <button type="submit" class="search-btn"><span
-                                          class="fas fa-search"></span></button>
+                                       class="fas fa-search"></span></button>
                                  </div>
                               </form>
                            </div>
@@ -215,7 +259,7 @@
                                     <input type="search" name="keyword" value=""
                                        placeholder="Search product name, size, category" required="">
                                     <button type="submit" class="search-btn"><span
-                                          class="fas fa-search"></span></button>
+                                       class="fas fa-search"></span></button>
                                  </div>
                               </form>
                            </div>
@@ -232,7 +276,7 @@
          <div class="close-btn"><i class="fas fa-times"></i></div>
          <nav class="menu-box">
             <div class="nav-logo"><a href="<?php echo BASE_URL; ?>"><img src="assets/images/logo-w.png" alt=""
-                     title=""></a></div>
+               title=""></a></div>
             <div class="menu-outer">
                <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
             </div>
