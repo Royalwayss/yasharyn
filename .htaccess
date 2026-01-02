@@ -7,7 +7,7 @@ RewriteEngine On
 ErrorDocument 404 default
 ErrorDocument 404 /404.php
 
-
+ 
 
 RewriteRule    ^how-indias-honey-container-manufacturers-are-elevating-quality-and-safety/?$    blog-detail.php    [NC,L] 
 RewriteRule    ^why-wide-flip-top-caps-are-redefining-modern-packaging-in-india/?$    blog-detail.php    [NC,L] 
