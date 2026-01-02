@@ -201,7 +201,7 @@
                            <li><a href="clients.php">Clients</a></li>
                            <li><a href="contacts.php">Contact</a></li>
                            <li><a href="events.php">Events</a></li>
-                           <li><a href="blog-listing.php">Blogs</a></li>
+                           <li><a href="blogs.php">Blogs</a></li>
                            <li><a href="career.php">Career</a></li>
                            <!-- <li> 
                               <a href="javascript:;" class="yasharyn-download-btn">View Catalogue</a>

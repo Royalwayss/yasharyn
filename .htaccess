@@ -1,0 +1,16 @@
+RewriteCond %{HTTPS} off
+# First rewrite to HTTPS:
+# Don't put www. here. If it is already there it will be included, if not
+# the subsequent rule will catch it.
+RewriteEngine On
+
+ErrorDocument 404 default
+ErrorDocument 404 /404.php
+
+
+
+RewriteRule    ^how-indias-honey-container-manufacturers-are-elevating-quality-and-safety/?$    blog-detail.php    [NC,L] 
+RewriteRule    ^why-wide-flip-top-caps-are-redefining-modern-packaging-in-india/?$    blog-detail.php    [NC,L] 
+RewriteRule    ^why-plastic-packaging-is-still-dominating-the-global-market/?$    blog-detail.php    [NC,L] 
+RewriteRule    ^applications-of-pet-and-hdpe-packaging-in-everyday-products/?$    blog-detail.php    [NC,L] 
+RewriteRule    ^testttt/?$    blog-detail.php    [NC,L] 

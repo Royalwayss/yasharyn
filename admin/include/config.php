@@ -76,6 +76,25 @@ function get_city_options($conn,$state_id) {
     return $city_options;	
 }
 
+function get_blogs($conn) {
+	
+	$blogs = [];
+	
+	$sql = 'select id,title,url,short_description,publication_date,image,sort from blogs where status = 1 order by publication_date desc';
+	
+	$result = $conn->query($sql); 
+    
+    if ($result->num_rows > 0) { 
+    
+        while ($row = $result->fetch_assoc()) { 
+        
+		  $blogs[] = $row;
+			  
+        }
+    }
+
+    return $blogs;	
+} 
 
 function getSingleRow($conn,$query) {
 	
