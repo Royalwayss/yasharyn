@@ -36,7 +36,7 @@ $home_products =home_products($conn,$limit=10);
                 </div>
             </div>
         </div>
-         <div class="slide-item" style="background-image: url(assets/images/banner-2463.jpg);">
+         <div class="slide-item" style="background-image: url(assets/images/home-banner-1.1.jpg);">
             <!-- <div class="pattern-box">
                 <div class="pattern-1"></div>
                 <div class="pattern-2"></div>
@@ -59,7 +59,7 @@ $home_products =home_products($conn,$limit=10);
                 </div>
             </div>
         </div>
-        <div class="slide-item" style="background-image: url(assets/images/home-banner-5.jpg);">
+        <div class="slide-item" style="background-image: url(assets/images/banner-2463.jpg);">
             <!-- <div class="pattern-box">
                 <div class="pattern-1"></div>
                 <div class="pattern-2"></div>
