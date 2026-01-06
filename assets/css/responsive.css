@@ -170,7 +170,7 @@
   .feature-block-one .inner-box {
     margin-bottom: 30px;
   }
-  .testimonial-feedback{
+  .testimonial-feedback {
     height: 430px;
   }
   .client-inner-logo {
@@ -388,7 +388,7 @@
     width: 50%;
     margin: 0 auto;
   }
-    .testimonial-feedback{
+  .testimonial-feedback {
     height: 350px;
   }
   .about-section .image-box {
@@ -400,9 +400,9 @@
   }
 
   .banner-carousel .content-box {
-    padding: 180px 0px 200px 0px;
+    padding: 40px 0px 20px 0px;
   }
-  .service-block-one .inner-box .icon-box{
+  .service-block-one .inner-box .icon-box {
     text-align: left;
   }
 
@@ -431,18 +431,20 @@
     font-size: 16px;
     line-height: 20px;
     margin-bottom: 6px;
-}
-.service-block-one {
+  }
+  .service-block-one {
     max-width: 250px;
-}
-
+  }
 
   .service-section .shape {
     display: none;
   }
 
+  .service-section .image-layer img {
+    max-width: 200px;
+  }
   .service-section {
-    padding: 70px 0px 40px 0px;
+    padding: 70px 0px 140px 0px;
   }
 
   .chooseus-section .image-box {
@@ -660,6 +662,9 @@
     margin-top: 12px;
     margin-bottom: 6px !important;
   }
+  .work-process .title-text {
+    margin-bottom: 28px !important;
+  }
   .sec-title h2,
   .title-text h2 {
     font-size: 30px;
@@ -674,19 +679,19 @@
   /* .main-header .outer-box {
     display: block;
   } */
-.service-block-one {
+  .service-block-one {
     max-width: 220px;
-}
-.product-box img{
-  height: auto;
-}
-    .testimonial-feedback{
-    height: 420px;
   }
-.service-block-one .inner-box h4 {
+  .product-box img {
+    height: auto;
+  }
+  .testimonial-feedback {
+    height: 500px;
+  }
+  .service-block-one .inner-box h4 {
     font-size: 14px;
     text-align: left;
-}
+  }
   .main-header .logo-box .logo {
     margin: 0 auto;
   }
@@ -831,18 +836,18 @@
   .logo-header-display {
     padding: 0;
   }
+  .banner-carousel .slide-item{
+    height: 500px;
+  }
 }
 
 @media only screen and (max-width: 499px) {
   .mobile-menu {
     width: 100%;
   }
-      .testimonial-feedback{
-    height: 460px;
-  }
   .service-block-one {
     max-width: 160px;
-}
+  }
   .testimonial-block-one .inner-box {
     padding-left: 30px;
   }
@@ -900,8 +905,17 @@
     padding-left: 20px;
     padding-right: 20px;
   }
-  .testimonial-block-one h4{
+  .testimonial-block-one h4 {
     font-size: 18px;
+  }
+  .yasharyn-new-product-details .product-details-sub-details-heading {
+    min-width: 140px;
+  }
+  .yasharyn-new-product-details .product-details-sub-details-data {
+    text-align: start;
+  }
+   .service-section .image-layer img {
+    max-width: 160px;
   }
 }
 
@@ -920,7 +934,7 @@
     border-radius: 30px;
     width: 100%;
   }
-      .testimonial-feedback{
+  .testimonial-feedback {
     height: 600px;
   }
 }

@@ -394,7 +394,7 @@ if(empty($get_product['status'])){
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Product Enquery</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Product Enquiry</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -423,7 +423,7 @@ if(empty($get_product['status'])){
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <input type="submit" class="btn btn-primary" value="Send message">
+                    <input type="submit" class="theme-btn btn-one"  style="padding:6px 14px" value="Send message">
                 </div>
             </form>
         </div>
