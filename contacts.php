@@ -130,7 +130,7 @@
                                 <li class="accordion block">
                                      <div class="acc-btn">
                                         <div class="icon-outer"><i class="fal fa-plus"></i></div>
-                                        <h4>Original Office</h4>
+                                        <h4>Regional Office</h4>
                                     </div>
                                     <div class="acc-content">
                                         <div class="text">
