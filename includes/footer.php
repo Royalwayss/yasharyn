@@ -100,7 +100,7 @@
                <div class="auto-container">
                    <div class="bottom-inner">
                        <div class="copyright">
-                           <p>Copyright © 2025 <a href="index.html">Yasharyn Packaging Pvt. Ltd.</a> All Rights
+                           <p>Copyright © <?php echo date('Y'); ?> <a href="index.html">Yasharyn Packaging Pvt. Ltd.</a> All Rights
                                Reserved.</p>
                        </div>
                    </div>
