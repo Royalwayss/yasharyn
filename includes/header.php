@@ -25,7 +25,9 @@
       <title>Contact - Yasharyn Packaging</title>
       <meta name="description" content="Reach out to Yasharyn Packaging, a leading pet bottle manufacturer in India for inquiries about our high-quality packaging solutions. Contact us for product details, orders, and more."/>
       <meta name="keywords" content="contact, yasharyn packaging, contact us today, inquire now, yasharyn packaging, india pet bottles"/>
-      <?php }else if($currentPageName == 'product_details.php'){ 
+      <?php }else if($currentPageName == 'blogs.php'){ ?>
+	  <title>Blogs - Yasharyn Packaging</title>
+	  <?php }else if($currentPageName == 'product_details.php'){ 
          $get_pro = getSingleRow($conn,'select * from products where id='.@$_GET['id']);
          if(!empty($get_pro)){
 			$product_name = $get_pro['product_name']; 
