@@ -9,12 +9,18 @@
             </div>
         </section>
         <!-- End Page Title -->
+		
+		
+		
+		<?php include 'includes/breadcrumb.php'; ?> 
+		
+		
 
         <!-- contact-style-two -->
         <section class="contact-style-two">
             <div class="auto-container">
                 <div class="row clearfix">
-                    <div class="col-lg-5 col-md-12 col-sm-12 info-column mt-5">
+                    <div class="col-lg-5 col-md-12 col-sm-12 info-column ">
                         <div class="info-inner">
                             <div class="sec-title">
                                 <h2>We’re Here <b>For You</b></h2>
@@ -22,17 +28,18 @@
                             <ul class="info-list clearfix">
                                 <li>
                                     <i class="fas fa-map-marker-alt"></i>
-                                    <h5>Communication Office</h5>
-                                    <p>SCO-1, (First Floor), Pahwa Complex, Cemetary Road, Civil Lines, Near Fountain Chowk, Ludhiana-141001 (PB), India.</p>
+                                    <h5>Corporate Office / Manufacturing Unit</h5>
+                                    <p>Jalandhar Rd, near Neva Garments, Hussainpura, Ludhiana, Punjab 141008</p>
                                 </li>
                                 <li>
                                     <i class="fas fa-envelope-open"></i>
                                     <h5>Email Drop Us</h5>
                                     <p><a href="mailto:info@yasharyn.com">info@yasharyn.com</a></p>
+                                    <p><a href="mailto:sales@yasharyn.com">sales@yasharyn.com</a></p>
                                 </li>
                                 <li>
                                     <i class="fas fa-phone"></i>
-                                    <h5>Call for Inquery</h5>
+                                    <h5>Call for Enquiry</h5>
                                     <p><a href="tel:+91-93177-55220">+91-93177-55220</a></p>
                                 </li>
                             </ul>
@@ -99,29 +106,14 @@
                                         <div class="icon-outer"><i class="fal fa-plus"></i></div>
                                         <h4>Head Office</h4>
                                     </div>
-                                    <div class="acc-content current">
+                                    <div class="acc-content current"> 
                                         <div class="text">
                                             <p>Sankeshwar Parshavnath Marg, Near Neva Garments, G.T. Road West, Village Hussainpura, Dist - Ludhiana, Punjab - 141008, India.</p>
                                             <ul class="list clearfix">
-                                                <li>Ms. Neha : +91-89683-55229</li>
-                                                <li>Ms. Geeta : +91-79869-99632</li>
+                                                <li>Mr. Yashik : +91-99212-00000</li>
+                                                <!-- <li>Ms. Geeta : +91-79869-99632</li>
                                                 <li>Ms. Simran : +91-96460-00866</li>
-                                                <li>Ms. Rakshanda : +91-93177-55226</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="accordion block">
-                                    <div class="acc-btn">
-                                        <div class="icon-outer"><i class="fal fa-plus"></i></div>
-                                        <h4>Sale Office</h4>
-                                    </div>
-                                    <div class="acc-content">
-                                        <div class="text">
-                                            <p>HB 89, G.T. Road East, Street No.4, Opp. Nishat Bagh Colony, Bhattian, Ludhiana, Punjab - 141008, India.</p>
-                                            <ul class="list clearfix">
-                                                <li>Ms. Kiran : +91-98781-65227</li>
-                                                <li>sales@yasharyn.com</li>
+                                                <li>Ms. Rakshanda : +91-93177-55226</li> -->
                                             </ul>
                                         </div>
                                     </div>
@@ -144,15 +136,11 @@
                                 <li class="accordion block">
                                      <div class="acc-btn">
                                         <div class="icon-outer"><i class="fal fa-plus"></i></div>
-                                        <h4>Baddi Office</h4>
+                                        <h4>Regional Office</h4>
                                     </div>
                                     <div class="acc-content">
                                         <div class="text">
-                                            <p>Nalagrah-Baddi Road, Near Manpura Bus Stop, Opp. Electricity Office, Baddi, Distt Solan, Himachal Pradesh, 173025, India.</p>
-                                            <ul class="list clearfix">
-                                                <li>Mr. Ujjagar : +91-92183-30003, +91-82190-81003</li>
-                                                <li> baddibranch@yasharyn.com</li>
-                                            </ul>
+                                            <p>SC0-1, FIRST FLOOR, PAHWA COMPLEX, Cemetery Rd, Fountain Chowk, Civil Lines, Ludhiana, Punjab 141001</p>
                                         </div>
                                     </div>
                                 </li>
@@ -168,7 +156,7 @@
         <section class="google-map-section">
             <div class="auto-container">
                 <div class="map-inner">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27379.983004680445!2d75.81448353499027!3d30.92865653083698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a83c263636f99%3A0xf91f3a12d2a9452!2sYASHARYN%20PACKAGING%20PVT.%20LTD.!5e0!3m2!1sen!2sin!4v1753423618496!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3421.6289505635687!2d75.81295209999999!3d30.952926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a85c5a842b811%3A0xbc437b3454b26cdd!2sYasharyn%20Packaging%20Private%20Limited!5e0!3m2!1sen!2sin!4v1767250398975!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </section>

@@ -6,8 +6,11 @@
 	define('WEBSITENAME','Yasharyn');
 	define('FROM_MAIL','info@yasharyn.com');
 	define('ADMIN_MAIL','info@yasharyn.com');
+	//define('ADMIN_MAIL_BCC','manjit@rtpltech.com');
+	define('ADMIN_MAIL_BCC','rwpttech@gmail.com');
 	define('RECAPTCHA_SITE_KEY','6Ldx-AosAAAAAJxdP2-YhrveSlk1PiwHPU3i9Y0b');
 	define('RECAPTCHA_SECRET_KEY','6Ldx-AosAAAAABj5zF9tJ5SpW7rOb0N96c3mtxnG');
+	define('HTTP_HOST',$_SERVER['HTTP_HOST']);
  
 	$conn = new mysqli($servername, $username, $password, $dbname);
 	// Check connection
@@ -478,6 +481,107 @@ function resizeImage($source_path, $destination_path, $new_width, $new_height) {
     return true;
 }	
 	
+function get_category_detail($conn,$slug=''){
+	
+	
+	
+	$sql = 'select * FROM `categories` where `category_url` = "'.$slug.'"';
+	$row = $conn->query($sql);
+	if ($row->num_rows > 0) { 
+	         
+			 $category = mysqli_fetch_assoc($row);
+	   
+	         if($category['parent_id'] != '0'){
+				 
+				  //$sql1 = 'select * FROM `categories` where `id` = '.$category['parent_id'] ;
+	              //$row2 = $conn->query($sql1);
+				  //$main_cat = mysqli_fetch_assoc($row2);
+				  
+				  $parent_id = $category['parent_id'];
+			 }else{
+				  $parent_id = $category['id'];
+			 }
+			
+	         $sub_categories = [];
+
+             $sub_cat_sql = 'select * FROM `categories` where `parent_id` = '.$category['id'];
+			
+		     $sub_cat_sql .= ' and status  =1';
+	         
+			 $sub_cat_sql .= ' order by sort asc'; 
+	
+			 $sub_cat_result = $conn->query($sub_cat_sql); 
+
+             if ($sub_cat_result->num_rows > 0) { 
+
+				while ($sub_category_row = $sub_cat_result->fetch_assoc()) { 
+                    
+					
+					   $sub2_categories = [];
+
+						 $sub_cat2_sql = 'select * FROM `categories` where `parent_id` = '.$sub_category_row['id'];
+						 
+						 
+						  $sub_cat2_sql .= ' and status  =1';
+						
+						 
+						 $sub_cat2_sql .= ' order by sort asc'; 
+				
+						 $sub_cat2_result = $conn->query($sub_cat2_sql); 
+
+						 if ($sub_cat2_result->num_rows > 0) { 
+
+							while ($sub_cat2_row = $sub_cat2_result->fetch_assoc()) { 
+								$sub2_categories[] = $sub_cat2_row;
+							}
+
+						 }
+					
+					$sub_category_row['sub_categories2'] = $sub2_categories;
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 $sub_categories[] = $sub_category_row;
+				}
+
+			 }
+	   
+	   
+	        $category['sub_categories'] = $sub_categories;
+	   
+	   
+	   $cats_id = [];
+	   $cats_id[] = $category['id'];
+	  
+	   foreach($category['sub_categories'] as $cat){
+		   $cats_id[] = $cat['id'];
+		   foreach($cat['sub_categories2'] as $sub_cat){
+			   $cats_id[] = $sub_cat['id'];
+		   }
+	   }
+	   
+	   
+	   
+	   
+	   
+	   return array(
+		   'status'=>true,
+		   'category'=>$category,
+		   'cats_id'=>$cats_id,
+	   );
+	}else{
+		 return array(
+		   'status'=>false
+	     );
+	}
+}
+
+	
 	
 function get_category($conn,$id){
 	
@@ -583,6 +687,31 @@ function get_category($conn,$id){
 
 
 
+function get_product_details($conn,$id='',$product_url=''){
+	if(empty($id)){
+		$id = 0;
+	}
+	$sql = 'select * FROM `products` where status ="1" and `id` = '.$id.' and product_url = "'.$product_url.'"'; 
+	$row = $conn->query($sql);
+	if ($row->num_rows > 0) { 
+	         
+	   $product = mysqli_fetch_assoc($row);
+	   
+	   
+	   $product['related_products'] = related_products($conn,$product['product_name']);
+	   	   
+	   return array(
+		   'status'=>true,
+		   'product'=>$product,
+	   );
+	}else{
+		 return array(
+		   'status'=>false
+	     );
+	}
+} 
+
+
 function get_product($conn,$id){
 	$sql = 'select * FROM `products` where status ="1" and `id` = '.$id ;
 	$row = $conn->query($sql);
@@ -639,6 +768,54 @@ function get_main_category($conn,$id){
 	}
 	   
 }
+
+function show404($conn)
+{ 
+    http_response_code(404);   // IMPORTANT
+    include('404.php');      // custom 404 page
+	
+    exit;
+}
+function createProductSlug($string)
+{
+    // Convert to lowercase
+    $string = strtolower($string);
+
+    // Remove special characters
+    $string = preg_replace('/[^a-z0-9\s-]/', '', $string);
+
+    // Replace multiple spaces or hyphens with single hyphen
+    $string = preg_replace('/[\s-]+/', '-', $string);
+
+    // Trim hyphens from start & end
+    $string = trim($string, '-');
+
+    return $string;
+}
+
+
+function getCategoryBreadcrumb($conn,$category_id) { 
+    $breadcrumbs = [];
+	$sql ='WITH RECURSIVE cat_path AS ( SELECT id, parent_id, category_name, category_url, category_image FROM categories WHERE id = '.$category_id.' UNION ALL SELECT c.id, c.parent_id, c.category_name, c.category_url,c.category_image FROM categories c JOIN cat_path cp ON cp.parent_id = c.id ) SELECT * FROM cat_path;';
+	$row = $conn->query($sql);
+	
+	if ($row->num_rows > 0) { 
+	         
+	   while ($breadcrumb = $row->fetch_assoc()) { 
+			
+			  $breadcrumbs[] = $breadcrumb;
+				  
+			}
+	   $breadcrumbs = array_reverse($breadcrumbs);
+	}
+	
+
+	return $breadcrumbs;
+	
+	
+}
+
+
 
 function pd($data=[]){
 	echo "<pre>"; print_r($data); exit;

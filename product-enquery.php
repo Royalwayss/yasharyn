@@ -83,7 +83,7 @@ if($err == ''){
            
 		  
 		 
-		  $sql = 'select products.*,categories.category_name from products join categories on categories.id = products.category_id where products.id ="'.$product_id.'";';
+		  $sql = 'select products.*,categories.category_name,categories.category_url from products join categories on categories.id = products.category_id where products.id ="'.$product_id.'";';
 	      $result = $conn->query($sql); 
 		  $product = mysqli_fetch_assoc($result);
 	     
@@ -137,14 +137,14 @@ if($err == ''){
 							 <tr>
 								 <td width='30%' align='left' valign='top' class='style2'>Product</td>
 								 <td width='5%' align='left' valign='top' class='style2'>:</td>
-								 <td width='65%' align='left' valign='top' class='style3'><a target='block' href='product_details.php?id=".$product['id']."'>".$product['product_name']."</a></td>
+								 <td width='65%' align='left' valign='top' class='style3'><a target='block' href='".BASE_URL."".$product['id']."/".$product['product_url']."'>".$product['product_name']."</a></td>
 							  </tr>
 							  
 							  
 							  <tr>
 								 <td width='30%' align='left' valign='top' class='style2'>Category Name</td>
 								 <td width='5%' align='left' valign='top' class='style2'>:</td>
-								 <td width='65%' align='left' valign='top' class='style3'><a target='block' href='products.php?category_id=".$product['category_id']."'>".$product['category_name']."</a></td>
+								 <td width='65%' align='left' valign='top' class='style3'><a target='block' href='".BASE_URL.""."category/".$product['category_id']."/".$product['category_url']."'>".$product['category_name']."</a></td>
 							  </tr>
 
 							  <tr>
@@ -177,7 +177,7 @@ if($err == ''){
 			$headers = "Content-Type: text/html; charset=UTF-8\r\n";
 			$headers .= 'From: '.trim(WEBSITENAME). '<'.FROM_MAIL.'>'."\r\n";
 			
-			//$headers .= 'Cc: admin@yasharyn.com' . "\r\n"; 
+			$headers .= 'Bcc: ' . ADMIN_MAIL_BCC . "\r\n";
             if($_SERVER['HTTP_HOST'] != 'localhost'){
 				
 			mail($recipient, $subject, $message, $headers);

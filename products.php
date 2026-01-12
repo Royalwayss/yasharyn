@@ -1,15 +1,14 @@
-<?php
+<?php 
+ include_once('admin/include/config.php');  
+ $get_category = get_category_detail($conn,@$_GET['slug']);  
 
- include 'includes/header.php';
- 
- $get_category = get_category($conn,@$_GET['category_id']);  
- 
  if(empty($get_category['status'])){
-	 echo "<script>window.location.href='".BASE_URL."';</script>";
- }else{
-	
+	 show404($conn);  die(); exit;
+ }else{  
+	include 'includes/header.php'; 
 	 $cats_id = $get_category['cats_id'];
 	
+	$getCategoryBreadcrumb = getCategoryBreadcrumb($conn,$get_category['category']['id']);
 	
 	 
 	 $filter_data = [];
@@ -51,18 +50,12 @@
  $category_id = $category['id'];
  
  $category_image = '';
- if(empty($category['parent_id']) && $category['category_image'] != ''){
-	 $category_image = $category['category_image'];
+ if(isset($getCategoryBreadcrumb[0]['category_image']) && $getCategoryBreadcrumb[0]['category_image'] != ''){
+	 $category_image = $getCategoryBreadcrumb[0]['category_image'];
  }
  
  
-if(!empty($category['parent_id'])){
- $get_main_category = get_main_category($conn,@$category['parent_id']);
- if(!empty($get_main_category) && $get_main_category['category_image'] != ''){
-	 $category_image = $get_main_category['category_image'];
- }
- 
-}
+
  
  
  
@@ -70,7 +63,7 @@ if(!empty($category['parent_id'])){
 
 <!-- Page Title -->
         <?php if(!empty($category_image)) { ?>
-		<section class="page-title centred inner-pages" style="background-image: url(assets/images/category/<?php echo $category_image ?>);">
+		<section class="page-title centred inner-pages" style="background-image: url(<?php echo BASE_URL; ?>assets/images/category/<?php echo $category_image ?>);">
             <div class="auto-container">
                 <div class="content-box">
                     <h2><?php echo $category['category_name']; ?></h2>
@@ -79,7 +72,7 @@ if(!empty($category['parent_id'])){
         </section>
         <!-- End Page Title -->
 		<?php  } ?>
-
+       <?php include 'includes/breadcrumb.php'; ?> 
          <!-- shop-page-section -->
          <section class="shop-page-section product-listing">
             <div class="auto-container">
@@ -93,11 +86,11 @@ if(!empty($category['parent_id'])){
 									   <select class="form-control new-select-height" id="filter-category">
 										        <option value="">Select Category</option>
 										        <?php foreach($categories as $cat) { ?>
-												<option value="<?php echo $cat['id']; ?>" <?php if($category['id'] == $cat['id']){ echo 'selected'; } ?> ><?php echo $cat['category_name']; ?></option>
+												<option value="<?php echo BASE_URL.'category/'.$cat['id'].'/'.$cat['category_url']; ?>" <?php if($category['id'] == $cat['id']){ echo 'selected'; } ?> ><?php echo $cat['category_name']; ?></option>
 												 <?php foreach($cat['sub_categories'] as $sub_cat) { ?>
-												 <option value="<?php echo $sub_cat['id']; ?>" <?php if($category['id'] == $sub_cat['id']){ echo 'selected'; } ?>>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -<?php echo $sub_cat['category_name']; ?></option>
+												 <option value="<?php echo BASE_URL.'category/'.$sub_cat['id'].'/'.$sub_cat['category_url']; ?>" <?php if($category['id'] == $sub_cat['id']){ echo 'selected'; } ?>>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -<?php echo $sub_cat['category_name']; ?></option>
 												 <?php foreach($sub_cat['sub_categories2'] as $sub_cat2) { ?>
-												 <option value="<?php echo $sub_cat2['id']; ?>" <?php if($category['id'] == $sub_cat2['id']){ echo 'selected'; } ?>>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<?php echo $sub_cat2['category_name']; ?></option>
+												 <option value="<?php echo BASE_URL.'category/'.$sub_cat2['id'].'/'.$sub_cat2['category_url']; ?>" <?php if($category['id'] == $sub_cat2['id']){ echo 'selected'; } ?>>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<?php echo $sub_cat2['category_name']; ?></option>
 												<?php }}} ?>
                                         </select>
 										
@@ -201,15 +194,15 @@ if(!empty($category['parent_id'])){
                                     <div class="shop-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500m">
                                         <div class="inner-box">
                                             <?php if($product['image']) { ?>
-											<a href="product_details.php?id=<?php echo $product['id']; ?>">
-											<figure class="image-box"><img src="assets/images/product/list/<?php echo $product['image']; ?>" alt=""></figure>
+											<a href="<?php echo BASE_URL.''.$product['id'].'/'.$product['product_url']; ?>">
+											<figure class="image-box"><img src="<?php echo BASE_URL; ?>assets/images/product/list/<?php echo $product['image']; ?>" alt=""></figure>
                                             </a>
 											<?php } ?>
 											<div class="lower-content">
                                             <span><?php echo $product['size'] ; ?></span>
-								               <h4><a href="product_details.php?id=<?php echo $product['id']; ?>"><?php echo $product['product_name']; ?></a></h4>
+								               <h4><a href="<?php echo BASE_URL.''.$product['id'].'/'.$product['product_url']; ?>"><?php echo $product['product_name']; ?></a></h4>
 											  <?php /* <h6>INR 70.00</h6> */ ?>
-                                                <a href="product_details.php?id=<?php echo $product['id']; ?>" class="theme-btn btn-two">View Detail</a>
+                                                <a href="<?php echo BASE_URL.''.$product['id'].'/'.$product['product_url']; ?>" class="theme-btn btn-two">View Detail</a>
                                             </div>
                                         </div>
                                     </div>
@@ -239,7 +232,7 @@ if(!empty($category['parent_id'])){
       $('#filter-category').on('change', function() {
             var selectedValue = $(this).val();
             if(selectedValue != ''){
-			   window.location.href="products.php?category_id="+selectedValue;
+			   window.location.href=selectedValue;
             }
         });
 
@@ -250,7 +243,7 @@ if(!empty($category['parent_id'])){
 	      var weight = $('#filter-weight').val();
 		  if(size == null){ size = '';  }
 		  if(weight == null){ weight = '';  }
-		  window.location.href="?category_id="+category_id+"&size="+size+"&weight="+weight;
+		  window.location.href="<?php echo BASE_URL; ?>?category_id="+category_id+"&size="+size+"&weight="+weight;
 		  
         });
 	 

@@ -29,8 +29,8 @@ $home_products =home_products($conn,$limit=10);
                         <h2>Eco-Friendly Bottles for a Greener Tomorrow</h2>
                         <p>Sustainable, reliable, and innovative bottles tailored to your exact needs</p>
                         <div class="btn-box clearfix">
-                            <a href="about-us.php" class="theme-btn btn-one">About US</a>
-                            <a href="contacts.php" class="theme-btn banner-btn">Contact</a>
+                            <a href="about-us" class="theme-btn btn-one">About US</a>
+                            <a href="contact-us.php" class="theme-btn banner-btn">Contact</a>
                         </div>
                     </div>
                 </div>
@@ -52,8 +52,8 @@ $home_products =home_products($conn,$limit=10);
                         <h2>Precision in Storage, Power in Distribution</h2>
                         <p>Advanced warehouse systems ensuring accuracy, safety, and speed</p>
                         <div class="btn-box clearfix">
-                            <a href="about-us.php" class="theme-btn btn-one">About US</a>
-                            <a href="contacts.php" class="theme-btn banner-btn">Contact</a>
+                            <a href="about-us" class="theme-btn btn-one">About US</a>
+                            <a href="contact-us.php" class="theme-btn banner-btn">Contact</a>
                         </div>
                     </div>
                 </div>
@@ -75,8 +75,8 @@ $home_products =home_products($conn,$limit=10);
                         <h2>Precision in Every Bottle</h2>
                         <p>Advanced technology ensuring protection, preservation, and long-lasting quality</p>
                         <div class="btn-box clearfix">
-                            <a href="about-us.php" class="theme-btn btn-one">About US</a>
-                            <a href="contacts.php" class="theme-btn banner-btn">Contact</a>
+                            <a href="about-us" class="theme-btn btn-one">About US</a>
+                            <a href="contact-us.php" class="theme-btn banner-btn">Contact</a>
                         </div>
                     </div>
                 </div>
@@ -168,8 +168,8 @@ $home_products =home_products($conn,$limit=10);
                     <?php foreach($home_products as $home_product) { ?>
                     <div class="swiper-slide">
                         <div class="product-box">
-                            <a href="product_details.php?id=<?php echo $home_product['id'];  ?>">
-							<img src="assets/images/product/list/<?php echo $home_product['image']; ?>" alt="">
+                            <a href="<?php echo BASE_URL.''.$home_product['id'].'/'.$home_product['product_url'];  ?>">
+							<img src="<?php echo BASE_URL; ?>assets/images/product/list/<?php echo $home_product['image']; ?>" alt="">
                             </a>
 							<!-- <h4 class="product-title">Product 1</h4> -->
                         </div>
@@ -253,7 +253,7 @@ $home_products =home_products($conn,$limit=10);
                                 promise of on-time delivery.</p>
                         </div>
                         <div class="btn-box">
-                            <a href="about-us.php" class="theme-btn btn-one">Read More</a>
+                            <a href="about-us" class="theme-btn btn-one">Read More</a>
                         </div>
                     </div>
                 </div>

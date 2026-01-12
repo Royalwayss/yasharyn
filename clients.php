@@ -10,6 +10,7 @@
 }
 </style>
 <!-- Page Title -->
+
 <section class="page-title centred inner-pages" style="background-image: url(assets/images/background/clients.jpg);">
     <!-- <div class="shape" style="background-image: url(assets/images/shape/banner-shap.png);"></div> -->
     <div class="auto-container">
@@ -19,7 +20,7 @@
     </div>
 </section>
 <!-- End Page Title -->
-
+<?php include 'includes/breadcrumb.php'; ?> 
 <section class="clients-section alternat-2">
     <div class="auto-container">
         <div class="row">

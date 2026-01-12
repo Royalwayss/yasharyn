@@ -14,3 +14,17 @@ RewriteRule    ^wide-flip-top-caps-modern-packaging-india/?$    blog-detail.php 
 RewriteRule    ^why-plastic-packaging-still-dominates-global-market/?$    blog-detail.php    [NC,L] 
 RewriteRule    ^applications-of-pet-and-hdpe-packaging-in-everyday-products/?$    blog-detail.php    [NC,L] 
 RewriteRule    ^testttt/?$    blog-detail.php    [NC,L] 
+RewriteRule    ^about-us/?$    about-us.php    [NC,L] 
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirect /product-name to product.php
+RewriteRule ^([a-zA-Z0-9-]+)$ product_details.php?slug=$1 [L,QSA]
+RewriteRule ^([0-9]+)/([a-zA-Z0-9-]+)$ product_details.php?id=$1&slug=$2 [L,QSA]
+
+RewriteRule ^category/([0-9]+)/([a-zA-Z0-9-]+)$ products.php?id=$1&slug=$2 [L,QSA]
+
+
+
+

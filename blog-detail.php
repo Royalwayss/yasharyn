@@ -28,6 +28,7 @@ if(empty($blog)){
         </div>
     </div>
 </section>
+<?php include 'includes/breadcrumb.php'; ?> 
 <section class="about-section csr">
     <div class="container">
         <div class="blogDetail">

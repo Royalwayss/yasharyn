@@ -1,3 +1,44 @@
+ .error { color: red; }
+#breadcrumb-section {
+		 background-color: #006a4e !important;
+		 }
+		 
+		 .breadcrumb-wrap {
+   
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.breadcrumb {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    background: transparent;
+    font-size: 14px;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    display: inline-block;
+    padding-right: 0.5rem;
+    color: #fff !important;
+    content: "/";
+}
+.breadcrumb-item a {
+    color: #fff;
+    text-decoration: none !important;
+}
+
+.breadcrumb-item a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb-item.active {
+    color: #555;
+}
+
+
+
+
+
 .subcategory2 li {
 	display: flex
 	margin-right: 10px; 

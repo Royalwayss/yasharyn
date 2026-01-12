@@ -206,7 +206,7 @@ if($err == ''){
 			</html>";
 			
 			
-			$skills = implode(',',$data['skills']);
+			$skills = implode(',',$data['skills']); 
 			
 		    $sql = "INSERT INTO careers (name,email,mobile,subject,join_type,skills,resume,category,experience,message) VALUES ('".$name."','".$email."','".$mobile."','".$subject."','".$data['join_type']."','".$skills."','".$resume_file."','".$data['category']."', '".$data['experience']."','".$message."')";
 					
@@ -220,7 +220,8 @@ if($err == ''){
 			$headers = "Content-Type: text/html; charset=UTF-8\r\n";
 			$headers .= 'From: '.trim(WEBSITENAME). '<'.FROM_MAIL.'>'."\r\n";
 			
-			//$headers .= 'Cc: admin@yasharyn.com' . "\r\n"; 
+            $headers .= 'Bcc: ' . ADMIN_MAIL_BCC . "\r\n";
+
 
 			if($_SERVER['HTTP_HOST'] != 'localhost'){
 				

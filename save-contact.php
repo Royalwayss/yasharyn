@@ -163,7 +163,7 @@ if($err == ''){
 			$headers = "Content-Type: text/html; charset=UTF-8\r\n";
 			$headers .= 'From: '.trim(WEBSITENAME). '<'.FROM_MAIL.'>'."\r\n";
 			
-			//$headers .= 'Cc: admin@yasharyn.com' . "\r\n"; 
+			$headers .= 'Bcc: ' . ADMIN_MAIL_BCC . "\r\n";
 
 			if($_SERVER['HTTP_HOST'] != 'localhost'){
 				

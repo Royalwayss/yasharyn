@@ -1,13 +1,13 @@
-<?php 
-
-include 'includes/header.php'; 
-$get_product = get_product($conn,@$_GET['id']); 
-if(empty($get_product['status'])){
-	 echo "<script>window.location.href='".BASE_URL."';</script>";
+<?php  
+include_once('admin/include/config.php');  
+$get_product = get_product_details($conn,@$_GET['id'],@$_GET['slug']); 
+if(empty($get_product['status'])){ 
+	show404($conn);  die(); exit;
  }else{
 	$product =$get_product['product']; 
-	
  }
+ 
+include 'includes/header.php';
 ?>
 
 <!-- Page Title -->
@@ -28,16 +28,16 @@ if(empty($get_product['status'])){
         <div class="product-details-content">
             <?php if(!empty($product['image'])) { ?>
             <div class="shape"
-                style="background-image: url('assets/images/product/detail/<?php echo $product['image']; ?>);"></div>
+                style="background-image: url('<?php echo BASE_URL; ?>assets/images/product/detail/<?php echo $product['image']; ?>);"></div>
             <?php } ?>
             <div class="row clearfix">
                 <div class="col-lg-6 col-md-12 col-sm-12 image-column">
                     <?php if(!empty($product['image'])) { ?>
                     <div class="image-box text-center">
-                        <figure class="image"><img src="assets/images/product/detail/<?php echo $product['image']; ?>"
+                        <figure class="image"><img src="<?php echo BASE_URL; ?>assets/images/product/detail/<?php echo $product['image']; ?>"
                                 alt=""></figure>
                         <div class="preview-link"><a
-                                href="assets/images/product/detail/<?php echo $product['image']; ?>"
+                                href="<?php echo BASE_URL; ?>assets/images/product/detail/<?php echo $product['image']; ?>"
                                 class="lightbox-image" data-fancybox="gallery"><i class="far fa-search-plus"></i></a>
                         </div>
                     </div>
@@ -166,7 +166,7 @@ if(empty($get_product['status'])){
                                         data-target="#exampleModal">Product Enquiry</a>
                                 </li>
                             </ul>
-                             <div class="shape" style="background-image: url(assets/images/shape/shape-39.png);">
+                             <div class="shape" style="background-image: url(<?php echo BASE_URL; ?>assets/images/shape/shape-39.png);">
                                 </div> 
                                         <?php /*
 							<div class="tab" id="tab-2">
@@ -364,15 +364,15 @@ if(empty($get_product['status'])){
                         <div class="inner-box product-details-inner-height">
                             <?php if($related_product['image']) { ?>
                             <figure class="image-box "><img
-                                    src="assets/images/product/list/<?php echo $related_product['image']; ?>" alt="">
+                                    src="<?php echo BASE_URL; ?>assets/images/product/list/<?php echo $related_product['image']; ?>" alt="">
                             </figure>
                             <?php } ?>
                             <div class="lower-content">
                                 <span><?php echo $related_product['size'] ; ?></span>
-                                <div class="shape" style="background-image: url(assets/images/shape/shape-7.png);">
+                                <div class="shape" style="background-image: url(<?php echo BASE_URL; ?>assets/images/shape/shape-7.png);">
                                 </div>
                                 <h4><a
-                                        href="product_details.php?id=<?php echo $related_product['id']; ?>"><?php echo $related_product['product_name']; ?></a>
+                                        href="<?php echo BASE_URL.''.$related_product['id'].'/'.$related_product['product_url']; ?>"><?php echo $related_product['product_name']; ?></a>
                                 </h4>
 
                             </div>
@@ -399,7 +399,7 @@ if(empty($get_product['status'])){
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form id="product-enquery" action="product-enquery.php" method="post">
+            <form id="product-enquery" action="<?php echo BASE_URL; ?>product-enquery.php" method="post">
                 <input type="hidden" name="product_id" value="<?php echo $product['id']; ?>">
                 <div class="modal-body">
 

@@ -14,7 +14,7 @@
     </div>
 </section>
 <!-- End Page Title -->
-
+<?php include 'includes/breadcrumb.php'; ?> 
 <section class="about-section">
     <div class="auto-container">
         <div class="row align-items-center">
