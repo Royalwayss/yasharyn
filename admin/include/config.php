@@ -6,8 +6,7 @@
 	define('WEBSITENAME','Yasharyn');
 	define('FROM_MAIL','info@yasharyn.com');
 	define('ADMIN_MAIL','info@yasharyn.com');
-	//define('ADMIN_MAIL_BCC','manjit@rtpltech.com');
-	define('ADMIN_MAIL_BCC','rwpttech@gmail.com');
+	define('ADMIN_MAIL_BCC','manjit@rtpltech.com');
 	define('RECAPTCHA_SITE_KEY','6Ldx-AosAAAAAJxdP2-YhrveSlk1PiwHPU3i9Y0b');
 	define('RECAPTCHA_SECRET_KEY','6Ldx-AosAAAAABj5zF9tJ5SpW7rOb0N96c3mtxnG');
 	define('HTTP_HOST',$_SERVER['HTTP_HOST']);
@@ -776,7 +775,7 @@ function show404($conn)
 	
     exit;
 }
-function createProductSlug($string)
+function createSlug($string)
 {
     // Convert to lowercase
     $string = strtolower($string);
@@ -795,24 +794,62 @@ function createProductSlug($string)
 
 
 function getCategoryBreadcrumb($conn,$category_id) { 
-    $breadcrumbs = [];
-	$sql ='WITH RECURSIVE cat_path AS ( SELECT id, parent_id, category_name, category_url, category_image FROM categories WHERE id = '.$category_id.' UNION ALL SELECT c.id, c.parent_id, c.category_name, c.category_url,c.category_image FROM categories c JOIN cat_path cp ON cp.parent_id = c.id ) SELECT * FROM cat_path;';
-	$row = $conn->query($sql);
+    if(HTTP_HOST == 'localhost'){
 	
-	if ($row->num_rows > 0) { 
-	         
-	   while ($breadcrumb = $row->fetch_assoc()) { 
+			$breadcrumbs = [];
+			$sql ='WITH RECURSIVE cat_path AS ( SELECT id, parent_id, category_name, category_url, category_image FROM categories WHERE id = '.$category_id.' UNION ALL SELECT c.id, c.parent_id, c.category_name, c.category_url,c.category_image FROM categories c JOIN cat_path cp ON cp.parent_id = c.id ) SELECT * FROM cat_path;';
+			$row = $conn->query($sql);
 			
-			  $breadcrumbs[] = $breadcrumb;
-				  
+			if ($row->num_rows > 0) { 
+					 
+			   while ($breadcrumb = $row->fetch_assoc()) { 
+					
+					  $breadcrumbs[] = $breadcrumb;
+						  
+					}
+			   $breadcrumbs = array_reverse($breadcrumbs);
 			}
-	   $breadcrumbs = array_reverse($breadcrumbs);
-	}
-	
+			
 
-	return $breadcrumbs;
+			return $breadcrumbs;
 	
-	
+	}else{
+		
+		// Make sure category_id is numeric
+    $category_id = (int)$category_id;
+
+    while ($category_id > 0) {
+        // Prepare SQL
+        $sql = "SELECT id, parent_id, category_name, category_url, category_image 
+                FROM categories 
+                WHERE id = ?";
+        $stmt = $conn->prepare($sql);
+        if (!$stmt) {
+            die("Prepare failed: " . $conn->error);
+        }
+
+        $stmt->bind_param("i", $category_id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        if ($row = $result->fetch_assoc()) {
+            $breadcrumbs[] = $row;          // Add current category
+            $category_id = (int)$row['parent_id'];  // Move to parent
+        } else {
+            break; // Stop if category not found
+        }
+
+        $stmt->close();
+    }
+
+     // Reverse array so parent categories come first
+     return array_reverse($breadcrumbs);
+		
+		
+		
+		
+		
+	}
 }
 
 

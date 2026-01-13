@@ -44,7 +44,7 @@
                                    <ul class="links-list clearfix">
                                        <?php foreach($categories as $category) { ?>
                                        <li><a
-                                               href="<?php echo BASE_URL; ?>products.php?id=<?php echo $category['id']; ?>"><?php echo $category['category_name']; ?></a>
+                                               href="<?php echo BASE_URL.'category/'.$category['id'].'/'.$category['category_url']; ?>"><?php echo $category['category_name']; ?></a>
                                        </li>
                                        <?php } ?>
                                    </ul>

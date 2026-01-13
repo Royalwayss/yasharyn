@@ -475,10 +475,10 @@ $home_products =home_products($conn,$limit=10);
                         <div class="lower-content">
 
                             <h4><a
-                                    href="product_details.php?id=<?php echo $product['id']; ?>"><?php echo $product['product_name']; ?></a>
+                                    href="<?php echo BASE_URL.''. $product['id'].'/'.$product['product_url']; ?>"><?php echo $product['product_name']; ?></a>
                             </h4>
                             <div class="btn-box">
-                                <a href="product_details.php?id=<?php echo $product['id']; ?>"
+                                <a href="<?php echo BASE_URL.''. $product['id'].'/'.$product['product_url']; ?>"
                                     class="theme-btn btn-two">View More</a>
                             </div>
                         </div>

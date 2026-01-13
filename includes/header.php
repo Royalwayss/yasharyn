@@ -133,7 +133,7 @@
       <link href="<?php echo BASE_URL; ?>assets/css/nice-select.css" rel="stylesheet">
       <link href="<?php echo BASE_URL; ?>assets/css/responsive.css?v=2.1" rel="stylesheet">
       <link href="<?php echo BASE_URL; ?>assets/css/select2.min.css" rel="stylesheet" />
-      <link href="<?php echo BASE_URL; ?>assets/css/dev.css?v=2.0" rel="stylesheet" />
+      <link href="<?php echo BASE_URL; ?>assets/css/dev.css?v=2.1" rel="stylesheet" />
       <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
       <!-- Swiper CSS -->
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
@@ -371,7 +371,7 @@
                            aria-haspopup="true" aria-expanded="false"><i class="far fa-search"></i></button>
                         <div class="dropdown-menu search-panel" id="product-search" aria-labelledby="dropdownMenu3">
                            <div class="form-container">
-                              <form method="get" action="result.php">
+                              <form method="get" action="<?php echo BASE_URL; ?>result.php">
                                  <div class="form-group">
                                     <input type="search" name="keyword" value=""
                                        placeholder="Search product name, size, category" required="">

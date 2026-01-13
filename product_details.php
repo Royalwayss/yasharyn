@@ -6,12 +6,12 @@ if(empty($get_product['status'])){
  }else{
 	$product =$get_product['product']; 
  }
- 
+ $getCategoryBreadcrumb = getCategoryBreadcrumb($conn,$product['category_id']); 
 include 'includes/header.php';
 ?>
 
 <!-- Page Title -->
-<section class="page-title centred inner-pages" style="background-image: url(assets/images/background/product.jpg);">
+<section class="page-title centred inner-pages" style="background-image: url(<?php echo BASE_URL; ?>assets/images/background/product.jpg);">
     <div class="auto-container">
         <div class="content-box">
             <!-- <h2><?php echo $product['product_name']; ?></h2> -->
@@ -21,7 +21,7 @@ include 'includes/header.php';
 </section>
 <!-- End Page Title -->
 
-
+<?php include 'includes/breadcrumb.php'; ?> 
 <!-- shop-details -->
 <section class="shop-details">
     <div class="auto-container">

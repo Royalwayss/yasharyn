@@ -54,9 +54,9 @@
                                             <?php } ?>
 											<div class="lower-content">
                                             <span><?php echo $product['size'] ; ?></span>
-								               <h4><a href="product_details.php?id=<?php echo $product['id']; ?>"><?php echo $product['product_name']; ?></a></h4>
+								               <h4><a href="<?php echo BASE_URL.''.$product['id'].'/'.$product['product_url']; ?>"><?php echo $product['product_name']; ?></a></h4>
 											  <?php /* <h6>INR 70.00</h6> */ ?>
-                                                <a href="product_details.php?id=<?php echo $product['id']; ?>" class="theme-btn btn-two">View Detail</a>
+                                                <a href="<?php echo BASE_URL.''.$product['id'].'/'.$product['product_url']; ?>" class="theme-btn btn-two">View Detail</a>
                                             </div>
                                         </div>
                                     </div>
