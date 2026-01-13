@@ -1015,6 +1015,75 @@ $home_products =home_products($conn,$limit=10);
 <!-- team-section end -->
 
 
+<section class="about-section" style="margin-top:-100px;">
+    <div class="auto-container">
+        <div class="row align-items-center">
+            
+            <div class="col-sm-12 content-column">
+                <div class="content_block_1">
+                    <div class="content-box wow fadeInRight animated animated" data-wow-delay="00ms"
+                        data-wow-duration="1500ms"
+                        style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInRight;">
+                        <div class="sec-title">
+                            <h2>About <b>Yasharyn</b></h2>
+                        </div>
+                        <div class="text">
+                            
+							
+							<p>Yasharyn Packaging Pvt. Ltd. is a trusted manufacturer, exporter and supplier of high-quality pharmaceutical, cosmetic and food packaging solutions in India. With cutting-edge technology and a commitment to excellence, we provide PET bottles for pharmaceuticals, HDPE tablet containers, dropper bottles, plastic lotion bottles, shampoo bottles, face wash bottles, body oil bottles and more.</p>
+
+ 
+
+							<p><strong>Our Product Range:</strong></p>
+
+							 
+
+							<p>Pharmaceutical Packaging: PET tablet containers, HDPE pharma containers, nasal spray bottles and pharma accessories.</br>
+
+							Cosmetic Packaging: Lotion bottles, round face wash bottles, shampoo bottles, plastic body wash bottles and hair oil bottle manufacturers in India.</br>
+
+							Food & Beverage Packaging: Honey jars, talc powder packaging, sharbat bottles and plastic juice bottles.</br>
+
+							Home & Chemical Packaging: Dishwashing liquid bottles, hand soap bottles, HDPE chemical bottles and PET dishwash bottles.</br>
+
+							Closures & Dispensers: Flip-top caps, wide flip-top caps, aluminium caps, dispenser pumps, trigger pumps and mist spray pumps.</p>
+
+							 
+
+							<p><strong>Why Choose Us?</strong></p>
+
+							 
+
+							<p>Premium Quality: Stringent quality checks for durable and safe packaging.</br>
+
+							Innovative Solutions: Modern designs to enhance brand identity.</br>
+
+							Reliable Supply Chain: Advanced manufacturing across India for bulk orders.</br>
+
+							Eco-Friendly Manufacturing: Sustainable and responsible production.</p>
+
+							 
+
+							<p>As leading PET bottle manufacturers in India, we cater to diverse industries with world-class packaging solutions. Contact Yasharyn Packaging Pvt. Ltd. today for wholesale packaging supplies that elevate your brand!</p>
+						
+							
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
 <?php include 'includes/footer.php'; ?>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script>

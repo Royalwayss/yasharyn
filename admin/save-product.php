@@ -27,6 +27,8 @@ session_start();
 	$date = date('Y-m-d H:i:s');
 	$description = mysqli_real_escape_string($conn, $description); 
 	$product_name = mysqli_real_escape_string($conn, $product_name); 
+	$product_url = createSlug($product_name);
+	
 	
 	 $image = '';
 	if($data['id'] != ''){
@@ -55,7 +57,7 @@ session_start();
 
 
 
-		$sql ="UPDATE `products` SET `category_id` = '".$category_id."', `product_name` = '".$product_name."', `description` = '".$description."',`size` = '".$size."',`weight` = '".$weight."',`ofc` = '".$ofc."',`neck` = '".$neck."',`product_code` = '".$product_code."',`moc` = '".$moc."',`availability` = '".$availability."',`image` = '".$image."', `sort` = '".$sort ."', `status` ='".$status."',updated_at = '".$date ."' WHERE `products`.`id` = '".$id ."';";
+		$sql ="UPDATE `products` SET `category_id` = '".$category_id."', `product_name` = '".$product_name."',`product_url` = '".$product_url."', `description` = '".$description."',`size` = '".$size."',`weight` = '".$weight."',`ofc` = '".$ofc."',`neck` = '".$neck."',`product_code` = '".$product_code."',`moc` = '".$moc."',`availability` = '".$availability."',`image` = '".$image."', `sort` = '".$sort ."', `status` ='".$status."',updated_at = '".$date ."' WHERE `products`.`id` = '".$id ."';";
 		$conn->query($sql);
 		$message = 'Product has been updated successfully';
 	}else{
@@ -81,7 +83,7 @@ session_start();
 				   
 			   }
            }
-		$sql = "INSERT INTO `products` (`category_id`, `product_name`,`size`, `description`, `weight`, `ofc`, `neck`, `product_code`, `moc`, `availability`,`image`, `sort`, `status`, `created_at`) VALUES ('$category_id','$product_name','$size','$description','$weight','$ofc','$neck','$product_code','$moc','$availability','$image', '$sort','$status','$date');";
+		$sql = "INSERT INTO `products` (`category_id`, `product_name`,`product_url`,`size`, `description`, `weight`, `ofc`, `neck`, `product_code`, `moc`, `availability`,`image`, `sort`, `status`, `created_at`) VALUES ('$category_id','$product_name','$product_url','$size','$description','$weight','$ofc','$neck','$product_code','$moc','$availability','$image', '$sort','$status','$date');";
 		$conn->query($sql);  
 		
 		$message = 'Product has been added successfully';

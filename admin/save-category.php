@@ -23,6 +23,15 @@ session_start();
 	$date = date('Y-m-d H:i:s');
 	$description = mysqli_real_escape_string($conn, $description); 
 	$category_name = mysqli_real_escape_string($conn, $category_name); 
+	
+	
+	$category_url = createSlug($category_name);
+	
+	
+	
+	
+	
+	
 	$category_image = '';
 	
 	 if(!empty($_FILES["category_image"])){
@@ -60,11 +69,11 @@ session_start();
 		
 		
 		
-		$sql ="UPDATE `categories` SET `parent_id` = '".$parent_id."', `category_name` = '".$category_name."', `description` = '".$description."', `category_image` = '".$category_image ."', `sort` = '".$sort ."', `status` ='".$status."',updated_at = '".$date ."' WHERE `categories`.`id` = '".$id ."';";
+		$sql ="UPDATE `categories` SET `parent_id` = '".$parent_id."', `category_name` = '".$category_name."',`category_url` = '".$category_url."', `description` = '".$description."', `category_image` = '".$category_image ."', `sort` = '".$sort ."', `status` ='".$status."',updated_at = '".$date ."' WHERE `categories`.`id` = '".$id ."';";
 		$conn->query($sql);
 		$message = 'Category has been updated successfully';
 	}else{
-		$sql ="INSERT INTO `categories` (`parent_id`, `category_name`, `description`,category_image, `sort`, `status`,created_at) VALUES ('".$parent_id."','".$category_name."','".$description."', '".$category_image."', '".$sort."','".$status."','".$date."');";
+		$sql ="INSERT INTO `categories` (`parent_id`, `category_name`,category_url,`description`,category_image, `sort`, `status`,created_at) VALUES ('".$parent_id."','".$category_name."','".$category_url."','".$description."', '".$category_image."', '".$sort."','".$status."','".$date."');";
 		$conn->query($sql); 
 		$message = 'Category has been added successfully';
 	}
