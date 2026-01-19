@@ -122,7 +122,7 @@ $home_products =home_products($conn,$limit=10);
                         <h2>Built for Performance, Designed for the Planet</h2>
                         <p>Smart manufacturing solutions for durable, eco-conscious bottles</p>
                         <div class="btn-box clearfix">
-                            <a href="#" class="theme-btn btn-one">Our Services</a>
+                            <a href="service.php" class="theme-btn btn-one">Our Services</a>
                             <a href="#" class="theme-btn banner-btn">Discover</a>
                         </div>
                     </div>
