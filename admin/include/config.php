@@ -754,12 +754,37 @@ function search_products($conn,$keyword){
 	return $products;
 } 
 
+function get_product_images($conn,$id){ 
+    
+	$product_images = [];
+	
+	$sql = "select * from `product_images` where `product_id` = ".$id." order by `product_images`.`image_order` asc"; 
+	
+	$row = $conn->query($sql);
+	
+	if ($row->num_rows > 0) { 
+	         
+	   while ($product_row = $row->fetch_assoc()) { 
+			
+			  $product_images[] = $product_row;
+				  
+			}
+	   
+	}
+	return $product_images;
+} 
+
+
+
+
+
+
 function get_main_category($conn,$id){
 	$sql = 'select * FROM `categories` where `id` = '.$id ;
 	$row = $conn->query($sql);
 	if ($row->num_rows > 0) { 
 	         
-	   return  mysqli_fetch_assoc($row); pd($product);
+	   return  mysqli_fetch_assoc($row); 
 	   
 	}else{
 		

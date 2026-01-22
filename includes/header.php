@@ -130,7 +130,7 @@
       <link href="<?php echo BASE_URL; ?>assets/css/animate.css" rel="stylesheet">
       <link href="<?php echo BASE_URL; ?>assets/css/jquery-ui.css" rel="stylesheet">
       <link href="<?php echo BASE_URL; ?>assets/css/color.css?v=2.0" rel="stylesheet">
-      <link href="<?php echo BASE_URL; ?>assets/css/style.css?v=2.3" rel="stylesheet">
+      <link href="<?php echo BASE_URL; ?>assets/css/style.css?v=2.4" rel="stylesheet">
       <link href="<?php echo BASE_URL; ?>assets/css/nice-select.css" rel="stylesheet">
       <link href="<?php echo BASE_URL; ?>assets/css/responsive.css?v=2.1" rel="stylesheet">
       <link href="<?php echo BASE_URL; ?>assets/css/select2.min.css" rel="stylesheet" />

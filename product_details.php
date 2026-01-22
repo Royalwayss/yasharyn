@@ -6,7 +6,8 @@ if(empty($get_product['status'])){
  }else{
 	$product =$get_product['product']; 
  }
- $getCategoryBreadcrumb = getCategoryBreadcrumb($conn,$product['category_id']); 
+ $getCategoryBreadcrumb = getCategoryBreadcrumb($conn,$product['category_id']);
+ $product_images = get_product_images($conn,$_GET['id']); 
 include 'includes/header.php';
 ?>
 
@@ -34,24 +35,33 @@ include 'includes/header.php';
             <?php } ?>
             <div class="row clearfix">
                 <div class="col-lg-6 col-md-12 col-sm-12 image-column">
-                    <?php if(!empty($product['image'])) { ?>
+                    
                     <div class="detail-image-large">
-                        <!-- Large Image -->
-                        <a href="<?php echo BASE_URL; ?>assets/images/product/detail/<?php echo $product['image']; ?>" data-fancybox="gallery">
+                        <?php if(!empty($product['image'])) { ?>
+						<!-- Large Image -->
+                        <a href="<?php echo BASE_URL; ?>assets/images/product/detail/<?php echo $product['image']; ?>" >
                             <img src="<?php echo BASE_URL; ?>assets/images/product/detail/<?php echo $product['image']; ?>" alt="Product Image">
                         </a>
-
-                        <!-- Thumbnails -->
+                        <?php }else{ if(!empty($product_images)) { ?>
+						
+						<a href="<?php echo BASE_URL; ?>assets/images/product/detail/<?php echo $product_images[0]['image']; ?>" >
+                            <img src="<?php echo BASE_URL; ?>assets/images/product/detail/<?php echo $product_images[0]['image']; ?>" alt="Product Image">
+                        </a>
+					
+                        <?php }}?>
+						<!-- Thumbnails -->
                         <div class="detail-thumbs horizontal-scroll">
-                            <a href="<?php echo BASE_URL; ?>assets/images/product/detail/<?php echo $product['image']; ?>" data-fancybox="gallery">
-                                <img src="<?php echo BASE_URL; ?>assets/images/product/detail/<?php echo $product['image']; ?>" alt="">
-                            </a>
-
-                            <a href="<?php echo BASE_URL; ?>assets/images/product/detail/<?php echo $product['image']; ?>" data-fancybox="gallery">
-                                <img src="<?php echo BASE_URL; ?>assets/images/product/detail/<?php echo $product['image']; ?>" alt="">
-                            </a>
+                            <?php if(!empty($product['image'])) { ?>
+								<a href="<?php echo BASE_URL; ?>assets/images/product/detail/<?php echo $product['image']; ?>" data-fancybox="gallery">
+									<img src="<?php echo BASE_URL; ?>assets/images/product/detail/<?php echo $product['image']; ?>" alt="">
+								</a>
+                            <?php } foreach($product_images as $product_image){ ?>
+								<a href="<?php echo BASE_URL; ?>assets/images/product/detail/<?php echo $product_image['image']; ?>" data-fancybox="gallery">
+									<img src="<?php echo BASE_URL; ?>assets/images/product/detail/<?php echo $product_image['image']; ?>" alt="">
+								</a>
+                            <?php } ?>
                         </div>
-                        <?php } ?>
+                        
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12 col-sm-12 content-column">

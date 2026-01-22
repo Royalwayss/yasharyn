@@ -14,6 +14,13 @@
          $sql = "select * from ".$table." where id =".$id; 
          $result = $conn->query($sql);
          $product = $result->fetch_assoc();
+		 
+		 $product_images = get_product_images($conn,$id); 
+		 
+		 
+		 
+		 
+		 
       }else{
          $id = '';
          $title = 'Add Product';
@@ -24,6 +31,13 @@
       }
       
       ?>
+	  <style>
+	  .green.btn {
+		color: #FFFFFF;
+		background-color: #35aa47;
+		border-color: "";
+      }
+	  </style>
    <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
       <div class="wrapper">
       <?php include('include/header.php'); ?>
@@ -134,7 +148,7 @@
                                  </div> 
 
                                   <div class="form-group col-md-3">
-                                    <label for="category_name">Image (dimisions 600 X 600 )</label>
+                                    <label for="category_name">Main Image (dimisions 600 X 600 )</label>
                                     <input type="file" class="form-control" id="image" name="image">
                                  </div>
                                  <?php if(!empty($id) && !empty($product['image'])){ ?>
@@ -143,6 +157,60 @@
                                     <img src="../assets/images/product/list/<?php echo $product['image']; ?>" style="width:100px">
                                  </div>
                                     <?php } ?>
+
+
+
+                                 <div class="form-group col-md-12">
+                                        <label class="col-md-2 control-label">More Images: <br><span style="color:red"></span></label>
+                                        <div class="col-md-10">
+                                            <table  class="table table-hover table-bordered table-striped" id="image-table" >
+                                                <tbody>
+                                                    <tr>
+                                                        <th width="35%">Image</th>
+                                                        <th width="35%">Sort</th>
+                                                        <th>Actions</th>
+                                                    </tr>
+                                                    <?php if(!empty($product_images)) {
+													foreach($product_images as $key => $product_image) { ?>
+                                                    <tr id="delete-<?php echo $product_image['id']; ?>">
+                                                        <td>
+                                                            <?php if(!empty($product_image['image'])) { ?>
+                                                            <img src="../assets/images/product/list/<?php echo $product_image['image']; ?>" style="width:100px">
+                                                            <?php } ?>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <input id="ImageSort-<?php echo $product_image['id']; ?>"  type="number" class="form-control" value="<?php echo $product_image['image_order']; ?>">
+                                                            <br>
+                                                            <button data-imageid="<?php echo $product_image['id']; ?>" class="btn green updateImageSort" type="button"> Update</button>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <a   data-id="<?php echo $product_image['id']; ?>" class="btn btn-danger Deleteimage" href="javascript:void(0);"><i class="fa fa-times"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                   
+                                                    <?php } } ?>
+													
+														<tr class="blockIdWrap">
+															<td>
+																<input type="file" class="form-control" name="images[]">
+															<td>
+																<input type="text" placeholder="Image Sort" name="image_sort[]" style="color:gray" autocomplete="off" class="form-control"/>
+															</td>
+															</td>
+															<td></td>
+														</tr>
+                                                    
+                                                </tbody>
+                                            </table>
+											<input type="button" id="addImageRow" value="Add More" />
+                                        </div>
+                                    </div>
+                                   
+								
+
+
+
 
 
 							
@@ -190,6 +258,22 @@
       </section>
       <!-- /.content -->
       </div>
+	  <!-- Append Table Rows -->
+<table class="table table-hover table-bordered table-striped imagesamplerow" style="display:none;">
+    <tbody>
+        <tr class="appenderTr blockIdWrap">
+            <td>
+                <input type="file" class="form-control" name="images[]">
+            </td>
+            <td>
+                <input type="number" placeholder="Image Sort" name="image_sort[]" style="color:gray" autocomplete="off" class="form-control" required/>
+            </td>
+            <td class="text-center">
+				<a  class="btn btn-danger imageRowRemove" href="javascript:void(0);"><i class="fa fa-times"></i>                                           </a>
+            </td>
+        </tr>
+    </tbody>
+</table>
       <?php include('include/js-files.php'); ?>
        <script src="assets/js/jquery.validate.min.js"></script>
        <script src="assets/plugins/select2/js/select2.full.min.js"></script>
@@ -225,6 +309,51 @@
 				}
 			  });
 	});
+	
+	
+	$(document).on('click','.Deleteimage',function(){ 
+        var id = $(this).attr('data-id');
+		$.ajax({
+            data : {id:id},
+            url : "delete-image.php",
+            type : "get",
+            success:function(resp){
+				$("#delete-"+id).remove();
+                //alert('Image has been deleted successfully');
+				
+            },
+            error:function(){
+
+            }
+        })
+    });
+	
+	$(document).on('click','.updateImageSort',function(){
+        var imageid = $(this).data('imageid'); 
+        var imagesort = $('#ImageSort-'+imageid).val();
+        $.ajax({
+            data : {imageid:imageid,imagesort:imagesort},
+            url : "update_imagesort.php",
+            type : "get",
+            success:function(resp){
+                alert('Sort updated successfully');
+            },
+            error:function(){
+
+            }
+        })
+    })
+	
+	
+	
+	jQuery("#addImageRow").click(function() {        
+        var row = jQuery('.imagesamplerow tr').clone(true);
+        row.appendTo('#image-table');        
+    });
+	    $('.imageRowRemove').on("click", function() {
+        $(this).parents("tr").remove();
+    });
+	
 	  </script>
 	 
 
