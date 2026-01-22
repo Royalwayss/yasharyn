@@ -11,7 +11,8 @@ include 'includes/header.php';
 ?>
 
 <!-- Page Title -->
-<section class="page-title centred inner-pages" style="background-image: url(<?php echo BASE_URL; ?>assets/images/background/product.jpg);">
+<section class="page-title centred inner-pages"
+    style="background-image: url(<?php echo BASE_URL; ?>assets/images/background/product.jpg);">
     <div class="auto-container">
         <div class="content-box">
             <!-- <h2><?php echo $product['product_name']; ?></h2> -->
@@ -21,96 +22,120 @@ include 'includes/header.php';
 </section>
 <!-- End Page Title -->
 
-<?php include 'includes/breadcrumb.php'; ?> 
+<?php include 'includes/breadcrumb.php'; ?>
 <!-- shop-details -->
 <section class="shop-details">
     <div class="auto-container">
         <div class="product-details-content">
             <?php if(!empty($product['image'])) { ?>
             <div class="shape"
-                style="background-image: url('<?php echo BASE_URL; ?>assets/images/product/detail/<?php echo $product['image']; ?>);"></div>
+                style="background-image: url('<?php echo BASE_URL; ?>assets/images/product/detail/<?php echo $product['image']; ?>);">
+            </div>
             <?php } ?>
             <div class="row clearfix">
                 <div class="col-lg-6 col-md-12 col-sm-12 image-column">
                     <?php if(!empty($product['image'])) { ?>
-                    <div class="image-box text-center">
-                        <figure class="image"><img src="<?php echo BASE_URL; ?>assets/images/product/detail/<?php echo $product['image']; ?>"
-                                alt=""></figure>
-                        <div class="preview-link"><a
-                                href="<?php echo BASE_URL; ?>assets/images/product/detail/<?php echo $product['image']; ?>"
-                                class="lightbox-image" data-fancybox="gallery"><i class="far fa-search-plus"></i></a>
+                    <div class="detail-image-large">
+                        <!-- Large Image -->
+                        <a href="<?php echo BASE_URL; ?>assets/images/product/detail/<?php echo $product['image']; ?>" data-fancybox="gallery">
+                            <img src="<?php echo BASE_URL; ?>assets/images/product/detail/<?php echo $product['image']; ?>" alt="Product Image">
+                        </a>
+
+                        <!-- Thumbnails -->
+                        <div class="detail-thumbs horizontal-scroll">
+                            <a href="<?php echo BASE_URL; ?>assets/images/product/detail/<?php echo $product['image']; ?>" data-fancybox="gallery">
+                                <img src="<?php echo BASE_URL; ?>assets/images/product/detail/<?php echo $product['image']; ?>" alt="">
+                            </a>
+
+                            <a href="<?php echo BASE_URL; ?>assets/images/product/detail/<?php echo $product['image']; ?>" data-fancybox="gallery">
+                                <img src="<?php echo BASE_URL; ?>assets/images/product/detail/<?php echo $product['image']; ?>" alt="">
+                            </a>
                         </div>
+                        <?php } ?>
                     </div>
-                    <?php } ?>
                 </div>
                 <div class="col-lg-6 col-md-12 col-sm-12 content-column">
                     <div class="product-details">
-                      
+
                         <!-- <div class="text">
                                     <p><?php echo $product['product_code']; ?></p>
                                 </div> -->
                         <div class="yasharyn-new-product-details mb-2">
-                             <!-- <h3><?php echo $product['product_name']; ?></h3>  -->
-                          <ul class="list product-details-sub-details-ul">
+                            <!-- <h3><?php echo $product['product_name']; ?></h3>  -->
+                            <ul class="list product-details-sub-details-ul">
                                 <li class="product-details-sub-details-heading">Product Name :</li>
-                                <li class="product-details-sub-details-data"><?php echo $product['product_name']; ?></li>
+                                <li class="product-details-sub-details-data">
+                                    <?php echo $product['product_name']; ?>
+                                </li>
                             </ul>
-							
-							<ul class="list product-details-sub-details-ul">
+
+                            <ul class="list product-details-sub-details-ul">
                                 <li class="product-details-sub-details-heading">Size :</li>
-                                <li class="product-details-sub-details-data"><?php echo $product['size']; ?></li>
+                                <li class="product-details-sub-details-data">
+                                    <?php echo $product['size']; ?>
+                                </li>
                             </ul>
                             <?php /* if(!empty($product['availability'])) { ?>
                             <ul class="list product-details-sub-details-ul">
                                 <li class="product-details-sub-details-heading">Availability :</li>
-                                <li class="product-details-sub-details-data"><?php echo $product['availability']; ?>
+                                <li class="product-details-sub-details-data">
+                                    <?php echo $product['availability']; ?>
                                 </li>
                             </ul>
-							<?php } */?>
-							
-							<?php  if(!empty($product['neck'])) { ?>
+                            <?php } */?>
+
+                            <?php  if(!empty($product['neck'])) { ?>
                             <ul class="list product-details-sub-details-ul">
                                 <li class="product-details-sub-details-heading">Neck :</li>
-                                <li class="product-details-sub-details-data"><?php echo $product['neck']; ?>
+                                <li class="product-details-sub-details-data">
+                                    <?php echo $product['neck']; ?>
                                 </li>
                             </ul>
-							<?php } ?>
-							
-							 <?php  if(!empty($product['weight'])) { ?>
+                            <?php } ?>
+
+                            <?php  if(!empty($product['weight'])) { ?>
                             <ul class="category list product-details-sub-details-ul">
                                 <li class="product-details-sub-details-heading">Weight :</li>
-                                <li class="product-details-sub-details-data"><?php echo $product['weight']; ?></li>
+                                <li class="product-details-sub-details-data">
+                                    <?php echo $product['weight']; ?>
+                                </li>
                             </ul>
                             <?php } ?>
-							
+
                             <?php if(!empty($product['moc'])) { ?>
                             <ul class="category list product-details-sub-details-ul">
                                 <li class="product-details-sub-details-heading">MOC :</li>
-                                <li class="product-details-sub-details-data"><?php echo $product['moc']; ?></li>
+                                <li class="product-details-sub-details-data">
+                                    <?php echo $product['moc']; ?>
+                                </li>
                             </ul>
                             <?php } ?>
-							
-							
-							<?php if(!empty($product['ofc'])) { ?>
+
+
+                            <?php if(!empty($product['ofc'])) { ?>
                             <ul class="category list product-details-sub-details-ul">
                                 <li class="product-details-sub-details-heading">OFC :</li>
-                                <li class="product-details-sub-details-data"><?php echo $product['ofc']; ?></li>
+                                <li class="product-details-sub-details-data">
+                                    <?php echo $product['ofc']; ?>
+                                </li>
                             </ul>
                             <?php } ?>
-                            
-							
-							<?php if(!empty(trim($product['description']))) { ?>
+
+
+                            <?php if(!empty(trim($product['description']))) { ?>
                             <ul class="category list product-details-sub-details-ul" style="border-bottom: none;">
                                 <li class="product-details-sub-details-heading">Description :</li>
-                                <li class="product-details-sub-details-data " style="text-align: left;"><?php echo $product['description']; ?></li>
-                                
+                                <li class="product-details-sub-details-data " style="text-align: left;">
+                                    <?php echo $product['description']; ?>
+                                </li>
+
                             </ul>
-							
-							<!-- <ul class="category list product-details-sub-details-ul">
+
+                            <!-- <ul class="category list product-details-sub-details-ul">
 							<li class="product-details-sub-details-data" style="text-align: left"><?php echo $product['description']; ?></li>
 							 </ul> -->
                             <?php } ?>
-							
+
 
                         </div>
 
@@ -146,29 +171,30 @@ include 'includes/header.php';
                                         <li>bottle</li>
                                     </ul> -->
                             <div class="product-discription">
-                               
+
                                 <div class="tabs-box">
-                                   <?php /* <div class="tab-btn-box description-product-details-new">
+                                    <?php /* <div class="tab-btn-box description-product-details-new">
                                         <ul class="tab-btns tab-buttons clearfix">
                                             <li class="tab-btn active-btn " data-tab="#tab-1">Description</li>
                                             <!-- <li class="tab-btn" data-tab="#tab-2">Reviews (2)</li> -->
                                         </ul>
                                     </div> */ ?>
                                     <div class="tabs-content">
-                                   <?php /*     <div class="tab active-tab" id="tab-1">
+                                        <?php /*     <div class="tab active-tab" id="tab-1">
                                             <div class="content-box">
                                                 <?php echo $product['description']; ?>
-                                            </div>
-                                        </div> */ ?>
-                                         <ul>
-                                <li class="btn-box mt-4 text-center">
-                                    <a href="javascript:;" class="theme-btn btn-one" data-toggle="modal"
-                                        data-target="#exampleModal">Product Enquiry</a>
-                                </li>
-                            </ul>
-                             <div class="shape" style="background-image: url(<?php echo BASE_URL; ?>assets/images/shape/shape-39.png);">
-                                </div> 
-                                        <?php /*
+                                    </div>
+                                </div> */ ?>
+                                <ul>
+                                    <li class="btn-box mt-4 text-center">
+                                        <a href="javascript:;" class="theme-btn btn-one" data-toggle="modal"
+                                            data-target="#exampleModal">Product Enquiry</a>
+                                    </li>
+                                </ul>
+                                <div class="shape"
+                                    style="background-image: url(<?php echo BASE_URL; ?>assets/images/shape/shape-39.png);">
+                                </div>
+                                <?php /*
 							<div class="tab" id="tab-2">
                                 <div class="row clearfix">
                                     <div class="col-lg-6 col-md-6 col-sm-12 review-block">
@@ -241,27 +267,27 @@ include 'includes/header.php';
                                 </div>
                             </div>
                              */ ?>
-                                    </div>
-                                </div>
                             </div>
-                           
+                        </div>
+                    </div>
 
-                            <ul class="social-links clearfix">
-                                <?php /*   <a rel="nofollow" href="javascript:void(0);" class="inline--icon enlarged bgCircleEnclosed" data-sharer="facebook" data-url="">
+
+                    <ul class="social-links clearfix">
+                        <?php /*   <a rel="nofollow" href="javascript:void(0);" class="inline--icon enlarged bgCircleEnclosed" data-sharer="facebook" data-url="">
 														<i class="fab fa-facebook-f"></i>
 										</a> */ ?>
-                                <!-- <li><h6>Follow Us:</h6></li>
+                        <!-- <li><h6>Follow Us:</h6></li>
                                         <li><a href="javascript:;"><i class="fab fa-facebook-f"></i></a></li>
                                         <li><a href="javascript:;"><i class="fab fa-twitter"></i></a></li>
                                         <li><a href="javascript:;"><i class="fab fa-vimeo-v"></i></a></li>
                                         <li><a href="javascript:;"><i class="fab fa-google-plus-g"></i></a></li> -->
-                            </ul>
-                        </div>
-                    </div>
+                    </ul>
                 </div>
             </div>
         </div>
-        <!-- <div class="product-discription">
+    </div>
+    </div>
+    <!-- <div class="product-discription">
                     <div class="shape" style="background-image: url(assets/images/shape/shape-39.png);"></div>
                     <div class="tabs-box">
                         <div class="tab-btn-box">
@@ -352,38 +378,44 @@ include 'includes/header.php';
 						</div>
                     </div>
                 </div> -->
-        <?php if(!empty($product['related_products'])){  ?>
-        <div class="related-product pt-5">
-            <div class="title-box">
-                <h3>Related Products</h3>
-            </div>
-            <div class="row clearfix">
-                <?php foreach($product['related_products'] as $related_product){  ?>
-                <div class="col-lg-4 col-md-6 col-sm-12 shop-block mb-5">
-                    <div class="shop-block-one wow fadeInUp animated " data-wow-delay="00ms" data-wow-duration="1500m">
-                        <div class="inner-box product-details-inner-height">
-                            <?php if($related_product['image']) { ?>
-                            <figure class="image-box "><img
-                                    src="<?php echo BASE_URL; ?>assets/images/product/list/<?php echo $related_product['image']; ?>" alt="">
-                            </figure>
-                            <?php } ?>
-                            <div class="lower-content">
-                                <span><?php echo $related_product['size'] ; ?></span>
-                                <div class="shape" style="background-image: url(<?php echo BASE_URL; ?>assets/images/shape/shape-7.png);">
-                                </div>
-                                <h4><a
-                                        href="<?php echo BASE_URL.''.$related_product['id'].'/'.$related_product['product_url']; ?>"><?php echo $related_product['product_name']; ?></a>
-                                </h4>
-
+    <?php if(!empty($product['related_products'])){  ?>
+    <div class="related-product pt-5">
+        <div class="title-box">
+            <h3>Related Products</h3>
+        </div>
+        <div class="row clearfix">
+            <?php foreach($product['related_products'] as $related_product){  ?>
+            <div class="col-lg-4 col-md-6 col-sm-12 shop-block mb-5">
+                <div class="shop-block-one wow fadeInUp animated " data-wow-delay="00ms" data-wow-duration="1500m">
+                    <div class="inner-box product-details-inner-height">
+                        <?php if($related_product['image']) { ?>
+                        <figure class="image-box "><img
+                                src="<?php echo BASE_URL; ?>assets/images/product/list/<?php echo $related_product['image']; ?>"
+                                alt="">
+                        </figure>
+                        <?php } ?>
+                        <div class="lower-content">
+                            <span>
+                                <?php echo $related_product['size'] ; ?>
+                            </span>
+                            <div class="shape"
+                                style="background-image: url(<?php echo BASE_URL; ?>assets/images/shape/shape-7.png);">
                             </div>
+                            <h4><a
+                                    href="<?php echo BASE_URL.''.$related_product['id'].'/'.$related_product['product_url']; ?>">
+                                    <?php echo $related_product['product_name']; ?>
+                                </a>
+                            </h4>
+
                         </div>
                     </div>
                 </div>
-                <?php } ?>
-
             </div>
+            <?php } ?>
+
         </div>
-        <?php } ?>
+    </div>
+    <?php } ?>
     </div>
 </section>
 <!-- shop-details end -->
@@ -423,7 +455,7 @@ include 'includes/header.php';
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <input type="submit" class="theme-btn btn-one"  style="padding:6px 14px" value="Send message">
+                    <input type="submit" class="theme-btn btn-one" style="padding:6px 14px" value="Send message">
                 </div>
             </form>
         </div>
@@ -436,10 +468,10 @@ include 'includes/header.php';
 
 <?php include 'includes/footer.php'; ?>
 <script>
-//$('#exampleModal').on('show.bs.modal', function (event) {
+    //$('#exampleModal').on('show.bs.modal', function (event) {
 
 
-//})
+    //})
 </script>
 
 

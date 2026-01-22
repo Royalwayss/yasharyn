@@ -84,7 +84,7 @@
                        </div>
                        <div class="col-xl-2 col-lg-2  col-md-6 col-sm-6 col-12 footer-column text-center">
                            <div class="footer-widget logo-widget text-center">
-                               <figure class="footer-logo-new"><a rel="nofollow" href="https://yamedlifesciences.com"><img
+                               <figure class="footer-logo-new"><a href="https://yamedlifesciences.com" target="_blank"><img
                                            src="<?php echo BASE_URL; ?>assets/images/logo-footer.png" alt="Blood Collection Tubes Manufacturer in India" title="Blood Collection Tubes Manufacturer in India"></a></figure>
                                <div class="text mt-3">
                                    <p>GROUP CONCERN</p>
@@ -133,6 +133,8 @@
        <script src="<?php echo BASE_URL; ?>assets/js/jquery-ui.js"></script>
        <script src="<?php echo BASE_URL; ?>assets/js/jquery.nice-select.min.js"></script>
        <script src="<?php echo BASE_URL; ?>assets/js/select2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
        <!-- Swiper JS -->
        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
        <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->

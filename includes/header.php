@@ -126,6 +126,7 @@
       <link href="<?php echo BASE_URL; ?>assets/css/owl.css" rel="stylesheet">
       <link href="<?php echo BASE_URL; ?>assets/css/bootstrap.css" rel="stylesheet">
       <link href="<?php echo BASE_URL; ?>assets/css/jquery.fancybox.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
       <link href="<?php echo BASE_URL; ?>assets/css/animate.css" rel="stylesheet">
       <link href="<?php echo BASE_URL; ?>assets/css/jquery-ui.css" rel="stylesheet">
       <link href="<?php echo BASE_URL; ?>assets/css/color.css?v=2.0" rel="stylesheet">
