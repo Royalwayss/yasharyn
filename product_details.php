@@ -39,7 +39,7 @@ include 'includes/header.php';
                     <div class="detail-image-large">
                         <?php if(!empty($product['image'])) { ?>
 						<!-- Large Image -->
-                        <a href="<?php echo BASE_URL; ?>assets/images/product/detail/<?php echo $product['image']; ?>" >
+                        <a id="pro-main-image" data-href="<?php echo BASE_URL; ?>assets/images/product/detail/<?php echo $product['image']; ?>" >
                             <img src="<?php echo BASE_URL; ?>assets/images/product/detail/<?php echo $product['image']; ?>" alt="Product Image">
                         </a>
                         <?php }else{ if(!empty($product_images)) { ?>
@@ -52,7 +52,7 @@ include 'includes/header.php';
 						<!-- Thumbnails -->
                         <div class="detail-thumbs horizontal-scroll">
                             <?php if(!empty($product['image'])) { ?>
-								<a href="<?php echo BASE_URL; ?>assets/images/product/detail/<?php echo $product['image']; ?>" data-fancybox="gallery">
+								<a id="pro-thumb-image" href="<?php echo BASE_URL; ?>assets/images/product/detail/<?php echo $product['image']; ?>" data-fancybox="gallery">
 									<img src="<?php echo BASE_URL; ?>assets/images/product/detail/<?php echo $product['image']; ?>" alt="">
 								</a>
                             <?php } foreach($product_images as $product_image){ ?>
@@ -478,10 +478,14 @@ include 'includes/header.php';
 
 <?php include 'includes/footer.php'; ?>
 <script>
-    //$('#exampleModal').on('show.bs.modal', function (event) {
+   
+      $(document).ready(function () {
+			$('#pro-main-image').on('click', function () {
+				$('#pro-thumb-image').click();
+			});
+	}); 
 
-
-    //})
+   
 </script>
 
 
