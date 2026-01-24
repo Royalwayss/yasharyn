@@ -9,7 +9,12 @@ if(isset($data['name']) && $data['name'] != ''){
 	$name ='';
 	$err = 1;
 } 
-
+if(isset($data['country_code']) && $data['country_code'] != ''){
+	$country_code = $data['country_code'];
+}else{
+	$country_code ='';
+	$err = 1;
+} 
 
 if(isset($data['mobile']) && $data['mobile'] != ''){
 	$mobile = $data['mobile'];
@@ -36,6 +41,29 @@ if(isset($data['product_id']) && $data['product_id'] != ''){
 	$product_id ='';
     $err = 1; 	
 }
+
+
+if(isset($data['country']) && $data['country'] != ''){
+	$country = $data['country'];
+}else{
+	$country ='';
+}
+
+
+if(isset($data['state']) && $data['state'] != ''){
+	$state = $data['state'];
+}else{
+	$state ='';
+}
+
+
+if(isset($data['city']) && $data['city'] != ''){
+	$city = $data['city'];
+}else{
+	$city ='';
+}
+
+
 
 
 if(isset($data['message']) && $data['message'] != ''){
@@ -125,7 +153,7 @@ if($err == ''){
 							  <tr>
 								 <td width='30%' align='left' valign='top' class='style2'>Mobile</td>
 								 <td width='5%' align='left' valign='top' class='style2'>:</td>
-								 <td width='65%' align='left' valign='top' class='style3'>".$mobile."</td>
+								 <td width='65%' align='left' valign='top' class='style3'>".$country_code.' '.$mobile."</td>
 							  </tr>
 							   
 							  <tr>
@@ -139,7 +167,24 @@ if($err == ''){
 								 <td width='5%' align='left' valign='top' class='style2'>:</td>
 								 <td width='65%' align='left' valign='top' class='style3'><a target='block' href='".BASE_URL."".$product['id']."/".$product['product_url']."'>".$product['product_name']."</a></td>
 							  </tr>
+							  <tr>
+								 <td width='30%' align='left' valign='top' class='style2'>Country</td>
+								 <td width='5%' align='left' valign='top' class='style2'>:</td>
+								 <td width='65%' align='left' valign='top' class='style3'>".$country."</td>
+							  </tr>
 							  
+							  
+							  <tr>
+								 <td width='30%' align='left' valign='top' class='style2'>State</td>
+								 <td width='5%' align='left' valign='top' class='style2'>:</td>
+								 <td width='65%' align='left' valign='top' class='style3'>".$state."</td>
+							  </tr>
+							  
+							  <tr>
+								 <td width='30%' align='left' valign='top' class='style2'>City</td>
+								 <td width='5%' align='left' valign='top' class='style2'>:</td>
+								 <td width='65%' align='left' valign='top' class='style3'>".$city."</td>
+							  </tr>
 							  
 							  <tr>
 								 <td width='30%' align='left' valign='top' class='style2'>Category Name</td>
@@ -165,7 +210,7 @@ if($err == ''){
 			</html>";
 			
 			
-		    $sql = "INSERT INTO product_enquiries (product_id,name,email,mobile,message) VALUES ('".$product_id."','".$name."','".$email."', '".$mobile."','".$message."')";
+		    $sql = "INSERT INTO product_enquiries (product_id,name,email,country_code,mobile,country,state,city,message) VALUES ('".$product_id."','".$name."','".$email."', '".$country_code."','".$mobile."','".$country."','".$state."','".$city."','".$message."')";
 						
 			mysqli_query($conn,$sql); 
 			$recipient = ADMIN_MAIL;

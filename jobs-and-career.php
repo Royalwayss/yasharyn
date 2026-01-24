@@ -1,4 +1,10 @@
-<?php include 'includes/header.php'; ?>
+<?php 
+   include 'includes/header.php'; 
+   $counties = get_counties($conn ); 
+   $state_options = get_state_options($conn,'101'); 
+   
+   ?>
+ 
 <!-- Page Title -->
 <section class="page-title centred inner-pages" style="background-image: url(assets/images/background/contact.jpg);">
    <div class="auto-container">
@@ -18,7 +24,7 @@
                <div class="sec-title">
                   <h2>Join <b>Us</b></h2>
                </div>
-               <form method="post" action="save-career.php" id="career-form" class="default-form" enctype="multipart/form-data">
+               <form method="post" action="save-career.php" id="career-form" class="default-form" enctype="multipart/form-data" onsubmit="setPhoneValues();">
                   <div class="row clearfix">
                      <!-- Name -->
                      <div class="col-lg-6 col-md-6 col-sm-12 form-group">
@@ -29,11 +35,32 @@
                         <input type="email" name="email" placeholder="Email Address" required="">
                      </div>
                      <!-- Phone -->
-                     <div class="col-lg-6 col-md-12 col-sm-12 form-group">
-                        <input type="text" name="mobile" required="" placeholder="Phone Number">
+                     <div class="col-lg-6 col-md-6 col-sm-12 form-group"  >
+							  <input type="text" id="iti_phone_input"  class="iti-phone-input" placeholder="Phone no *" name="mobile" style="width:100% !important"> 
+							   <input type="hidden" id="iti_country_code" name="country_code">
+							   <input type="hidden" id="iti_mobile_number" name="mobile_number">
+					</div>
+							
+					<div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                        <select id="country" name="country"  onchange="get_state_city('1')">
+                           <option value="" disabled selected>Select your country</option>
+                           <?php foreach($counties as $country){ ?>
+                           <option data-id="<?php echo $country['id']; ?>" value="<?php echo $country['country']; ?>" <?php if($country['country'] == 'India') { echo 'selected'; }?>><?php echo $country['country']; ?></option>
+                           <?php } ?>
+                        </select>
+                     </div>
+                     <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                        <select id="state" name="state" onchange="get_state_city('2')">
+                        <?php echo $state_options; ?>
+                        </select>
+                     </div>
+                     <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                        <select id="city" name="city" >
+                           <option value="" disabled selected>Select your city</option>
+                        </select>
                      </div>
                      <!-- Subject -->
-                     <div class="col-lg-6 col-md-12 col-sm-12 form-group">
+                     <div class="col-lg-6 col-md-12 col-sm-12 form-group" style="margin-top:25px">
                         <input type="text" name="subject" required="" placeholder="Subject">
                      </div>
                      <!-- Join Us Dropdown -->
@@ -94,5 +121,16 @@
       </div>
    </div>
 </section>
+
 <!-- contact-style-two end -->
 <?php include 'includes/footer.php'; ?>
+<script>
+	$(document).ready(function () {
+		$('#country').niceSelect('destroy');
+		$('#state').niceSelect('destroy');
+		$('#city').niceSelect('destroy');
+		$('#country').select2();
+		$('#state').select2();
+		$('#city').select2();
+	});
+</script>

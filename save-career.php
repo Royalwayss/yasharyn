@@ -11,12 +11,43 @@ if(isset($data['name']) && $data['name'] != ''){
 } 
 
 
+if(isset($data['country_code']) && $data['country_code'] != ''){
+	$country_code = $data['country_code'];
+}else{
+	$country_code ='';
+	$err = 1;
+} 
+
+
 if(isset($data['mobile']) && $data['mobile'] != ''){
 	$mobile = $data['mobile'];
 }else{
 	$mobile ='';
 	$err = 1;
 } 
+
+
+if(isset($data['country']) && $data['country'] != ''){
+	$country = $data['country'];
+}else{
+	$country ='';
+}
+
+
+if(isset($data['state']) && $data['state'] != ''){
+	$state = $data['state'];
+}else{
+	$state ='';
+}
+
+
+if(isset($data['city']) && $data['city'] != ''){
+	$city = $data['city'];
+}else{
+	$city ='';
+}
+
+
 
 if(isset($data['email']) && $data['email'] != ''){
 	if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
@@ -136,7 +167,7 @@ if($err == ''){
 							  <tr>
 								 <td width='30%' align='left' valign='top' class='style2'>Mobile</td>
 								 <td width='5%' align='left' valign='top' class='style2'>:</td>
-								 <td width='65%' align='left' valign='top' class='style3'>".$mobile."</td>
+								 <td width='65%' align='left' valign='top' class='style3'>".$country_code.' '.$mobile."</td>
 							  </tr>
 							   
 							  <tr>
@@ -144,6 +175,26 @@ if($err == ''){
 								 <td width='5%' align='left' valign='top' class='style2'>:</td>
 								 <td width='65%' align='left' valign='top' class='style3'>".$email."</td>
 							  </tr>
+							  
+							  
+							  <tr>
+								 <td width='30%' align='left' valign='top' class='style2'>Country</td>
+								 <td width='5%' align='left' valign='top' class='style2'>:</td>
+								 <td width='65%' align='left' valign='top' class='style3'>".$country."</td>
+							  </tr>
+							  
+							  <tr>
+								 <td width='30%' align='left' valign='top' class='style2'>State</td>
+								 <td width='5%' align='left' valign='top' class='style2'>:</td>
+								 <td width='65%' align='left' valign='top' class='style3'>".$state."</td>
+							  </tr>
+							  
+							  <tr>
+								 <td width='30%' align='left' valign='top' class='style2'>City</td>
+								 <td width='5%' align='left' valign='top' class='style2'>:</td>
+								 <td width='65%' align='left' valign='top' class='style3'>".$city."</td>
+							  </tr>
+							  
 							  
 							 <tr>
 								 <td width='30%' align='left' valign='top' class='style2'>Subject</td>
@@ -208,10 +259,11 @@ if($err == ''){
 			
 			$skills = implode(',',$data['skills']); 
 			
-		    $sql = "INSERT INTO careers (name,email,mobile,subject,join_type,skills,resume,category,experience,message) VALUES ('".$name."','".$email."','".$mobile."','".$subject."','".$data['join_type']."','".$skills."','".$resume_file."','".$data['category']."', '".$data['experience']."','".$message."')";
+		    $sql = "INSERT INTO careers (name,email,country_code,mobile,country,state,city,subject,join_type,skills,resume,category,experience,message) VALUES ('".$name."','".$email."','".$country_code."','".$mobile."','".$country."','".$state."','".$city."','".$subject."','".$data['join_type']."','".$skills."','".$resume_file."','".$data['category']."', '".$data['experience']."','".$message."')";
 					
 			mysqli_query($conn,$sql); 
 			$recipient = ADMIN_MAIL;
+			
 			
 
 			$subject =  'Hi admin!  New career form has been recived from '.WEBSITENAME.' date -'.date('d-m-Y');

@@ -9,6 +9,8 @@ if(empty($get_product['status'])){
  $getCategoryBreadcrumb = getCategoryBreadcrumb($conn,$product['category_id']);
  $product_images = get_product_images($conn,$_GET['id']); 
 include 'includes/header.php';
+$counties = get_counties($conn ); 
+$state_options = get_state_options($conn,'101');
 ?>
 
 <!-- Page Title -->
@@ -441,7 +443,7 @@ include 'includes/header.php';
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form id="product-enquery" action="<?php echo BASE_URL; ?>product-enquery.php" method="post">
+            <form id="product-enquery" action="<?php echo BASE_URL; ?>product-enquery.php" method="post" onsubmit="setPhoneValues();">
                 <input type="hidden" name="product_id" value="<?php echo $product['id']; ?>">
                 <div class="modal-body">
 
@@ -454,10 +456,37 @@ include 'includes/header.php';
                         <input type="text" class="form-control" id="enquery-email" name="email">
                     </div>
                     <div class="form-group">
-                        <label for="enquery-mobile" class="col-form-label">Mobile:</label>
-                        <input type="text" class="form-control" id="enquery-mobile" name="mobile">
+                                <label for="enquery-mobile" class="col-form-label">Mobile:</label><br>
+						        <input type="text" id="iti_phone_input"  class="form-control iti-phone-input" placeholder="Phone no *" name="mobile" > 
+							   <input type="hidden" id="iti_country_code" name="country_code">
+							   <input type="hidden" id="iti_mobile_number" name="mobile_number">
                     </div>
-                    <div class="form-group">
+					
+					<div class="form-group">
+                        <label for="enquery-mobile" class="col-form-label">Country:</label>
+						<select id="country" name="country"  onchange="get_state_city('1')">
+                           <option value="" disabled selected>Select your country</option>
+                           <?php foreach($counties as $country){ ?>
+                           <option data-id="<?php echo $country['id']; ?>" value="<?php echo $country['country']; ?>" <?php if($country['country'] == 'India') { echo 'selected'; }?>><?php echo $country['country']; ?></option>
+                           <?php } ?>
+                        </select>
+                     </div>
+                     <div class="form-group" style="margin-top:40px">
+					    <label for="enquery-mobile" class="col-form-label">State:</label>
+                        <select id="state" name="state" onchange="get_state_city('2')">
+                        <?php echo $state_options; ?>
+                        </select>
+                     </div>
+                     <div class="form-group" style="margin-top:40px">
+					   <label for="enquery-mobile" class="col-form-label">City:</label>
+                        <select id="city" name="city" >
+                           <option value="" disabled selected>Select your city</option>
+                        </select>
+                     </div>
+					
+					
+					
+                    <div class="form-group" style="margin-top:40px">
                         <label for="enquery-message" class="col-form-label">Message:</label>
                         <textarea class="form-control" id="enquery-message" name="message"></textarea>
                     </div>
@@ -487,7 +516,16 @@ include 'includes/header.php';
 
    
 </script>
-
+<script>
+	$(document).ready(function () {
+		$('#country').niceSelect('destroy');
+		$('#state').niceSelect('destroy');
+		$('#city').niceSelect('destroy');
+		$('#country').select2();
+		$('#state').select2();
+		$('#city').select2();
+	});
+</script>
 
 
 <?php /*

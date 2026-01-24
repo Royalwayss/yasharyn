@@ -106,12 +106,11 @@
 					required: true,
 					email: true
 				},
-				phone:{
-				  required: true,
-				  digits: true,
-				  minlength: 10,
-				  maxlength:12,
-				},
+				phone: {
+                      required: true,
+   					  minlength: 8,
+   					  maxlength:15,
+                    },
 				subject: {
 					required: true
 				},
@@ -132,11 +131,10 @@
 					email: "Please enter a valid email address"
 				},
 				phone:{
-					required: "Please enter your Phone No",
-					digits: "Please enter digits(0-9) only",
-					minlength: "Please enter 10 digits mobile number",
-					maxlength: "Please enter maximum 12 digits mobile number including country code",
-				},
+   						  required: "Enter your mobile no",
+   						  minlength: "Enter 8 digits mobile number",
+   						  maxlength: "Enter maximum 15 digits mobile number including country code",
+   						},
 				subject: {
 					required: "Please enter your subject",
 				},
@@ -165,12 +163,11 @@
 					required: true,
 					email: true
 				},
-				mobile:{
-				  required: true,
-				  digits: true,
-				  minlength: 10,
-				  maxlength:12,
-				},
+				mobile: {
+                      required: true,
+   					  minlength: 8,
+   					  maxlength:15,
+                    },
 				subject: {
 					required: true
 				},
@@ -198,11 +195,10 @@
 					email: "Please enter a valid email address"
 				},
 				mobile:{
-					required: "Please enter your Phone No",
-					digits: "Please enter digits(0-9) only",
-					minlength: "Please enter 10 digits mobile number",
-					maxlength: "Please enter maximum 12 digits mobile number including country code",
-				},
+   						  required: "Enter your mobile no",
+   						  minlength: "Enter 8 digits mobile number",
+   						  maxlength: "Enter maximum 15 digits mobile number including country code",
+   						},
 				subject: {
 					required: "Please enter your subject",
 
@@ -240,12 +236,11 @@
 					required: true,
 					email: true
 				},
-				mobile:{
-				  required: true,
-				  digits: true,
-				  minlength: 10,
-				  maxlength:12,
-				},
+				mobile: {
+                      required: true,
+   					  minlength: 8,
+   					  maxlength:15,
+                    },
 				message: {
 					required: true
 				}
@@ -260,11 +255,10 @@
 					email: "Please enter a valid email address"
 				},
 				mobile:{
-					required: "Please enter your Phone No",
-					digits: "Please enter digits(0-9) only",
-					minlength: "Please enter 10 digits mobile number",
-					maxlength: "Please enter maximum 12 digits mobile number including country code",
-				},
+   						  required: "Enter your mobile no",
+   						  minlength: "Enter 8 digits mobile number",
+   						  maxlength: "Enter maximum 15 digits mobile number including country code",
+   						},
 				message: {
 					required: "Please enter your message",
 				},

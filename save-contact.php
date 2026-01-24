@@ -1,6 +1,6 @@
 <?php
 include('admin/include/config.php');
-$data = $_POST;
+$data = $_POST; 
 $err = '';
 
 if(isset($data['name']) && $data['name'] != ''){
@@ -17,6 +17,15 @@ if(isset($data['phone']) && $data['phone'] != ''){
 	$phone ='';
 	$err = 1;
 } 
+
+if(isset($data['country_code']) && $data['country_code'] != ''){
+	$country_code = $data['country_code'];
+}else{
+	$country_code ='';
+	$err = 1;
+} 
+
+
 
 if(isset($data['email']) && $data['email'] != ''){
 	if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
@@ -38,6 +47,31 @@ if(isset($data['subject']) && $data['subject'] != ''){
 }
 
 
+
+
+
+if(isset($data['country']) && $data['country'] != ''){
+	$country = $data['country'];
+}else{
+	$country ='';
+}
+
+
+if(isset($data['state']) && $data['state'] != ''){
+	$state = $data['state'];
+}else{
+	$state ='';
+}
+
+
+if(isset($data['city']) && $data['city'] != ''){
+	$city = $data['city'];
+}else{
+	$city ='';
+}
+
+
+
 if(isset($data['message']) && $data['message'] != ''){
 	$message = $data['message'];
 }else{
@@ -52,7 +86,7 @@ if(isset($_GET['form_type'])){
 }	
 
 
-
+if($_SERVER['HTTP_HOST'] != 'localhost'){
 if(!empty($_POST)){
 		$recaptcha_secret = RECAPTCHA_SECRET_KEY;
 		$recaptcha_response = $_POST['g-recaptcha-response'];
@@ -79,6 +113,7 @@ if(!empty($_POST)){
 		} else { 
 		  echo '<script>window.location.href="index.php"; </script>'; die;
 		} 
+   }
    }
 
 
@@ -118,13 +153,34 @@ if($err == ''){
 							  <tr>
 								 <td width='30%' align='left' valign='top' class='style2'>Phone</td>
 								 <td width='5%' align='left' valign='top' class='style2'>:</td>
-								 <td width='65%' align='left' valign='top' class='style3'>".$phone."</td>
+								 <td width='65%' align='left' valign='top' class='style3'>".$country_code.' '.$phone."</td>
 							  </tr>
 							   
 							  <tr>
 								 <td width='30%' align='left' valign='top' class='style2'>Email</td>
 								 <td width='5%' align='left' valign='top' class='style2'>:</td>
 								 <td width='65%' align='left' valign='top' class='style3'>".$email."</td>
+							  </tr>
+							  
+							  
+							  
+							  <tr>
+								 <td width='30%' align='left' valign='top' class='style2'>Country</td>
+								 <td width='5%' align='left' valign='top' class='style2'>:</td>
+								 <td width='65%' align='left' valign='top' class='style3'>".$country."</td>
+							  </tr>
+							  
+							  
+							  <tr>
+								 <td width='30%' align='left' valign='top' class='style2'>State</td>
+								 <td width='5%' align='left' valign='top' class='style2'>:</td>
+								 <td width='65%' align='left' valign='top' class='style3'>".$state."</td>
+							  </tr>
+							  
+							  <tr>
+								 <td width='30%' align='left' valign='top' class='style2'>City</td>
+								 <td width='5%' align='left' valign='top' class='style2'>:</td>
+								 <td width='65%' align='left' valign='top' class='style3'>".$city."</td>
 							  </tr>
 							  
 							 <tr>
@@ -151,7 +207,7 @@ if($err == ''){
 			</html>";
 			
 			
-		    $sql = "INSERT INTO contacts (form_type,name,email,mobile,subject,message) VALUES ('".$form_type."','".$name."','".$email."', '".$phone."','".$subject."','".$message."')";
+		    $sql = "INSERT INTO contacts (form_type,name,email,country_code,mobile,country,state,city,subject,message) VALUES ('".$form_type."','".$name."','".$email."', '".$country_code."','".$phone."','".$country."','".$state."','".$city."','".$subject."','".$message."')";
 						
 			mysqli_query($conn,$sql); 
 			$recipient = ADMIN_MAIL;

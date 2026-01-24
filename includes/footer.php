@@ -175,7 +175,95 @@ var swiper = new Swiper(".productSwiper", {
     
     }
 });
-       </script>
+       
+	   
+function get_state_city(action){  
+		var country = $('#country').find(":selected").attr("data-id"); 
+		if(action == 2){
+			var state = $('#state').find(":selected").attr("data-id"); 
+		}else{
+			var state = '';
+			const el = $('#country');
+			setTimeout(() => {
+				el.select2('close');
+				el.blur(); 
+			}, 10);  
+		} 
+		
+		$.ajax({
+			url: "<?php echo BASE_URL; ?>get-state-city.php",
+			type:'POST',
+			data: { country:country,state:state,action:action },
+			success:function(resp){ 
+					if(action =='1'){ 
+						$("#state").html(resp);
+						$("#city").html('<option value="" disabled="" selected="">Select your city</option>');
+					}
+					if(action =='2'){
+						$("#city").html(resp);
+					}								 
+				},
+				error:function(){
+					
+				}	
+		});
+	}	
+		   
+	   
+	   
+	   
+	   
+	   </script>
+
+
+<script src="<?php echo BASE_URL; ?>assets/js/intlTelInput.min.js"></script>
+<script src="<?php echo BASE_URL; ?>assets/js/utils.js"></script>
+<script>
+
+if ($('#iti_phone_input').length > 0) { 
+    const itiInput = document.getElementById("iti_phone_input");
+    const countryNameDisplay = document.getElementById("country_name_display");
+
+
+    // Get all country data, sort by name alphabetically
+    const allCountries = window.intlTelInputGlobals.getCountryData();
+    allCountries.sort((a, b) => a.name.localeCompare(b.name));
+
+    // Extract ISO2 codes in sorted order
+    const sortedCountryCodes = allCountries.map(c => c.iso2);
+
+
+    // Initialize intl-tel-input
+    const iti = window.intlTelInput(itiInput, {
+        initialCountry: "in",
+        separateDialCode: true,
+        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.3.5/js/utils.js",
+        onlyCountries: sortedCountryCodes // this preserves alphabetical order
+    });
+
+    // Update hidden fields before submit
+    function setPhoneValues() {
+        const countryData = iti.getSelectedCountryData();
+        document.getElementById("iti_country_code").value = "+" + countryData.dialCode;
+        document.getElementById("iti_mobile_number").value = itiInput.value;
+    }
+
+    // Update country name and hidden country code dynamically on country change
+    itiInput.addEventListener("countrychange", function() {
+        const countryData = iti.getSelectedCountryData(); 
+		var country_name = countryData.name; 
+		//$("#country").val(country_name);
+		$('#country').val(country_name).trigger('change');
+
+        get_state_city(1);
+    });
+	
+}
+</script>
+
+
+
+
 
 
        </body><!-- End of .page_wrapper -->

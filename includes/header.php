@@ -134,11 +134,11 @@
       <link href="<?php echo BASE_URL; ?>assets/css/nice-select.css" rel="stylesheet">
       <link href="<?php echo BASE_URL; ?>assets/css/responsive.css?v=2.1" rel="stylesheet">
       <link href="<?php echo BASE_URL; ?>assets/css/select2.min.css" rel="stylesheet" />
-      <link href="<?php echo BASE_URL; ?>assets/css/dev.css?v=2.1" rel="stylesheet" />
+      <link href="<?php echo BASE_URL; ?>assets/css/dev.css?v=2.2" rel="stylesheet" />
       <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
       <!-- Swiper CSS -->
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.3.5/css/intlTelInput.css"/>
 	  <?php if(HTTP_HOST != 'localhost' && $currentPageName == 'index.php'){ ?>
 	  <script type="application/ld+json">
 
@@ -204,7 +204,7 @@
 	  
 	  
 	  
-	  
+	 
 	  
    </head>
    <!-- page wrapper -->
