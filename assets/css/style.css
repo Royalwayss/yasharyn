@@ -8570,3 +8570,6 @@ margin-top: 6px;
   background: #ccc;
   border-radius: 10px;
 }
+.form-group .iti.iti--allow-dropdown{
+  width: 100%;
+}

@@ -39,7 +39,7 @@
 							  <input type="text" id="iti_phone_input"  class="iti-phone-input" placeholder="Phone no *" name="mobile" style="width:100% !important"> 
 							   <input type="hidden" id="iti_country_code" name="country_code">
 							   <input type="hidden" id="iti_mobile_number" name="mobile_number">
-					</div>
+					      </div>
 							
 					<div class="col-lg-6 col-md-6 col-sm-12 form-group">
                         <select id="country" name="country"  onchange="get_state_city('1')">
