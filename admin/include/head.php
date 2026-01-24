@@ -42,5 +42,12 @@ include('include/config.php');
       background-color:transparent;
       border-color:#6c757d;
     }
+	
+.textShow {
+   max-width: 20ch;   /* ≈ 30 characters */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 </style>
 </head> 

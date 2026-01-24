@@ -70,9 +70,9 @@
 									   <?php 
                                           } ?>
                                     </td>
-                                    <td><?php echo $row['name']; ?></td>
+                                    <td class="textShow"><?php echo  $row['name']; ?></td>
                                     <td><?php echo $row['email']; ?></td>
-                                    <td><?php echo $row['mobile']; ?></td>
+                                    <td><?php echo $row['country_code'].' '.$row['mobile']; ?></td>
                                     <td><?php echo date("M j, Y, g:i a", strtotime($row['created_at'])); ?></td>
                                      <td> 
                                        <a id="row-<?php echo $row['id']; ?>" class="btn <?php if($row['view_status'] == '1') { echo 'btn-success'; }else{ echo 'btn-danger'; } ?>" id="form-row-<?php echo $row['id']; ?>" href="javascript:;" onclick="view_form('<?php echo $row['id']; ?>',<?php echo $row['view_status']; ?>);" >View</a>
@@ -120,9 +120,23 @@
                                        <div class="row">
                                           <div class="col-3 label">Mobile</div>
                                           <div class="col-1 label">:</div>
-                                          <div class="col-5 value"><?php echo $row['mobile']; ?></div>
+                                          <div class="col-5 value"><?php echo $row['country_code'].' '.$row['mobile']; ?></div>
                                        </div>
-                                       
+                                       <div class="row">
+                                             <div class="col-3 label">Country:</div>
+											 <div class="col-1 label">:</div>
+                                             <div class="col-5 value"><?php echo $row['country']; ?></div>
+                                          </div>
+										  <div class="row">
+                                             <div class="col-3 label">State:</div>
+											 <div class="col-1 label">:</div>
+                                             <div class="col-5 value"><?php echo $row['state']; ?></div>
+                                          </div>
+										  <div class="row">
+                                             <div class="col-3 label">City:</div>
+											 <div class="col-1 label">:</div>
+                                             <div class="col-5 value"><?php echo $row['city']; ?></div>
+                                          </div>
                                          <div class="row">
                                           <div class="col-3 label">Message</div>
                                           <div class="col-1 label">:</div>
