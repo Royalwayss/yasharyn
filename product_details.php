@@ -401,10 +401,12 @@ $state_options = get_state_options($conn,'101');
                 <div class="shop-block-one wow fadeInUp animated " data-wow-delay="00ms" data-wow-duration="1500m">
                     <div class="inner-box product-details-inner-height">
                         <?php if($related_product['image']) { ?>
-                        <figure class="image-box "><img
+                        <a href="<?php echo BASE_URL.''.$related_product['id'].'/'.$related_product['product_url']; ?>">
+						<figure class="image-box "><img
                                 src="<?php echo BASE_URL; ?>assets/images/product/list/<?php echo $related_product['image']; ?>"
                                 alt="">
                         </figure>
+						</a>
                         <?php } ?>
                         <div class="lower-content">
                             <span>
