@@ -5,8 +5,8 @@
 	define('SITE_LOGO',$base_url.'assets/images/logo.png');
 	define('WEBSITENAME','Yasharyn');
 	define('FROM_MAIL','info@yasharyn.com');
-	define('ADMIN_MAIL','info@yasharyn.com');
-	define('ADMIN_MAIL_BCC','manjit@rtpltech.com');
+	define('ADMIN_MAIL','info@yasharyn.com,yashik@yasharyn.com');
+	define('ADMIN_MAIL_BCC','manjit@rtpltech.com,jaspreet@rtpltech.com,rwpttech@gmail.com');
 	define('RECAPTCHA_SITE_KEY','6Ldx-AosAAAAAJxdP2-YhrveSlk1PiwHPU3i9Y0b');
 	define('RECAPTCHA_SECRET_KEY','6Ldx-AosAAAAABj5zF9tJ5SpW7rOb0N96c3mtxnG');
 	define('HTTP_HOST',$_SERVER['HTTP_HOST']);
