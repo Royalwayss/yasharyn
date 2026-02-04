@@ -1,4 +1,7 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
 include('admin/include/config.php');
 $data = $_POST;
 $err = '';
@@ -134,7 +137,7 @@ if($err == ''){
 					 </tr>
 					
 					 <tr>
-						<td class='style2'>Hi admin!  New product enquirie form has been recived from ".WEBSITENAME."</td>
+						<td class='style2'>Hi admin!  New product inquiry form has been recived from ".WEBSITENAME."</td>
 					 </tr>
 					 <tr>
 						<td>&nbsp;</td>
@@ -213,10 +216,13 @@ if($err == ''){
 		    $sql = "INSERT INTO product_enquiries (product_id,name,email,country_code,mobile,country,state,city,message) VALUES ('".$product_id."','".$name."','".$email."', '".$country_code."','".$mobile."','".$country."','".$state."','".$city."','".$message."')";
 						
 			mysqli_query($conn,$sql); 
+			
+			/*
+			
 			$recipient = ADMIN_MAIL;
 			
 
-			$subject =  'Hi admin!  New product enquirie form has been recived from '.WEBSITENAME.' date -'.date('d-m-Y');
+			$subject =  'Hi admin!  New product inquiry form has been recived from '.WEBSITENAME.' date -'.date('d-m-Y');
 			$message = $mail_message;  
 			
 			$headers = "Content-Type: text/html; charset=UTF-8\r\n";
@@ -228,6 +234,41 @@ if($err == ''){
 			mail($recipient, $subject, $message, $headers);
 			
 		    }
+			
+			*/
+			
+			
+			require 'vendor/autoload.php';
+            $subject =  'Hi admin!  New product inquiry form has been recived from '.WEBSITENAME.' date -'.date('d-m-Y');
+            $to_addresses = array('info@yasharyn.com','yashik@yasharyn.com','webadmin@yasharyn.com');
+            $cc_addresses = array('manjit@rtpltech.com','jaspreet@rtpltech.com');
+			
+			try {
+				
+			    require 'vendor/autoload.php';
+			    $mail = new PHPMailer(true);
+				$mail->isMail();
+				$mail->setFrom("info@yasharyn.com", "yasharyn");
+				foreach ($to_addresses as $to_address) {
+                  $mail->addAddress($to_address);
+                }
+				
+				foreach ($cc_addresses as $cc_address) {
+                  $mail->addCC($cc_address);
+                }
+
+				$mail->addBCC("rwpttech@gmail.com");
+
+				$mail->isHTML(true);
+				$mail->Subject = $subject;
+				$mail->Body    = $mail_message;
+				
+				$mail->send();
+				
+			} catch (Exception $e) {
+				
+			}
+			
 			echo '<script>window.location.href="thanks.php"; </script>'; die;
 }else{
 			echo '<script>window.location.href="index.php"; </script>'; die;

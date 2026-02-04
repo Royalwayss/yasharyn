@@ -1,4 +1,7 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
 include('admin/include/config.php');
 $data = $_POST; 
 $err = '';
@@ -265,7 +268,7 @@ if($err == ''){
 			$recipient = ADMIN_MAIL;
 			
 			
-
+            /*
 			$subject =  'Hi admin!  New career form has been recived from '.WEBSITENAME.' date -'.date('d-m-Y');
 			$message = $mail_message;  
 			
@@ -279,7 +282,53 @@ if($err == ''){
 				
 			  mail($recipient, $subject, $message, $headers); 
 			  
-		    } 
+		    }  */
+			
+			
+			
+			require 'vendor/autoload.php';
+            $subject =  'Hi admin!  New career form has been recived from '.WEBSITENAME.' date -'.date('d-m-Y'); 
+            $to_addresses = array('info@yasharyn.com','yashik@yasharyn.com','webadmin@yasharyn.com');
+            $cc_addresses = array('manjit@rtpltech.com','jaspreet@rtpltech.com');
+			
+			try {
+				
+			    require 'vendor/autoload.php';
+			    $mail = new PHPMailer(true);
+				$mail->isMail();
+				$mail->setFrom("info@yasharyn.com", "yasharyn");
+				foreach ($to_addresses as $to_address) {
+                  $mail->addAddress($to_address);
+                }
+				
+				foreach ($cc_addresses as $cc_address) {
+                  $mail->addCC($cc_address);
+                }
+
+				$mail->addBCC("rwpttech@gmail.com");
+
+				$mail->isHTML(true);
+				$mail->Subject = $subject;
+				$mail->Body    = $mail_message;
+				
+				if(!empty($resume_file)){
+				$mail->addAttachment("assets/uploads/resume/".$resume_file);
+                }
+				
+				
+				$mail->send();
+				
+			} catch (Exception $e) {
+				
+			}
+			
+			
+			
+			
+			
+			
+			
+			
 		   
 			echo '<script>window.location.href="thanks.php"; </script>'; die;
 }else{
