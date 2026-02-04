@@ -234,8 +234,8 @@ if($err == ''){
 			$subject =  'Hi admin!  New contact form has been recived from '.WEBSITENAME.' date -'.date('d-m-Y');
 			require 'vendor/autoload.php';
 
-            $to_addresses = array('info@yasharyn.com','yashik@yasharyn.com','webadmin@yasharyn.com');
-            $cc_addresses = array('manjit@rtpltech.com','jaspreet@rtpltech.com');
+            $to_addresses = array('info@yasharyn.com','yashik@yasharyn.com','aaryans@yasharyn.com');
+            $cc_addresses = array('manjit@rtpltech.com');
 			
 			try {
 				
@@ -251,7 +251,7 @@ if($err == ''){
                   $mail->addCC($cc_address);
                 }
 
-				$mail->addBCC("rwpttech@gmail.com");
+				
 
 				$mail->isHTML(true);
 				$mail->Subject = $subject;
