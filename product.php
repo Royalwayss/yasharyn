@@ -24,41 +24,51 @@
       <div class="row">
         <div class="col-12 col-md-6 col-lg-4 pb-5">
             <div class="products-all">
-                <img src="assets/images/product-1.png">
-                <div class="products-inner-heading">
-                    <a href="products.php?category_id=1"><h5>Pharma Packaging</h5></a>
+                <a href="<?php echo BASE_URL; ?>category/1/pharma-bottles-manufacturers-india">
+					<img src="<?php echo BASE_URL; ?>assets/images/pharma-packaging.jpg">
+                </a>
+				<div class="products-inner-heading">
+                    <a href="<?php echo BASE_URL; ?>category/1/pharma-bottles-manufacturers-india"><h5>Pharma Packaging</h5></a>
                 </div>
             </div>
         </div>
           <div class="col-12 col-md-6 col-lg-4 pb-5">
             <div class="products-all">
-                <img src="assets/images/product-2.png">
-                <div class="products-inner-heading">
-                   <a href="products.php?category_id=10"><h5>Cosmetic Packaging</h5></a>
+                <a href="<?php echo BASE_URL; ?>category/10/cosmetic-packaging-manufacturers">
+					<img src="<?php echo BASE_URL; ?>assets/images/cosmetic-packaging.jpeg">
+                </a>
+				<div class="products-inner-heading">
+                   <a href="<?php echo BASE_URL; ?>category/10/cosmetic-packaging-manufacturers"><h5>Cosmetic Packaging</h5></a>
                 </div>
             </div>
         </div>
           <div class="col-12 col-md-6 col-lg-4 pb-5">
             <div class="products-all">
-                <img src="assets/images/product-3.png">
-                <div class="products-inner-heading">
-                     <a href="products.php?category_id=17"><h5>Food Packaging</h5></a>
+                <a href="<?php echo BASE_URL; ?>category/17/food-packaging-bottles-manufacturers-india">
+					<img src="<?php echo BASE_URL; ?>assets/images/food-packaging.jpeg">
+                </a>
+				<div class="products-inner-heading">
+                     <a href="<?php echo BASE_URL; ?>category/17/food-packaging-bottles-manufacturers-india"><h5>Food Packaging</h5></a>
                 </div>
             </div>
         </div>
           <div class="col-12 col-md-6 col-lg-4 pb-5">
             <div class="products-all">
-                <img src="assets/images/product-4.png">
-                <div class="products-inner-heading">
-                  <a href="products.php?category_id=21"><h5>Home Utilities Section</h5></a>
+                <a href="<?php echo BASE_URL; ?>category/21/home-utility-manufacturers-india">
+					<img src="<?php echo BASE_URL; ?>assets/images/home-utilities-section.jpg">
+                </a>
+				<div class="products-inner-heading">
+                  <a href="<?php echo BASE_URL; ?>category/21/home-utility-manufacturers-india"><h5>Home Utilities Section</h5></a>
                 </div>
             </div>
         </div>
           <div class="col-12 col-md-6 col-lg-4  pb-5">
             <div class="products-all">
-                <img src="assets/images/product-5.png">
-                <div class="products-inner-heading">
-                  <a href="products.php?category_id=26"><h5>Closure & Dispensing Solution</h5></a>
+                <a href="<?php echo BASE_URL; ?>category/26/closure-and-dispensing-solutions">
+					<img src="<?php echo BASE_URL; ?>assets/images/product-5.png">
+                </a>
+				<div class="products-inner-heading">
+                  <a href="<?php echo BASE_URL; ?>category/26/closure-and-dispensing-solutions"><h5>Closure & Dispensing Solution</h5></a>
                 </div>
             </div>
         </div>

@@ -234,7 +234,7 @@ if($err == ''){
 			$subject =  'Hi admin!  New contact form has been recived from '.WEBSITENAME.' date -'.date('d-m-Y');
 			require 'vendor/autoload.php';
 
-            $to_addresses = array('info@yasharyn.com','yashik@yasharyn.com','aaryans@yasharyn.com');
+            $to_addresses = array('info@yasharyn.com','yashik@yasharyn.com','aaryans@yasharyn.com','yashik.yasharyn@gmail.com');
             $cc_addresses = array('manjit@rtpltech.com');
 			
 			try {

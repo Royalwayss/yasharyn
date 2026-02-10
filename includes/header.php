@@ -284,7 +284,7 @@
                            </li>
                            <!-- <li><a href="why-us.php">Why Us</a></li>   -->
                            <li class="dropdown">
-                              <a href="product.php">Products</a>
+                              <a href="<?php echo BASE_URL; ?>product.php">Products</a>
                               <ul>
                                  <?php foreach($categories as $category) { ?>
                                  <li class="dropdown">
