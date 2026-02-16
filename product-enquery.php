@@ -240,7 +240,7 @@ if($err == ''){
 			
 			require 'vendor/autoload.php';
             $subject =  'Hi admin!  New product inquiry form has been recived from '.WEBSITENAME.' date -'.date('d-m-Y');
-            $to_addresses = array('info@yasharyn.com','yashik@yasharyn.com','aaryans@yasharyn.com','yashik.yasharyn@gmail.com');
+            $to_addresses = array('info@yasharyn.com','yashik@yasharyn.com','aaryans@yasharyn.com','yashik.yasharyn@gmail.com','jainsohum.aaryan@gmail.com');
             $cc_addresses = array('manjit@rtpltech.com');
 			
 			try {
