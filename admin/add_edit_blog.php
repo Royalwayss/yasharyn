@@ -40,7 +40,7 @@
       <div class="wrapper">
       <?php include('include/header.php'); ?>
       <!-- page content start -->
-      <div class="content-wrapper" style="margin-top:10px">
+      <div class="content-wrapper" style="margin-top:50px">
       <!-- Content Header (Page header) -->
       <section class="content-header">
          <div class="container-fluid">
@@ -98,7 +98,7 @@
                                  </div>
 								 
 								 <div class="form-group col-md-12">
-                                    <label for="category_name">blog_url*</label>
+                                    <label for="category_name">Blog Url*</label>
                                     <input type="text" class="form-control" id="blog_url" name="url" placeholder="Enter the blog url" <?php if(!empty($id)) { ?> value="<?php echo $blog['url']; ?>" <?php } ?> pattern="[-a-zA-Z0-9_\.]+">
                                  </div>
 								 

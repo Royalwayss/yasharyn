@@ -5,7 +5,7 @@ $trimmedPath = rtrim($path, '/');
 $segments = explode('/', $trimmedPath);
 $blog_url = end($segments);
 
-$blog = getSingleRow($conn,"select * from blogs where url = '".$blog_url."'"); 
+$blog = getSingleRow($conn,"select * from blogs where url = '".$blog_url."' and status = '1'"); 
 if(empty($blog)){
 	echo "<script>window.location.href='index.php';</script>";
 }

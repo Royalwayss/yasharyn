@@ -34,7 +34,7 @@
          }
       </style>
       <!-- page content start -->
-      <div class="content-wrapper" style="margin-top:10px">
+      <div class="content-wrapper" style="margin-top:50px">
       <!-- Content Header (Page header) -->
       <section class="content-header">
          <div class="container-fluid">

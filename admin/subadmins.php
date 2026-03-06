@@ -12,7 +12,7 @@ $table ='admin';
       <div class="wrapper">
          <?php include('include/header.php'); ?>
          <!-- page content start -->
-         <div class="content-wrapper" style="margin-top:14px">
+         <div class="content-wrapper" style="margin-top:50px">
             <div class="content-header">
                <div class="container-fluid">
                   <div class="row mb-2">
