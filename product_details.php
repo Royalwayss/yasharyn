@@ -1,5 +1,10 @@
 <?php  
 include_once('admin/include/config.php');  
+
+if(isset($_GET['slug']) && !isset($_GET['id'])){
+	include('blog-detail.php'); exit;
+}
+
 $get_product = get_product_details($conn,@$_GET['id'],@$_GET['slug']); 
 if(empty($get_product['status'])){ 
 	show404($conn);  die(); exit;

@@ -9,11 +9,11 @@ ErrorDocument 404 /404.php
 
  
 
-RewriteRule    ^from-hive-to-shelf-indian-honey-container-manufacturers/?$    blog-detail.php    [NC,L] 
-RewriteRule    ^wide-flip-top-caps-modern-packaging-india/?$    blog-detail.php    [NC,L] 
-RewriteRule    ^why-plastic-packaging-still-dominates-global-market/?$    blog-detail.php    [NC,L] 
-RewriteRule    ^applications-of-pet-and-hdpe-packaging-in-everyday-products/?$    blog-detail.php    [NC,L] 
-RewriteRule    ^testttt/?$    blog-detail.php    [NC,L] 
+#RewriteRule    ^from-hive-to-shelf-indian-honey-container-manufacturers/?$    blog-detail.php    [NC,L] 
+#RewriteRule    ^wide-flip-top-caps-modern-packaging-india/?$    blog-detail.php    [NC,L] 
+#RewriteRule    ^why-plastic-packaging-still-dominates-global-market/?$    blog-detail.php    [NC,L] 
+#RewriteRule    ^applications-of-pet-and-hdpe-packaging-in-everyday-products/?$    blog-detail.php    [NC,L] 
+#RewriteRule    ^testttt/?$    blog-detail.php    [NC,L] 
 RewriteRule    ^about-us/?$    about-us.php    [NC,L] 
 
 RewriteCond %{REQUEST_FILENAME} !-f

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php 
-   include_once('admin/include/config.php');  
+   include_once('admin/include/config.php'); 
    //include_once(__DIR__.'/admin/include/config.php');   
    $categories = get_categories($conn,$status=1); 
    $currentPageName = basename($_SERVER['PHP_SELF']); 
@@ -55,23 +55,39 @@
       <title>Plastic Packaging Blogs & Industry Insights - Official Blog, Yasharyn Packaging</title>
       <meta name="description" content="Read the latest blogs on PET and HDPE packaging trends, pharmaceutical bottle manufacturing and sustainable cosmetic packaging solutions from Yasharyn Packaging experts.">
       <meta name="keywords" content="plastic packaging blogs, pet bottle manufacturing insights, hdpe container trends, pharmaceutical packaging news, cosmetic packaging industry updates, yasharyn packaging blog, plastic molding guides">
-      <?php }else if($currentPageName == 'product_details.php'){  
-         
-		 if(isset($_GET['id'])){
-		     $get_pro = getSingleRow($conn,'select * from products where id='.@$_GET['id']);
-         }else{
-			  $get_pro = [];
-		 }
-		 
-		 if(!empty($get_pro)){
-            $product_name = $get_pro['product_name']; 
-         }else{
-            $product_name = '';
-         }
-         ?>
-      <title><?php echo $product_name; ?> Manufacturer, Exporters & Suppliers in India - Yasharyn</title>
-      <meta name="description" content="Yasharyn Packaging is one of the leading <?php echo $product_name; ?> manufacturer, exporters and suppliers in India. Durable, leak-proof, high quality and available at wholesale prices. Request a quote."/>
-      <?php }else if($currentPageName == 'products.php'){ 
+      <?php }else if($currentPageName == 'product_details.php'){    
+         if(isset($product)){ 
+			 if(isset($_GET['id'])){
+				 $get_pro = getSingleRow($conn,'select * from products where id='.@$_GET['id']);
+			 }else{
+				  $get_pro = [];
+			 }
+			 
+			 if(!empty($get_pro)){
+				$product_name = $get_pro['product_name']; 
+			 }else{
+				$product_name = '';
+			 }
+			 ?>
+			<title><?php echo $product_name; ?> Manufacturer, Exporters & Suppliers in India - Yasharyn</title>
+			<meta name="description" content="Yasharyn Packaging is one of the leading <?php echo $product_name; ?> manufacturer, exporters and suppliers in India. Durable, leak-proof, high quality and available at wholesale prices. Request a quote."/>
+		 <?php }else { 
+			 
+			   
+				$meta_title = $meta_dec = ''; 
+				
+				
+			 if(!empty($blog)){
+				$meta_title = $blog['meta_title'];
+				$meta_dec = $blog['meta_description'];
+			 }
+			 
+			   ?>
+		  <title><?php echo $meta_title; ?></title>
+		  <meta name="description" content="<?php echo $meta_dec; ?>">
+	     <?php } ?>
+	  
+	  <?php }else if($currentPageName == 'products.php'){ 
          $get_cat = getSingleRow($conn,'select * from categories where id="'.@$_GET['id'].'"'); 
           if(!empty($get_cat) && !empty($get_cat['meta_title'])){
          $meta_title = $get_cat['meta_title']; 
@@ -86,29 +102,7 @@
       <title><?php echo $meta_title; ?></title>
       <meta name="description" content="<?php echo $meta_dec; ?>">
       <meta name="keywords" content="<?php echo $meta_keyword; ?>">
-      <?php }else if($currentPageName == 'blog-detail.php'){
-         $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-         $trimmedPath = rtrim($path, '/');
-         $segments = explode('/', $trimmedPath);
-         $blog_url = end($segments);
-            $meta_title = $meta_dec = '';
-         if($blog_url == 'from-hive-to-shelf-indian-honey-container-manufacturers'){
-         	$meta_title = 'Honey Container Manufacturers in India | Packaging Guide';
-         	$meta_dec = 'Learn how honey container manufacturers in India use PET and HDPE packaging to protect purity, improve shelf life, and ensure food safety.';
-         }else if($blog_url == 'wide-flip-top-caps-modern-packaging-india'){
-         	$meta_title = 'Wide Flip Top Cap Manufacturers in India | Uses & Benefits';
-         	$meta_dec = 'Discover why wide flip-top caps are widely used in pharma, food, and FMCG packaging for better hygiene, convenience, and leak protection.';
-         }else if($blog_url == 'why-plastic-packaging-still-dominates-global-market'){
-         	$meta_title = 'PET Bottle Manufacturers in India | Packaging Industry Insights';
-         	$meta_dec = 'Understand why PET bottle manufacturers in India are leading the global packaging market with quality production, scalability, and sustainability.';
-         }else if($blog_url == 'applications-of-pet-and-hdpe-packaging-in-everyday-products'){
-         	$meta_title = 'Talc Powder Container Manufacturers in India | PET & HDPE Uses';
-         	$meta_dec = 'Explore how PET and HDPE packaging is used in everyday products and why talc powder container manufacturers in India prefer HDPE containers.';
-         }
-         
-           ?>
-      <title><?php echo $meta_title; ?></title>
-      <meta name="description" content="<?php echo $meta_dec; ?>">
+      
       <?php }else{ ?>
       <title>Yasharyn</title>
       <?php } ?>

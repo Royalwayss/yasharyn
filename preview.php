@@ -1,18 +1,15 @@
 <?php 
-include_once('admin/include/config.php');  
-$path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-$trimmedPath = rtrim($path, '/');
-$segments = explode('/', $trimmedPath);
-$blog_url = end($segments);
-
-$blog = getSingleRow($conn,"select * from blogs where url = '".$blog_url."'"); 
-if(empty($blog)){
-	echo "<script>window.location.href='index.php';</script>";
-}
-
 include 'includes/header.php';
 
-
+$title ='';
+$editor_text ='';
+$data = $_POST; 
+if(isset($data['title'])){
+	$title = $data['title'];
+}
+if(isset($data['editor'])){
+	$editor_text = $data['editor'];
+}
  ?>
 <style>
 .blogDetail a u { color:#006a4e !important;text-decoration: none !important; }
@@ -27,7 +24,7 @@ include 'includes/header.php';
 <section class="page-title centred inner-pages" style="background-image: url(assets/images/background/csr.jpg);">
     <div class="auto-container">
         <div class="content-box">
-            <h2><?php echo $blog['title']; ?></h2>
+            <h2><?php echo $title; ?></h2>
         </div>
     </div>
 </section>
@@ -37,9 +34,9 @@ include 'includes/header.php';
         <div class="blogDetail">
             <div class="row">
                 <div class="col-12">
-                    <h1><?php echo $blog['title']; ?></h1>
+                    <h1><?php //echo $title; ?></h1>
                 </div>
-                 <?php echo $blog['content']; ?>
+                 <?php echo $editor_text; ?>
 			</div>
         </div>
     </div>

@@ -29,6 +29,7 @@ include('include/config.php');
   <link rel="stylesheet" href="assets/css/custom.css">
   <!-- DataTables CSS -->
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+<script src="https://cdn.tiny.cloud/1/25frry9xpp0pwadfxnz8fm1lm6x3eipjqdkhhu3qggd33413/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 <style>
 .error{ color:red; }
 .select2-container--default .select2-selection--multiple .select2-selection__choice

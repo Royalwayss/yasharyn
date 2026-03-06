@@ -21,21 +21,25 @@
          <?php }else if($currentPageName == 'blog-detail.php'){ ?>
          <li class="breadcrumb-item"><a href="<?php echo BASE_URL; ?>blogs.php">Blogs</a></li>
          <li class="breadcrumb-item"><a href="<?php echo BASE_URL; ?>blogs.php"><?php echo $blog['title']; ?></a></li>
-         <?php }else if($currentPageName == 'jobs-and-career.php'){ ?>
+         <?php }else if($currentPageName == 'preview.php'){ ?>
+		 <li class="breadcrumb-item"><a href="<?php echo BASE_URL; ?>blogs.php">Blogs</a></li>
+         <li class="breadcrumb-item"><a href="<?php echo BASE_URL; ?>blogs.php"><?php echo @$title; ?></a></li>
+		 <?php }else if($currentPageName == 'jobs-and-career.php'){ ?>
          <li class="breadcrumb-item"><a href="javascript:;">Jobs and Career</a></li>
          <?php }else if($currentPageName == 'products.php'){ 
             foreach($getCategoryBreadcrumb as $CategoryBreadcrumb){ 
             ?>
          <li class="breadcrumb-item"><a href="<?php echo BASE_URL.'category/'.$CategoryBreadcrumb['id'].'/'.$CategoryBreadcrumb['category_url'] ?>"><?php echo $CategoryBreadcrumb['category_name']; ?></a></li>
-			<?php } }else if($currentPageName == 'product_details.php'){ 
+			<?php } }else if($currentPageName == 'product_details.php' && isset($product)){ 
 		
             foreach($getCategoryBreadcrumb as $CategoryBreadcrumb){ 
             ?>
              <li class="breadcrumb-item"><a href="<?php echo BASE_URL.'category/'.$CategoryBreadcrumb['id'].'/'.$CategoryBreadcrumb['category_url'] ?>"><?php echo $CategoryBreadcrumb['category_name']; ?></a></li>
 			<?php } ?>
 			 <li class="breadcrumb-item"><a href="javascript:;"><?php echo $product['product_name']; ?></a></li>
-			<?php  }else if($currentPageName == 'ttttt.php'){ ?>
-         <li class="breadcrumb-item"><a href="javascript:;">testtt</a></li>
+			<?php }else if(isset($blog)){ ?>
+               <li class="breadcrumb-item"><a href="<?php echo BASE_URL.'blogs.php'; ?>">Blogs</a></li>
+               <li class="breadcrumb-item"><a href="javascript:;"><?php echo $blog['title']; ?></a></li>
          <?php } ?>
          </li>
       </ol>
