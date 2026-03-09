@@ -146,6 +146,10 @@
                                     <input type="date" class="form-control" id="publication_date" name="publication_date"  <?php if(!empty($id) && !empty($blog['publication_date'])) { ?> value="<?php echo $blog['publication_date']; ?>" <?php } ?> >
                                  </div>
 								 <div class="form-group col-md-6">
+                                    <label for="read_time">Read Time</label>
+                                    <input type="text" class="form-control" id="read_time" name="read_time"  <?php if(!empty($id) && !empty($blog['read_time'])) { ?> value="<?php echo $blog['read_time']; ?>" <?php } ?> >
+                                 </div>
+								 <div class="form-group col-md-6">
                                     <label for="status">Status</label>
                                     <input type="checkbox" class="form-control" style="margin-left:20px;width:20px" name="status" value="1" <?php if(!empty($id) && $blog['status'] == 1) { ?> checked="" <?php } ?>>
                                  </div>
@@ -212,7 +216,9 @@
                   publication_date: {
 					required: true
 				  },				  
-				 
+				 read_time: {
+					required: true
+				  },
 				  
 				},
 				messages: {

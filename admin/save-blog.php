@@ -19,12 +19,13 @@ if(isset($_POST['title']) && $_POST['title'] !=''){
 	
 	
 	$publication_date =$_POST['publication_date'];
+	$read_time =$_POST['read_time'];
 	$status =@$_POST['status'];
 	
 	
 	if(isset($_POST['id']) && $_POST['id'] !=''){
 		
-		$update_query  = "UPDATE  blogs SET title = '".$title."', url = '".$blog_url."',short_description = '".$short_description."',content = '".$blog_content."',meta_title = '".$meta_title."',meta_description = '".$meta_description."',meta_keywords = '".$meta_keywords."',publication_date = '".$publication_date."',status = '".$status."' WHERE id = ".$_POST['id']." "; 
+		$update_query  = "UPDATE  blogs SET title = '".$title."', url = '".$blog_url."',short_description = '".$short_description."',content = '".$blog_content."',meta_title = '".$meta_title."',meta_description = '".$meta_description."',meta_keywords = '".$meta_keywords."',publication_date = '".$publication_date."',read_time= '".$read_time."',status = '".$status."' WHERE id = ".$_POST['id']." "; 
 		mysqli_query($conn,$update_query);
 		if(isset($_FILES["image"]["name"])){
 			
@@ -50,7 +51,7 @@ if(isset($_POST['title']) && $_POST['title'] !=''){
 	
 	
 		
-		$insert_query = "INSERT INTO blogs (title,url,short_description,content,publication_date,meta_title,meta_description,meta_keywords,status,created_at) VALUES ('".$title."','".$blog_url."','".$short_description."','".$blog_content."','".$publication_date."','".$meta_title."','".$meta_description."','".$meta_keywords."','".$status."','".$current_time."')";
+		$insert_query = "INSERT INTO blogs (title,url,short_description,content,publication_date,read_time,meta_title,meta_description,meta_keywords,status,created_at) VALUES ('".$title."','".$blog_url."','".$short_description."','".$blog_content."','".$publication_date."','".$read_time."','".$meta_title."','".$meta_description."','".$meta_keywords."','".$status."','".$current_time."')";
 		mysqli_query($conn,$insert_query); 
 		$inser_id = mysqli_insert_id($conn);
 		
