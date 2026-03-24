@@ -1,6 +1,7 @@
 /admin/include/db_config.php
 .htaccess
 /public/images
+/yasharyn/assets/images/blogs
 /yasharyn/assets/images/product
 /yasharyn/assets/images/product/list
 /yasharyn/assets/images/product/detail
