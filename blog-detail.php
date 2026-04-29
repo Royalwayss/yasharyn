@@ -40,6 +40,8 @@ include 'includes/header.php';
     margin-right:6px;
     color:#006a4e;
 }
+
+.blogDetail ul { width:100% !important; }
 </style>
 <!-- Page Title -->
 <section class="page-title centred inner-pages" style="background-image: url(assets/images/background/csr.jpg);">
