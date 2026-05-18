@@ -38,6 +38,7 @@
                                     <th>Name</th>
                                     <th>Email</th>
                                     <th>Mobile</th>
+									 <th>Country/State</th>    
                                     <th>Date</th>
                                       <th>Actions</th> 
                                  </tr>
@@ -73,7 +74,18 @@
                                     <td class="textShow"><?php echo  $row['name']; ?></td>
                                     <td><?php echo $row['email']; ?></td>
                                     <td><?php echo $row['country_code'].' '.$row['mobile']; ?></td>
-                                    <td><?php echo date("M j, Y, g:i a", strtotime($row['created_at'])); ?></td>
+                                     <td>
+												<?php 
+												   echo $row['country'];
+												   if(!empty($row['state'])){
+													 echo '<br>'.$row['state'];
+												   }
+												   if(!empty($row['city'])){
+													 echo '<br>'.$row['city'];
+												   }
+												 ?>
+							  </td>	
+									<td><?php echo date("M j, Y, g:i a", strtotime($row['created_at'])); ?></td>
                                      <td> 
                                        <a id="row-<?php echo $row['id']; ?>" class="btn <?php if($row['view_status'] == '1') { echo 'btn-success'; }else{ echo 'btn-danger'; } ?>" id="form-row-<?php echo $row['id']; ?>" href="javascript:;" onclick="view_form('<?php echo $row['id']; ?>',<?php echo $row['view_status']; ?>);" >View</a>
                                     </td>
