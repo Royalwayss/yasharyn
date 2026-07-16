@@ -100,9 +100,8 @@
                <div class="auto-container">
                    <div class="bottom-inner">
                        <div class="copyright">
-                           <p>Copyright © <?php echo date('Y'); ?> <a href="<?php echo BASE_URL; ?>">Yasharyn Packaging Pvt. Ltd.</a> All Rights
-                               Reserved.</p>
-                       </div>
+    <p>Copyright © <?php echo date('Y'); ?> <a href="<?php echo BASE_URL; ?>">Yasharyn Packaging Pvt. Ltd.</a> All Rights Reserved. | Designed by <a href="https://www.royalways.com" target="_blank">royalways</a></p>
+</div>
                    </div>
                </div>
            </div>
